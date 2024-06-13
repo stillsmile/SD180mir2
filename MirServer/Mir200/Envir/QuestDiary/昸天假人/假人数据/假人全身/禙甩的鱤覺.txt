@@ -11,13 +11,13 @@ Job=2
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=7
+Level=10
 [UseItems]
 UseItems0=布衣(男)
-UseItems1=乌木剑
+UseItems1=短剑
 UseItems2=
-UseItems3=传统项链
-UseItems4=
+UseItems3=金项链
+UseItems4=青铜头盔
 UseItems5=铁手镯
 UseItems6=铁手镯
 UseItems7=玻璃戒指

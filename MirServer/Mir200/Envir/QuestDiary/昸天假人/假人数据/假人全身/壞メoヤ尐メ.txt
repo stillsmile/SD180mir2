@@ -16,14 +16,14 @@ Level=43
 UseItems0=ÁÒÑæÄ§ÒÂ(Å®)
 UseItems1=ÑªÒû
 UseItems2=
-UseItems3=ÁÒÑæÏîÁ´
+UseItems3=Ê¥Ä§ÏîÁ´
 UseItems4=Ä§Áú¿ø
 UseItems5=ºÚÌ´ÊÖïí
 UseItems6=ºÚÌ´ÊÖïí
 UseItems7=ÁÒÑæÄ§½ä
 UseItems8=½µÑı³ıÄ§½äÖ¸
 UseItems9=
-UseItems10=ÊŞÆ¤Ñü´ø
+UseItems10=ÌúÑü´ø
 UseItems11=±Ü»êÑ¥
 UseItems12=
 [Say]

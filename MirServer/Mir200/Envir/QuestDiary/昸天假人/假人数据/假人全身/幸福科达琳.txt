@@ -15,8 +15,8 @@ Level=30
 [UseItems]
 UseItems0=灵魂战衣(男)
 UseItems1=降魔
-UseItems2=
-UseItems3=竹笛
+UseItems2=荣誉勋章12号
+UseItems3=天珠项链
 UseItems4=道士头盔
 UseItems5=道士手镯
 UseItems6=道士手镯

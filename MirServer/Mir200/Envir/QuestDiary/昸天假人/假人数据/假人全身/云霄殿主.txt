@@ -15,7 +15,7 @@ Level=14
 [UseItems]
 UseItems0=轻型盔甲(男)
 UseItems1=乌木剑
-UseItems2=
+UseItems2=蜡烛
 UseItems3=黄色水晶项链
 UseItems4=青铜头盔
 UseItems5=铁手镯

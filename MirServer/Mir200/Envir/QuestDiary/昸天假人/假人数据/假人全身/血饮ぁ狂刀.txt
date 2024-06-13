@@ -15,7 +15,7 @@ Level=34
 [UseItems]
 UseItems0=幽灵战衣(女)
 UseItems1=降魔
-UseItems2=荣誉勋章25号
+UseItems2=荣誉勋章31号
 UseItems3=竹笛
 UseItems4=
 UseItems5=道士手镯
@@ -23,8 +23,8 @@ UseItems6=道士手镯
 UseItems7=泰坦戒指
 UseItems8=泰坦戒指
 UseItems9=护身符
-UseItems10=兽皮腰带
-UseItems11=紫绸靴
+UseItems10=铁腰带
+UseItems11=布鞋
 UseItems12=
 [Say]
 0=你想找死？

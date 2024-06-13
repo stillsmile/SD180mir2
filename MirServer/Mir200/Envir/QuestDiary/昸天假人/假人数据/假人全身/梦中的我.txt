@@ -23,7 +23,7 @@ UseItems6=圣战手镯
 UseItems7=圣战戒指
 UseItems8=珊瑚戒指
 UseItems9=
-UseItems10=
+UseItems10=兽皮腰带
 UseItems11=鹿皮靴
 UseItems12=
 [Say]

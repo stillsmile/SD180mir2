@@ -15,8 +15,8 @@ Level=46
 [UseItems]
 UseItems0=天尊道袍
 UseItems1=逍遥扇
-UseItems2=荣誉勋章32号
-UseItems3=真魂项链
+UseItems2=荣誉勋章25号
+UseItems3=天尊项链
 UseItems4=道士头盔
 UseItems5=三眼手镯
 UseItems6=道士手镯

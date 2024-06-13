@@ -16,14 +16,14 @@ Level=45
 UseItems0=幽灵战衣(男)
 UseItems1=龙纹剑
 UseItems2=天尊纹章
-UseItems3=天珠项链
+UseItems3=光芒项链
 UseItems4=道士头盔
 UseItems5=光芒护腕
 UseItems6=心灵手镯
 UseItems7=降妖除魔戒指
 UseItems8=降妖除魔戒指
 UseItems9=护身符
-UseItems10=青铜腰带
+UseItems10=光芒腰带
 UseItems11=紫绸靴
 UseItems12=
 [Say]

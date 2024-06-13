@@ -11,12 +11,12 @@ Job=0
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=16
+Level=17
 [UseItems]
 UseItems0=轻型盔甲(女)
 UseItems1=八荒
 UseItems2=
-UseItems3=黑色水晶项链
+UseItems3=魔鬼项链
 UseItems4=魔法头盔
 UseItems5=皮制手套
 UseItems6=皮制手套

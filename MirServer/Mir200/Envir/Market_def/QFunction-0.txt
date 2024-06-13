@@ -1,4 +1,25 @@
 (@@sendmsg @storage @PlayOffline @getback @buy @sell @repair @s_repair @@offlinemsg @storage @getback @getnextpage @getPreviouspage @@INPUTINTEGER @@InPutString )
+;界面UI第一个按钮
+[@ButtonClick1]
+#IF
+#ACT
+#CALL [系统功能\装备回收.txt] @声望回收
+[@ButtonClick2]
+#IF
+#ACT
+#CALL [系统功能\货币互换.txt] @互换
+;界面UI声望按钮
+[@ButtonClick3]
+
+[@ButtonClick4]
+#IF
+#ACT
+#CALL [系统功能\游戏辅助.txt] @辅助
+
+;背包按钮
+[@ItemBagButtonClick1]
+#ACT
+#CALL [系统功能\垃圾回收.txt] @回收垃圾
 
 [@StdModeFunc30]
 #IF

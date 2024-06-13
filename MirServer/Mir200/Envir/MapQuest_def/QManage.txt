@@ -1,4 +1,16 @@
 [@Startup]
+
+
+[@OnTimer1]
+#IF
+#ACT
+SendCenterMsg 180 251 穿戴护身符可获得传送能力. 1 30
+;刷新声望值
+[@OnTimer2]
+#IF
+#ACT
+ADDBUTTON 8 3 00006 00006 00006 10 400 0 声望值：<$CREDITPOINT> 
+
 #ACT
 ;天下第一
 MOV A35 天下第一男战士
@@ -30,7 +42,7 @@ MOV G52 1
 MOV G54 999
 
 ;全局假人总数
-MOV G56 2000
+MOV G56 50
 
 ;假人主动发言频率(数字越小越频繁，建议以百为单位)
 MOV G58 100
@@ -40,6 +52,27 @@ MOV A499 881223
 BREAK
 
 [@Login]
+
+;界面3个按钮
+#IF
+#ACT
+ADDBUTTON 8 1 00000 00001 00000 10 10 0  -1 一键回收包裹里的装备兑换灵符
+
+#IF
+#ACT
+ADDBUTTON 8 2 00004 00005 00004 135 10 0  -1 金币，灵符，元宝，声望值相互兑换
+
+#IF
+#ACT
+ADDBUTTON 8 4 00002 00003 00002 260 10 0  -1 游戏辅助和远程仓库
+
+;定时公告
+#IF
+#ACT
+SetOnTimer 1 60
+;刷新界面声望
+SetOnTimer 2 1
+
 #IF
 ISDUMMY
 #ACT

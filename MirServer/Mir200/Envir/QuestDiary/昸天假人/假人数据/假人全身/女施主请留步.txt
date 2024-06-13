@@ -15,7 +15,7 @@ Level=6
 [UseItems]
 UseItems0=布衣(男)
 UseItems1=乌木剑
-UseItems2=
+UseItems2=蜡烛
 UseItems3=金项链
 UseItems4=
 UseItems5=小手镯

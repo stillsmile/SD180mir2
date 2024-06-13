@@ -11,11 +11,11 @@ Job=1
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=8
+Level=11
 [UseItems]
 UseItems0=布衣(男)
 UseItems1=木剑
-UseItems2=
+UseItems2=火把
 UseItems3=传统项链
 UseItems4=
 UseItems5=铁手镯

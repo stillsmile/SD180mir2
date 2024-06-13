@@ -15,7 +15,7 @@ Level=36
 [UseItems]
 UseItems0=战神盔甲(男)
 UseItems1=井中月
-UseItems2=
+UseItems2=荣誉勋章32号
 UseItems3=圣战项链
 UseItems4=记忆头盔
 UseItems5=圣战手镯

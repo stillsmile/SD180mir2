@@ -16,14 +16,14 @@ Level=33
 UseItems0=幽灵战衣(男)
 UseItems1=降魔
 UseItems2=
-UseItems3=竹笛
+UseItems3=灵魂项链
 UseItems4=
 UseItems5=坚固手套
 UseItems6=坚固手套
 UseItems7=降妖除魔戒指
 UseItems8=
 UseItems9=护身符
-UseItems10=
+UseItems10=铁腰带
 UseItems11=布鞋
 UseItems12=
 [Say]

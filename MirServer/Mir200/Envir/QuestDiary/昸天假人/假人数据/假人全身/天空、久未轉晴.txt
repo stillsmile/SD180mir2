@@ -24,7 +24,7 @@ UseItems7=珍珠戒指
 UseItems8=珍珠戒指
 UseItems9=护身符
 UseItems10=兽皮腰带
-UseItems11=
+UseItems11=鹿皮靴
 UseItems12=
 [Say]
 0=你想找死？

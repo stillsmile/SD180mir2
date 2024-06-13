@@ -20,11 +20,11 @@ UseItems3=放大镜
 UseItems4=道士头盔
 UseItems5=黑檀手镯
 UseItems6=金手镯
-UseItems7=降妖除魔戒指
+UseItems7=紫碧螺
 UseItems8=降妖除魔戒指
 UseItems9=
 UseItems10=青铜腰带
-UseItems11=布鞋
+UseItems11=鹿皮靴
 UseItems12=
 [Say]
 0=你想找死？

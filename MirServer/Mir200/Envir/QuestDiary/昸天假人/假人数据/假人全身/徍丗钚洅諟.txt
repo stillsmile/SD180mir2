@@ -11,10 +11,10 @@ Job=0
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=4
+Level=5
 [UseItems]
 UseItems0=布衣(女)
-UseItems1=木剑
+UseItems1=青铜剑
 UseItems2=
 UseItems3=传统项链
 UseItems4=

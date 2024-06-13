@@ -15,8 +15,8 @@ Level=40
 [UseItems]
 UseItems0=天尊道袍
 UseItems1=逍遥扇
-UseItems2=
-UseItems3=竹笛
+UseItems2=天尊纹章
+UseItems3=天尊项链
 UseItems4=
 UseItems5=虹魔手镯
 UseItems6=天尊手镯

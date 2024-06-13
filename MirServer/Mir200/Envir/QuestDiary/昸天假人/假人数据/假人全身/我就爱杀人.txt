@@ -24,7 +24,7 @@ UseItems7=力量戒指
 UseItems8=龙之戒指
 UseItems9=
 UseItems10=铁腰带
-UseItems11=
+UseItems11=布鞋
 UseItems12=
 [Say]
 0=你想找死？

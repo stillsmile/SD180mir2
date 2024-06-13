@@ -15,7 +15,7 @@ Level=20
 [UseItems]
 UseItems0=轻型盔甲(女)
 UseItems1=斩马刀
-UseItems2=
+UseItems2=荣誉勋章22号
 UseItems3=魔鬼项链
 UseItems4=魔法头盔
 UseItems5=魔力手镯

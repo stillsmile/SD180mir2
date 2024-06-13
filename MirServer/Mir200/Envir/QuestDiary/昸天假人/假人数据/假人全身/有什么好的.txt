@@ -14,7 +14,7 @@ NeedMagicItem=1
 Level=18
 [UseItems]
 UseItems0=轻型盔甲(女)
-UseItems1=海魂
+UseItems1=青铜斧
 UseItems2=
 UseItems3=白金项链
 UseItems4=

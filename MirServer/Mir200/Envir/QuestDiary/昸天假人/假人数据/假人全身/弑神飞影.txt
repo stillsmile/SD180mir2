@@ -14,7 +14,7 @@ NeedMagicItem=1
 Level=19
 [UseItems]
 UseItems0=轻型盔甲(男)
-UseItems1=海魂
+UseItems1=青铜斧
 UseItems2=
 UseItems3=琥珀项链
 UseItems4=魔法头盔

@@ -15,7 +15,7 @@ Level=35
 [UseItems]
 UseItems0=重盔甲(女)
 UseItems1=凝霜
-UseItems2=
+UseItems2=荣誉勋章51号
 UseItems3=圣战项链
 UseItems4=骷髅头盔
 UseItems5=阎罗手套

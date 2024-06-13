@@ -15,8 +15,8 @@ Level=41
 [UseItems]
 UseItems0=幽灵战衣(男)
 UseItems1=龙纹剑
-UseItems2=
-UseItems3=竹笛
+UseItems2=荣誉勋章31号
+UseItems3=灵魂项链
 UseItems4=记忆头盔
 UseItems5=三眼手镯
 UseItems6=光芒护腕
@@ -24,7 +24,7 @@ UseItems7=降妖除魔戒指
 UseItems8=天尊戒指
 UseItems9=护身符
 UseItems10=兽皮腰带
-UseItems11=布鞋
+UseItems11=鹿皮靴
 UseItems12=
 [Say]
 0=你想找死？

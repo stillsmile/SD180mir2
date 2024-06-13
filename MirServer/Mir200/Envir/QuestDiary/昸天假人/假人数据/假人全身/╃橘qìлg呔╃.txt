@@ -23,7 +23,7 @@ UseItems6=ºÚÌ´ÊÖïí
 UseItems7=½µÑı³ıÄ§½äÖ¸
 UseItems8=ÁÒÑæÄ§½ä
 UseItems9=
-UseItems10=
+UseItems10=ÊŞÆ¤Ñü´ø
 UseItems11=ÁÒÑæÄ§Ñ¥
 UseItems12=
 [Say]

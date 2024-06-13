@@ -15,8 +15,8 @@ Level=37
 [UseItems]
 UseItems0=恶魔长袍(女)
 UseItems1=魔杖
-UseItems2=
-UseItems3=生命项链
+UseItems2=荣誉勋章32号
+UseItems3=恶魔铃铛
 UseItems4=道士头盔
 UseItems5=思贝儿手镯
 UseItems6=思贝儿手镯

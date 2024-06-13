@@ -15,7 +15,7 @@ Level=23
 [UseItems]
 UseItems0=灵魂战衣(男)
 UseItems1=降魔
-UseItems2=
+UseItems2=蜡烛
 UseItems3=凤凰明珠
 UseItems4=
 UseItems5=魔法手镯
@@ -24,7 +24,7 @@ UseItems7=道德戒指
 UseItems8=道德戒指
 UseItems9=护身符
 UseItems10=铁腰带
-UseItems11=鹿皮靴
+UseItems11=布鞋
 UseItems12=
 [Say]
 0=你想找死？
