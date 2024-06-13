@@ -1,6 +1,12 @@
 [@回收垃圾]
 {
 #if
+checkitem 辟邪手镯 1
+#ACT
+take 辟邪手镯 1
+GAMEGOLD + 1
+
+#if
 checkitem 魔力项链 1
 #ACT
 take 魔力项链 1

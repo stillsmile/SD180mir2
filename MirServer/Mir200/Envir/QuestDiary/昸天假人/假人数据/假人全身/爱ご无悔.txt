@@ -23,7 +23,7 @@ UseItems6=黑檀手镯
 UseItems7=紫碧螺
 UseItems8=红宝石戒指
 UseItems9=
-UseItems10=兽皮腰带
+UseItems10=铁腰带
 UseItems11=布鞋
 UseItems12=
 [Say]

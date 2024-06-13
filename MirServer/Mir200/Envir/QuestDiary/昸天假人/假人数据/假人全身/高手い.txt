@@ -14,7 +14,7 @@ NeedMagicItem=1
 Level=28
 [UseItems]
 UseItems0=ÖØ¿ø¼×(ÄĞ)
-UseItems1=ĞŞÂŞ
+UseItems1=Á¶Óü
 UseItems2=
 UseItems3=À¶ôä´äÏîÁ´
 UseItems4=¼ÇÒäÍ·¿ø

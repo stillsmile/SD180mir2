@@ -15,7 +15,7 @@ MOV P1 5
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   checkitemTYPE 5 24
 #ACT
@@ -36,7 +36,7 @@ MOV P1 7
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   checkitemTYPE 7 23
 #ACT
@@ -57,7 +57,7 @@ MOV P1 2
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   CHECKITEMTYPE 2 30
 #ACT
@@ -71,7 +71,7 @@ MOV P1 10
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   CHECKITEMTYPE 10 64
 #ACT
@@ -85,7 +85,7 @@ MOV P1 1
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 7
+MOVR P3 0 8
 #IF
   checkitemTYPE 1 5
 #ACT
@@ -106,7 +106,7 @@ MOV P1 11
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   CHECKITEMTYPE 11 62
 #ACT
@@ -120,7 +120,7 @@ MOV P1 4
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   checkitemTYPE 4 15
 #ACT
@@ -134,7 +134,7 @@ MOV P1 0
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   checkitemTYPE 0 11
 #ACT
@@ -155,7 +155,7 @@ MOV P1 3
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 4
+MOVR P3 0 5
 #IF
   checkitemTYPE 3 19 
 #ACT
@@ -176,6 +176,14 @@ BREAK
 #ELSESAY
 请将要调整的项链戴在身上\
 [@对半几率]
+#IF
+small <$GAMEGIRD> 5
+#ACT
+#SAY
+你的灵符不够！！\
+<返回/@@main>
+#ELSEACT
+GAMEGIRD - 5
 #IF
 RANDOM 2
 #ACT

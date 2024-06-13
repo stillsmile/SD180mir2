@@ -6,6 +6,11 @@
 <重复道具/AUTOCOLOR=161>  请多回收几次\
 <回收装备/@回收>
 [@回收]
+#if
+checkitem 生命项链 1
+#ACT
+take 生命项链 1
+GAMEGIRD + 2
 
 #if
 checkitem 骑士手镯 1

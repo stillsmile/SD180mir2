@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=253400
+ItemNumber=266265
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -5731,7 +5731,7 @@ ValidateLockHum=1
 ValidateCheckOpen=0
 ValidateCheckOKCount=6
 ValidateOKTimeOut=60
-ClientBuyShopItemTime=3
+ClientBuyShopItemTime=0
 Skill72BaseRate=20
 Skill72AddRate=20
 HeroWarrorHPRate=100

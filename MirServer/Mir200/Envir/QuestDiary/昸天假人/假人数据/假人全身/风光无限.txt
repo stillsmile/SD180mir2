@@ -15,12 +15,12 @@ Level=48
 [UseItems]
 UseItems0=烈焰魔衣(男)
 UseItems1=镇天
-UseItems2=
+UseItems2=荣誉勋章12号
 UseItems3=法神项链
 UseItems4=魔龙盔
 UseItems5=思贝儿手镯
 UseItems6=思贝儿手镯
-UseItems7=降妖除魔戒指
+UseItems7=红宝石戒指
 UseItems8=红宝石戒指
 UseItems9=
 UseItems10=钢铁腰带
