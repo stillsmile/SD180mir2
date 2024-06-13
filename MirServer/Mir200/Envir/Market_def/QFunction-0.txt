@@ -12,6 +12,7 @@
 [@ButtonClick3]
 
 [@ButtonClick4]
+
 #IF
 #ACT
 #CALL [系统功能\游戏辅助.txt] @辅助
@@ -20,6 +21,10 @@
 [@ItemBagButtonClick1]
 #ACT
 #CALL [系统功能\垃圾回收.txt] @回收垃圾
+
+[@ItemBagButtonClick2]
+#ACT
+#CALL [系统功能\药物打捆.txt] @药物打捆
 
 [@StdModeFunc30]
 #IF
@@ -375,6 +380,10 @@ RECALLMOB 楔蛾 <$STR(S98)> 120 5
 [@UserCmd1]
 #ACT
 #CALL [系统功能\后台管理.txt] @管理
+
+[@UserCmd2]
+#ACT
+#CALL [系统功能\垃圾回收.txt] @回收垃圾
 
 [@Help]
 #ACT

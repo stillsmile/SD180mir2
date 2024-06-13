@@ -5,13 +5,39 @@
 <注意：重要物品请一定存放好后再回收，以免被误回收!!!!!!!!!!/AUTOCOLOR=249>\
 <重复道具/AUTOCOLOR=161>  请多回收几次\
 <回收装备/@回收>
-#if
 [@回收]
+
+#if
+checkitem 骑士手镯 1
+#ACT
+take 骑士手镯 1
+GAMEGIRD + 2
+
+
 #if
 checkitem 传送戒指 1
 #ACT
 take 传送戒指 1
 GAMEGIRD + 1
+
+#if
+checkitem 幽灵手套 1
+#ACT
+take 幽灵手套 1
+GAMEGIRD + 1
+
+#if
+checkitem 红宝石戒指 1
+#ACT
+take 红宝石戒指 1
+GAMEGIRD + 1
+
+#if
+checkitem 龙之戒指 1
+#ACT
+take 龙之戒指 1
+GAMEGIRD + 1
+
 
 #if
 checkitem 护身戒指 1
@@ -294,24 +320,6 @@ GAMEGIRD + 1
 checkitem 命运项链 1
 #ACT
 take 命运项链 1
-GAMEGIRD + 1
-
-#if
-checkitem 魔力戒指 1
-#ACT
-take 魔力戒指 1
-GAMEGIRD + 1
-
-#if
-checkitem 魔力手镯 1
-#ACT
-take 魔力手镯 1
-GAMEGIRD + 1
-
-#if
-checkitem 魔力项链 1
-#ACT
-take 魔力项链 1
 GAMEGIRD + 1
 
 #if
@@ -1071,5 +1079,5 @@ take 荣誉勋章55号 1
 GAMEGIRD + 5
 
 #ELSEACT
-SENDMSG 6 〖提示〗一键回收成功,你的灵符数位：<$GAMEGIRD>
+SENDMSG 6 你的灵符数位：<$GAMEGIRD>
 }

@@ -19,11 +19,11 @@ UseItems2=荣誉勋章32号
 UseItems3=恶魔铃铛
 UseItems4=道士头盔
 UseItems5=黑檀手镯
-UseItems6=金手镯
+UseItems6=黑檀手镯
 UseItems7=紫碧螺
 UseItems8=红宝石戒指
 UseItems9=
-UseItems10=
+UseItems10=兽皮腰带
 UseItems11=布鞋
 UseItems12=
 [Say]
