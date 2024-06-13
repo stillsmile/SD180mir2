@@ -11,3 +11,10 @@ MagIcon2.wil
 magic8.wil
 magic7.wil
 Mon26.wil
+Magic.wil
+magic4.wil
+magic2.wil
+Mon23.wil
+Mon24.wil
+stateitem.wil
+HumEffect2.wil

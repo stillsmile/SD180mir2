@@ -11,6 +11,8 @@
 ;界面UI声望按钮
 [@ButtonClick3]
 
+[@ButtonClick5]
+
 [@ButtonClick4]
 
 #IF
@@ -25,6 +27,94 @@
 [@ItemBagButtonClick2]
 #ACT
 #CALL [系统功能\药物打捆.txt] @药物打捆
+;buff图标
+[@避寒神丹BUFF]
+#ACT
+;AddBUttON 20 13 450 451 452 <$STR(N$我的屏幕宽度)> 300 0 103#巅峰后台 255#强大的管理面板　\254#只有后台管理才能看到此按钮　
+ADDBUTTON 9 10 342 342 342 400 10 1  护体 神丹护体中，你不会被冰冻
+DELAYCALL 300000 @避寒神丹BUFF结束
+[@避寒神丹BUFF结束]
+#ACT
+DELBUTTON 10
+
+;地图事件
+[@火龙]
+#IF
+NOT EQUAL U1 1
+#ACT
+map 1
+SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
+SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
+SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
+
+[@经验密境]
+#IF
+equal U2 0
+#ACT
+map 1
+SENDMSG 7 你没有经验密境许可！不能踏入！
+SENDMSG 7 你没有经验密境许可！不能踏入！
+SENDMSG 7 你没有经验密镜许可！不能踏入！
+
+[@StdModeFunc41]
+#IF
+#ACT
+Mov D41 10000000
+	Mul D41 <$KILLMONEXPRATE>
+	changeexp + D41
+	
+
+[@StdModeFunc40]
+#IF
+#ACT
+Mov D40 5000000
+	Mul D40 <$KILLMONEXPRATE>
+	changeexp + D40
+	
+
+[@StdModeFunc39]
+#IF
+#ACT
+Mov D39 1000000
+	Mul D39 <$KILLMONEXPRATE>
+	changeexp + D39
+	
+[@StdModeFunc38]
+#IF
+#ACT
+Mov D38 200000
+	Mul D38 <$KILLMONEXPRATE>
+	changeexp + D38
+	
+[@StdModeFunc37]
+#IF
+#ACT
+Mov D37 100000
+	Mul D37 <$KILLMONEXPRATE>
+	changeexp + D37
+	
+[@StdModeFunc36]
+#IF
+#ACT
+Mov D36 50000
+	Mul D36 <$KILLMONEXPRATE>
+	changeexp + D36
+
+[@StdModeFunc35]
+#IF
+#ACT
+ChangeModeEx 16 300
+GOTO @避寒神丹BUFF
+SENDMSG 7 你获得了5分钟防冰冻属性！
+
+
+[@StdModeFunc33]
+#IF
+#ACT
+Gmexecute showeffect 76
+KILLMONEXPRATE 1000 3600
+SENDMSG 7 你获得了1个小时十倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+
 
 [@StdModeFunc32]
 #IF
@@ -396,6 +486,7 @@ RECALLMOB 楔蛾 <$STR(S98)> 120 5
 [@UserCmd1]
 #ACT
 #CALL [系统功能\垃圾回收.txt] @回收垃圾
+#CALL [系统功能\装备回收.txt] @回收
 
 [@UserCmd2]
 #ACT
@@ -404,6 +495,14 @@ RECALLMOB 楔蛾 <$STR(S98)> 120 5
 #ACT
 #CALL [系统功能\帮助菜单.txt] @帮菜
 
+[@UserCmd3]
+#IF
+#ACT
+POWERRATE 100000 600 
+CHANGESPEED 1 10
+CHANGESPEED 2 10
+USEBONUSPOINT 8 + 100
+SENDMSG 7 GM秒怪模式
 ;施毒术
 [@MagSelfFunc6]
 #IF

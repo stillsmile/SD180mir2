@@ -1,10 +1,10 @@
 [Setup]
 CastleName=É³°Í¿Ë
 ChangeDate=2023/7/29 17:18:55
-WarDate=2023/7/29 17:18:55
-IncomeToday=2023/8/31 0:00:06
-TotalGold=591500
-TodayIncome=8000
+WarDate=2023/10/13 20:00:04
+IncomeToday=2023/10/31 0:00:09
+TotalGold=2000000
+TodayIncome=122000
 OwnGuild=
 [Defense]
 CastleMapList=0151,0152,0153,0154,0155,0156,
@@ -95,10 +95,10 @@ Guard_4_X=676
 Guard_4_Y=329
 Guard_4_HP=0
 MainDoorOpen=1
-MainDoorHP=6556
-LeftWallHP=4345
-CenterWallHP=4278
-RightWallHP=4412
+MainDoorHP=9772
+LeftWallHP=5000
+CenterWallHP=5000
+RightWallHP=5000
 CastleWarAreaHomeMap=3
 CastleWarAreaHomeX=330
 CastleWarAreaHomeY=330

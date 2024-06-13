@@ -85,7 +85,7 @@ MOV P1 1
 ;值变量
 MOVR P2 1 7
 ;属性变量
-MOVR P3 0 8
+MOVR P3 0 7
 #IF
   checkitemTYPE 1 5
 #ACT
