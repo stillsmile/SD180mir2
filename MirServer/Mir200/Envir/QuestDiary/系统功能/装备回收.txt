@@ -7,6 +7,55 @@
 <回收装备/@回收>
 [@回收]
 #if
+checkitem 阎罗手套 1
+#ACT
+take 阎罗手套 1
+GAMEGIRD + 3
+
+#if
+checkitem 龙之手镯 1
+#ACT
+take 龙之手镯 1
+GAMEGIRD + 3
+
+
+#if
+checkitem 恶魔铃铛 1
+#ACT
+take 恶魔铃铛 1
+GAMEGIRD + 3
+
+#if
+checkitem 灵魂项链 1
+#ACT
+take 灵魂项链 1
+GAMEGIRD + 3
+
+#if
+checkitem 泰坦戒指 1
+#ACT
+take 泰坦戒指 1
+GAMEGIRD + 3
+
+#if
+checkitem 紫碧螺 1
+#ACT
+take 紫碧螺 1
+GAMEGIRD + 1
+
+#if
+checkitem 三眼手镯 1
+#ACT
+take 三眼手镯 1
+GAMEGIRD + 1
+
+#if
+checkitem 天珠项链 1
+#ACT
+take 天珠项链 1
+GAMEGIRD + 1
+
+#if
 checkitem 心灵手镯 1
 #ACT
 take 心灵手镯 1

@@ -11,11 +11,11 @@ Job=1
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=32
+Level=34
 [UseItems]
 UseItems0=魔法长袍(女)
-UseItems1=偃月
-UseItems2=荣誉勋章31号
+UseItems1=魔杖
+UseItems2=荣誉勋章54号
 UseItems3=生命项链
 UseItems4=祈祷头盔
 UseItems5=思贝儿手镯
@@ -23,8 +23,8 @@ UseItems6=黑檀手镯
 UseItems7=降妖除魔戒指
 UseItems8=降妖除魔戒指
 UseItems9=
-UseItems10=铁腰带
-UseItems11=鹿皮靴
+UseItems10=青铜腰带
+UseItems11=紫绸靴
 UseItems12=
 [Say]
 0=你想找死？

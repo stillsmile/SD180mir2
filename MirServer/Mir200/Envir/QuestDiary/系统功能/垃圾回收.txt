@@ -1,6 +1,12 @@
 [@回收垃圾]
 {
 #if
+checkitem 黑铁矿石 1
+#ACT
+take 黑铁矿石 1
+GAMEGOLD + 1
+
+#if
 checkitem 狂风戒指 1
 #ACT
 take 狂风戒指 1
