@@ -7,6 +7,12 @@
 <回收装备/@回收>
 [@回收]
 #if
+checkitem 心灵手镯 1
+#ACT
+take 心灵手镯 1
+GAMEGIRD + 1
+
+#if
 checkitem 铂金戒指 1
 #ACT
 take 铂金戒指 1

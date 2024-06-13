@@ -20,10 +20,10 @@ UseItems3=烈焰项链
 UseItems4=法神头盔
 UseItems5=烈焰护腕
 UseItems6=烈焰护腕
-UseItems7=红宝石戒指
+UseItems7=紫碧螺
 UseItems8=紫碧螺
 UseItems9=
-UseItems10=钢铁腰带
+UseItems10=铁腰带
 UseItems11=烈焰魔靴
 UseItems12=
 [Say]

@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=297248
+ItemNumber=342655
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -3013,7 +3013,7 @@ NotCanUseClientConfig=0
 ActionLogButton=0
 MissionButton=0
 FriendButton=0
-ControlHelpButton=0
+ControlHelpButton=1
 RankButton=0
 WhisperButton=0
 OpenShopButton=1
