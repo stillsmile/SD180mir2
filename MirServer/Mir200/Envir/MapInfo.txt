@@ -1,5 +1,8 @@
 ;传奇世界所有场所/地图座标配置文件
-[0	比奇省] 
+;新加冰雪地图
+[YXSD 冰雪1] NORECALL   NOGUILDRECALL  NODEARRECALL  NORECONNECT(3)  DARK
+
+[0	比奇省] DARK
 [0122 宫殿 0] DAY
 [0110 研究院 0]  FIGHT
 [0111 研究院 0]  FIGHT

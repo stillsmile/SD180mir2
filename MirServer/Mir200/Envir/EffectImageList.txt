@@ -7,3 +7,6 @@ Prguse3.wil
 Items1.wil
 DoItems1.wil
 ws.Wil
+MagIcon2.wil
+magic8.wil
+magic7.wil
