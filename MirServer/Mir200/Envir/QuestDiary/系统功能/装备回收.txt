@@ -7,16 +7,34 @@
 <回收装备/@回收>
 [@回收]
 #if
+checkitem 铂金戒指 1
+#ACT
+take 铂金戒指 1
+GAMEGIRD + 1
+
+#if
+checkitem 思贝儿手镯 1
+#ACT
+take 思贝儿手镯 1
+GAMEGIRD + 1
+
+#if
+checkitem 幽灵项链 1
+#ACT
+take 幽灵项链 1
+GAMEGIRD + 1
+
+#if
 checkitem 生命项链 1
 #ACT
 take 生命项链 1
-GAMEGIRD + 2
+GAMEGIRD + 1
 
 #if
 checkitem 骑士手镯 1
 #ACT
 take 骑士手镯 1
-GAMEGIRD + 2
+GAMEGIRD + 1
 
 
 #if

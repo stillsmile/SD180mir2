@@ -11,9 +11,9 @@ Job=0
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=30
+Level=31
 [UseItems]
-UseItems0=重盔甲(男)
+UseItems0=战神盔甲(男)
 UseItems1=修罗
 UseItems2=
 UseItems3=蓝翡翠项链

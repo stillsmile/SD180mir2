@@ -24,7 +24,7 @@ UseItems7=×Ï±ÌÂİ
 UseItems8=½µÑı³ıÄ§½äÖ¸
 UseItems9=
 UseItems10=ÊŞÆ¤Ñü´ø
-UseItems11=Â¹Æ¤Ñ¥
+UseItems11=×Ï³ñÑ¥
 UseItems12=
 [Say]
 0=ÄãÏëÕÒËÀ£¿

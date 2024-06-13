@@ -1,6 +1,12 @@
 [@回收垃圾]
 {
 #if
+checkitem 狂风戒指 1
+#ACT
+take 狂风戒指 1
+GAMEGOLD + 1
+
+#if
 checkitem 辟邪手镯 1
 #ACT
 take 辟邪手镯 1
@@ -194,6 +200,12 @@ GAMEGOLD + 1
 checkitem 轻型盔甲(女) 1
 #ACT
 take 轻型盔甲(女) 1
+GAMEGOLD + 1
+
+#if
+checkitem 珊瑚戒指 1
+#ACT
+take 珊瑚戒指 1
 GAMEGOLD + 1
 
 #if

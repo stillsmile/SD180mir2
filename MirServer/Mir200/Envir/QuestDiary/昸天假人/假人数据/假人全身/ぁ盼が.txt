@@ -15,11 +15,11 @@ Level=36
 [UseItems]
 UseItems0=魔法长袍(女)
 UseItems1=偃月
-UseItems2=
+UseItems2=荣誉勋章32号
 UseItems3=生命项链
 UseItems4=祈祷头盔
 UseItems5=龙之手镯
-UseItems6=思贝儿手镯
+UseItems6=龙之手镯
 UseItems7=降妖除魔戒指
 UseItems8=法神戒指
 UseItems9=

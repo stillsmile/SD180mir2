@@ -15,10 +15,10 @@ Level=41
 [UseItems]
 UseItems0=魔法长袍(女)
 UseItems1=魔杖
-UseItems2=荣誉勋章51号
+UseItems2=
 UseItems3=生命项链
 UseItems4=道士头盔
-UseItems5=法神手镯
+UseItems5=黑檀手镯
 UseItems6=黑檀手镯
 UseItems7=降妖除魔戒指
 UseItems8=烈焰魔戒
