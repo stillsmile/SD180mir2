@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=1557840
+ItemNumber=2989733
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -256,7 +256,7 @@ ShowGuildName=1
 MonSayMsg=0
 MonsterPowerRate=10
 ItemsPowerRate=10
-ItemNumberEx=1073742415
+ItemNumberEx=1073742416
 StartCastlewarTime=20
 StartPointSize=2
 PasswordLockSystem=1

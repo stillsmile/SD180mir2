@@ -11,9 +11,9 @@ Job=1
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=40
+Level=41
 [UseItems]
-UseItems0=魔法长袍(女)
+UseItems0=恶魔长袍(女)
 UseItems1=骨玉权杖
 UseItems2=法神纹章
 UseItems3=烈焰项链
@@ -21,9 +21,9 @@ UseItems4=法神头盔
 UseItems5=圣魔手镯
 UseItems6=圣魔手镯
 UseItems7=法神戒指
-UseItems8=红宝石戒指
+UseItems8=紫碧螺
 UseItems9=
-UseItems10=钢铁腰带
+UseItems10=烈焰腰带
 UseItems11=避魂靴
 UseItems12=
 [Say]

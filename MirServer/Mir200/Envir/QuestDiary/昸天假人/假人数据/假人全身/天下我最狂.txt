@@ -11,7 +11,7 @@ Job=0
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=38
+Level=40
 [UseItems]
 UseItems0=战神盔甲(男)
 UseItems1=井中月

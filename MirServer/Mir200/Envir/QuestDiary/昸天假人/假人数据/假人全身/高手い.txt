@@ -11,11 +11,11 @@ Job=0
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=38
+Level=40
 [UseItems]
 UseItems0=重盔甲(男)
-UseItems1=凝霜
-UseItems2=
+UseItems1=裁决之杖
+UseItems2=圣战纹章
 UseItems3=圣战项链
 UseItems4=黑铁头盔
 UseItems5=战神手镯
@@ -24,7 +24,7 @@ UseItems7=龙之戒指
 UseItems8=珊瑚戒指
 UseItems9=
 UseItems10=钢铁腰带
-UseItems11=鹿皮靴
+UseItems11=避魂靴
 UseItems12=
 [Say]
 0=你想找死？

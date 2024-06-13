@@ -11,7 +11,7 @@ Job=1
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=38
+Level=40
 [UseItems]
 UseItems0=魔法长袍(女)
 UseItems1=血饮
@@ -19,7 +19,7 @@ UseItems2=荣誉勋章31号
 UseItems3=放大镜
 UseItems4=魔龙盔
 UseItems5=圣魔手镯
-UseItems6=法神手镯
+UseItems6=圣魔手镯
 UseItems7=法神戒指
 UseItems8=法神戒指
 UseItems9=

@@ -11,7 +11,7 @@ Job=0
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=39
+Level=41
 [UseItems]
 UseItems0=Õ½Éñ¿ø¼×(Å®)
 UseItems1=Á¶Óü
