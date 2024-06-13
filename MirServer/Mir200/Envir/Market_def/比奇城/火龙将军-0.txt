@@ -31,7 +31,9 @@
 #IF
 NOT EQUAL U1 1
 #SAY
-你还不是火龙勇士，我没办法让你去这么危险的地方！\
+你还不是火龙勇士，我没办法让你去这么危险的地方\
+#ACT
+BREAK
 #ELSEACT
 	#IF
 	checkitem 火龙凭证 1
@@ -46,6 +48,9 @@ NOT EQUAL U1 1
 	<返回/@main>\\  
 	#ELSESAY 
 	嗯，你的等级太低了，不过，\你给我一个火龙凭证，我就送你进去。\
+	#ELSEACT
+	BREAK
+
 [@进去] 
 #IF
 CHECKCREDITPOINT < 200

@@ -15,7 +15,7 @@ Level=44
 [UseItems]
 UseItems0=天师长袍
 UseItems1=无极棍
-UseItems2=火把
+UseItems2=荣誉勋章42号
 UseItems3=天尊项链
 UseItems4=天尊头盔
 UseItems5=天尊手镯

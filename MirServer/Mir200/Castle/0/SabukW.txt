@@ -4,7 +4,7 @@ ChangeDate=2023/7/29 17:18:55
 WarDate=2023/10/13 20:00:04
 IncomeToday=2023/10/31 0:00:09
 TotalGold=2000000
-TodayIncome=122000
+TodayIncome=123000
 OwnGuild=
 [Defense]
 CastleMapList=0151,0152,0153,0154,0155,0156,

@@ -13,7 +13,7 @@ HAIR=2
 NeedMagicItem=1
 Level=39
 [UseItems]
-UseItems0=魔法长袍(男)
+UseItems0=恶魔长袍(男)
 UseItems1=骨玉权杖
 UseItems2=法神纹章
 UseItems3=法神项链
