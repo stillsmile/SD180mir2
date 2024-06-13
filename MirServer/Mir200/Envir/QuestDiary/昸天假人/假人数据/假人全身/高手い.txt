@@ -11,7 +11,7 @@ Job=0
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=22
+Level=23
 [UseItems]
 UseItems0=重盔甲(男)
 UseItems1=修罗
@@ -20,11 +20,11 @@ UseItems3=魔鬼项链
 UseItems4=魔法头盔
 UseItems5=死神手套
 UseItems6=坚固手套
-UseItems7=骷髅戒指
+UseItems7=黑色水晶戒指
 UseItems8=骷髅戒指
 UseItems9=
 UseItems10=兽皮腰带
-UseItems11=布鞋
+UseItems11=
 UseItems12=
 [Say]
 0=你想找死？

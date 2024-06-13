@@ -1,5 +1,6 @@
 [@互换]
 {
+\\
 #SAY
 灵符与金币的比例是 1：10000\
 <灵符换金币/@@InPutInteger1>    <金币换灵符/@@InPutInteger2>\
@@ -7,7 +8,7 @@
 元宝与金币的比例是 1：1000\
 <元宝换金币/@@InPutInteger3>    <金币换元宝/@@InPutInteger4>\
 <☆/AUTOCOLOR=154><≡≡≡≡≡≡≡≡/AUTOCOLOR=245><☆/AUTOCOLOR=154>\
-元宝与金币的比例是 1：10000\
+声望与金币的比例是 1：10000\
 <声望换金币/@@InPutInteger5>    <金币换声望/@@InPutInteger6>\
 ;灵符换金币
 [@InPutInteger1]
@@ -83,7 +84,7 @@ CHECKCREDITPOINT < <$STR(N5)>
 <返回/@互换>
 #ELSEACT
 MUL P5 N5 10000
-GAMEGOLD - N5
+CREDITPOINT - N5
 give 金币 P5
 SENDMSG 7 兑换<$STR(P5)>金币！
 

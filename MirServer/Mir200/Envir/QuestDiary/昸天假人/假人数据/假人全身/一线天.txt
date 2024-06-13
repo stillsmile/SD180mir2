@@ -23,7 +23,7 @@ UseItems6=龙之手镯
 UseItems7=红宝石戒指
 UseItems8=降妖除魔戒指
 UseItems9=
-UseItems10=
+UseItems10=兽皮腰带
 UseItems11=
 UseItems12=
 [Say]

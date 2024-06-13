@@ -11,7 +11,7 @@ Job=1
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=20
+Level=22
 [UseItems]
 UseItems0=轻型盔甲(男)
 UseItems1=偃月
@@ -21,9 +21,9 @@ UseItems4=魔法头盔
 UseItems5=黑檀手镯
 UseItems6=黑檀手镯
 UseItems7=蛇眼戒指
-UseItems8=生铁戒指
+UseItems8=蛇眼戒指
 UseItems9=
-UseItems10=
+UseItems10=铁腰带
 UseItems11=布鞋
 UseItems12=
 [Say]

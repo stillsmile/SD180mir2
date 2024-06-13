@@ -3,8 +3,8 @@ CastleName=É³°Í¿Ë
 ChangeDate=2023/7/29 17:18:55
 WarDate=2023/7/29 17:18:55
 IncomeToday=2023/7/30 0:00:04
-TotalGold=343500
-TodayIncome=68000
+TotalGold=349500
+TodayIncome=6000
 OwnGuild=
 [Defense]
 CastleMapList=0151,0152,0153,0154,0155,0156,
