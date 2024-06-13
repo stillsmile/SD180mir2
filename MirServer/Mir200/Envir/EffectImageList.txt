@@ -10,3 +10,4 @@ ws.Wil
 MagIcon2.wil
 magic8.wil
 magic7.wil
+Mon26.wil

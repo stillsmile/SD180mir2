@@ -26,12 +26,27 @@
 #ACT
 #CALL [系统功能\药物打捆.txt] @药物打捆
 
+[@StdModeFunc32]
+#IF
+#ACT
+Gmexecute showeffect 76
+KILLMONEXPRATE 500 3600
+SENDMSG 7 你获得了1个小时五倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+
+[@StdModeFunc31]
+#IF
+#ACT
+Gmexecute showeffect 76
+KILLMONEXPRATE 300 3600
+SENDMSG 7 你获得了1个小时三倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+
 [@StdModeFunc30]
 #IF
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE 200 3600
 SENDMSG 7 你获得了1个小时双倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+
 
 [@StdModeFunc29]
 #IF

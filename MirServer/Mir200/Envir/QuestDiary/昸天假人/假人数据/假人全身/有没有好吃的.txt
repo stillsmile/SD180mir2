@@ -15,13 +15,13 @@ Level=42
 [UseItems]
 UseItems0=аряФд╖рб(е╝)
 UseItems1=я╙рШ
-UseItems2=хысЧя╚уб12╨е
+UseItems2=хысЧя╚уб54╨е
 UseItems3=аряФоНа╢
 UseItems4=д╖аЗ©Ь
 UseItems5=аряФ╩╓мС
 UseItems6=й╔д╖йжОМ
-UseItems7=╨Л╠╕й╞╫Дж╦
-UseItems8=╫╣яЩЁЩд╖╫Дж╦
+UseItems7=╥╗иЯ╫Дж╦
+UseItems8=во╠лбщ
 UseItems9=
 UseItems10=лЗяЭ╢Ь
 UseItems11=╠э╩Йя╔
