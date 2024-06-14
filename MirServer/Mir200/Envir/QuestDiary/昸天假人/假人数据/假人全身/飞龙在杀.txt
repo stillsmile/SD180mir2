@@ -11,7 +11,7 @@ Job=0
 GENDER=0
 HAIR=2
 NeedMagicItem=1
-Level=42
+Level=43
 [UseItems]
 UseItems0=战神盔甲(男)
 UseItems1=命运之刃

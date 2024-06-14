@@ -2,7 +2,7 @@
 #SAY
 <$USERNAME>你好，有什么需要领取的礼品？
 <领取礼品/@发送装备>\\
-<退出/@传送>
+<退出/@exit>
 
 [@传送]
 #IF
@@ -16,7 +16,19 @@ CLOSE
 #IF
   checknamelist 帮助菜单自己领取物品\发送人.txt
 #ACT
-  GIVE 火龙凭证 2
+  GIVE 火龙凭证 5
+  GIVE  祖玛头像 10
+  GIVE  沃玛号角 10
+  DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
+#elsesay
+没有东西获取！！！\
+<退出/@exit>\
+
+[@发送装备1]
+#IF
+  checknamelist 帮助菜单自己领取物品\发送人.txt
+#ACT
+  GIVE 召唤白虎  1
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
 #elsesay
 没有东西获取！！！\

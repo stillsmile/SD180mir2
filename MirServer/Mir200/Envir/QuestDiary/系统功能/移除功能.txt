@@ -1,0 +1,5 @@
+辅助功能里的
+<[变更自身职业]/@职业变更> \
+ <金币换灵符/@@InPutInteger2>
+ <金币换元宝/@@InPutInteger4>
+  <金币换声望/@@InPutInteger6>

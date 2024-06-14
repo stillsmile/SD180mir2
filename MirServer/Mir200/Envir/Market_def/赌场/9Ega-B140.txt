@@ -21,13 +21,7 @@ BreakTimeRecall
 break
 
 [@main-1]
-#IF
-NOT EQUAL U2 1
-#SAY
-近期你来过一次了，请稍后再试！\
-#ELSEACT
 CALCVAR HUMAN Cache = 0
-#ELSESAY
 欢迎<$USERNAME>光临.\
 这里是赌场里的最后一间房. \
 不管发生什么事情,你都要坚持下去. \
@@ -75,7 +69,6 @@ give 金砖 1
 CREDITPOINT + 10
 SENDMSG 5 提示：赌场闯关成功，你获得了10点声望，当前声望：<$CREDITPOINT>点...
 CALCVAR HUMAN Cache = 9
-mov U2 1 ;角色下标志防止刷金砖
 [@Quit]
 #IF
 #ACT

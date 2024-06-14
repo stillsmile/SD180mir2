@@ -11,7 +11,7 @@ Job=1
 GENDER=1
 HAIR=3
 NeedMagicItem=1
-Level=42
+Level=43
 [UseItems]
 UseItems0=дчиясПрб
 UseItems1=аЗяю

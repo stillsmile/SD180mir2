@@ -15,10 +15,10 @@ Level=46
 [UseItems]
 UseItems0=圣战宝甲
 UseItems1=屠龙
-UseItems2=荣誉勋章13号
+UseItems2=圣战纹章
 UseItems3=雷霆项链
 UseItems4=圣战头盔
-UseItems5=幽灵手套
+UseItems5=骑士手镯
 UseItems6=战神手镯
 UseItems7=力量戒指
 UseItems8=雷霆战戒

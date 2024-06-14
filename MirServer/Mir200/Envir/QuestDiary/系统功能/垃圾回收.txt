@@ -106,11 +106,11 @@ checkitem Ìú½£ 1
 take Ìú½£ 1
 GAMEGOLD + 1
 
-#if
-checkitem º××ì³ú 1
-#ACT
-take º××ì³ú 1
-GAMEGOLD + 1
+;#if
+;checkitem º××ì³ú 1
+;#ACT
+;take º××ì³ú 1
+;GAMEGOLD + 1
 
 #if
 checkitem ÇàÍ­¸« 1

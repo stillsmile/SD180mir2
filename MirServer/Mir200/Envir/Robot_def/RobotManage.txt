@@ -102,62 +102,62 @@ CLEARMAPMON GA1
 MonGenEx GA1 19 30 魔龙教主 10 1 0 255
 SENDMSG 1 魔龙教主已在魔龙宫殿出现，与其一决胜负,将其消灭，就能得到魔龙教主身上携带着的大量珍奇宝藏。
 
-[@盟重魔影]
-#IF
-RANDOM 3
-#ACT
-PARAM1 3
-PARAM2 650
-PARAM3 28
-MONGEN 魔龙射手 5 20
-MONGEN 魔龙刀兵 5 20
-MONGEN 魔龙破甲兵 5 20
-MONGEN 电僵王8 5 20
-MONGEN 暗之触龙神8 2 20
-MONGEN 魔龙战将 1 20
-MONGEN 魔龙力士 1 20
-MONGEN 魔龙巨蛾 1 20
-MONGEN 魔龙树妖 1 20
-MONGEN 魔影巨人 1 20
-SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(650,28)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
-Break
+;[@盟重魔影]
+;#IF
+;RANDOM 3
+;#ACT
+;PARAM1 3
+;PARAM2 650
+;PARAM3 28
+;MONGEN 魔龙射手 5 20
+;MONGEN 魔龙刀兵 5 20
+;MONGEN 魔龙破甲兵 5 20
+;MONGEN 电僵王8 5 20
+;MONGEN 暗之触龙神8 2 20
+;MONGEN 魔龙战将 1 20
+;MONGEN 魔龙力士 1 20
+;MONGEN 魔龙巨蛾 1 20
+;MONGEN 魔龙树妖 1 20
+;MONGEN 魔影巨人 1 20
+;SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(650,28)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
+;Break
 
-#IF
-RANDOM 2
-#ACT
-PARAM1 3
-PARAM2 199
-PARAM3 446
-MONGEN 魔龙射手 5 20
-MONGEN 魔龙刀兵 5 20
-MONGEN 魔龙破甲兵 5 20
-MONGEN 电僵王8 5 20
-MONGEN 暗之触龙神8 2 20
-MONGEN 魔龙战将 1 20
-MONGEN 魔龙力士 1 20
-MONGEN 魔龙巨蛾 1 20
-MONGEN 魔龙树妖 1 20
-MONGEN 魔影巨人 1 20
-SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(199,446)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
-Break
+;#IF
+;RANDOM 2
+;#ACT
+;PARAM1 3
+;PARAM2 199
+;PARAM3 446
+;MONGEN 魔龙射手 5 20
+;MONGEN 魔龙刀兵 5 20
+;MONGEN 魔龙破甲兵 5 20
+;MONGEN 电僵王8 5 20
+;MONGEN 暗之触龙神8 2 20
+;MONGEN 魔龙战将 1 20
+;MONGEN 魔龙力士 1 20
+;MONGEN 魔龙巨蛾 1 20
+;MONGEN 魔龙树妖 1 20
+;MONGEN 魔影巨人 1 20
+;SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(199,446)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
+;Break
 
-#IF
-#ACT
-PARAM1 3
-PARAM2 965
-PARAM3 270
-MONGEN 魔龙射手 5 20
-MONGEN 魔龙刀兵 5 20
-MONGEN 魔龙破甲兵 5 20
-MONGEN 电僵王8 5 20
-MONGEN 暗之触龙神8 2 20
-MONGEN 魔龙战将 1 20
-MONGEN 魔龙力士 1 20
-MONGEN 魔龙巨蛾 1 20
-MONGEN 魔龙树妖 1 20
-MONGEN 魔影巨人 1 20
-SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(965,270)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
-Break
+;#IF
+;#ACT
+;PARAM1 3
+;PARAM2 965
+;PARAM3 270
+;MONGEN 魔龙射手 5 20
+;MONGEN 魔龙刀兵 5 20
+;MONGEN 魔龙破甲兵 5 20
+;MONGEN 电僵王8 5 20
+;MONGEN 暗之触龙神8 2 20
+;MONGEN 魔龙战将 1 20
+;MONGEN 魔龙力士 1 20
+;MONGEN 魔龙巨蛾 1 20
+;MONGEN 魔龙树妖 1 20
+;MONGEN 魔影巨人 1 20
+;SENDMSG 1 邪恶的怪物军团正向玛法大陆盟重省(965,270)发起一场声势浩大的进攻，同时也带来了一个振奋人心的消息。据说这些怪物的身上携带了人们期待已久超级属性的三大至尊头盔。
+;Break
 
 [@幻境魔影]
 #IF

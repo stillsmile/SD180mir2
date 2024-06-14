@@ -1,0 +1,104 @@
+[@main]
+
+#SAY
+如果你是法师？ \ 
+可以通过灵符召唤仆从... \ 
+
+<开始召唤/@开始召唤> \
+
+<退出/@exit>
+
+[@开始召唤]
+#IF
+CHECKJOB wizard
+#ACT
+MOV P1 0
+GOTO @等级判断
+
+#ELSEACT
+MESSAGEBOX 你不是法师！！
+BREAK
+
+[@等级判断]
+#IF
+CHECKLEVELEX > 29
+#ACT
+MOV P1 1
+  #IF
+  CHECKLEVELEX > 34
+  #ACT
+  MOV P1 2
+    #IF
+    CHECKLEVELEX > 39
+    #ACT
+    MOV P1 3
+      #IF
+      CHECKLEVELEX > 49
+      #ACT
+      MOV P1 4
+        #IF
+        CHECKLEVELEX > 54
+        #ACT
+        MOV P1 5
+	#IF
+	#ACT
+	GOTO @等级判断1
+
+[@等级判断1]
+#IF 
+LARGE P1 0
+#ACT
+GOTO @等级判断2
+#ELSEACT
+MESSAGEBOX 抱歉，你的等级还无法召唤
+
+[@等级判断2]
+#IF
+LARGE P1 2
+#SAY
+我已经感受到仆从的回应，选择你的仆从。\\
+<我要召唤虎卫/@虎卫0> \\
+<我要召唤魔龙巨蛾/@魔龙巨蛾0> \\
+<退出/@exit>\
+
+#ELSESAY
+我已经感受到仆从的回应，选择你的仆从。\\
+<我要召唤虎卫/@虎卫0> \\
+<退出/@exit>\
+
+[@虎卫0]
+#IF
+small <$GAMEGIRD> 20
+#ACT
+MESSAGEBOX 你的灵符不够20枚！！\
+BREAK
+#ELSEACT
+	#if
+	CHECKSLAVECOUNT > P1
+	#act
+	MESSAGEBOX 你最多只能买:<$STR(P1)>个宝宝！！
+	BREAK
+	#ELSEACT
+	GAMEGIRD - 20
+	RECALLMOB 虎卫 3
+	MESSAGEBOX 召唤成功
+BREAK
+
+
+[@魔龙巨蛾0]
+#IF
+small <$GAMEGIRD> 100
+#ACT
+MESSAGEBOX 你的灵符不够100枚！！\
+BREAK
+#ELSEACT
+	#if
+	CHECKSLAVECOUNT > P1
+	#act
+	MESSAGEBOX 你最多只能买:<$STR(P1)>个宝宝！！
+	BREAK
+	#ELSEACT
+	GAMEGIRD - 100
+	RECALLMOB 魔龙巨蛾 70
+	MESSAGEBOX 召唤成功
+BREAK
