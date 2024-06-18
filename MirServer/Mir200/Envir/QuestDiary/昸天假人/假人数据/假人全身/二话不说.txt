@@ -15,8 +15,8 @@ Level=39
 [UseItems]
 UseItems0=幽灵战衣(女)
 UseItems1=龙纹剑
-UseItems2=天尊纹章
-UseItems3=竹笛
+UseItems2=荣誉勋章15号
+UseItems3=天珠项链
 UseItems4=道士头盔
 UseItems5=心灵手镯
 UseItems6=心灵手镯

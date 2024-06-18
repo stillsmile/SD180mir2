@@ -12,7 +12,11 @@ SendCenterMsg 180 251 穿戴护身符可获得传送能力 0 30 0
 #ACT
 ADDBUTTON 8 3 00006 00006 00006 10 400 0 声望值：<$CREDITPOINT> 
 ADDBUTTON 8 5 00006 00006 00006 10 440 0 经验倍率：<$KILLMONEXPRATE> 
-
+;刷新每日材料
+[@OnTimer3]
+#IF
+#ACT
+  CLEARNAMELIST ..\Market_def\每日领取材料\每日领取材料名单.txt
 
 
 #ACT
@@ -91,6 +95,7 @@ SetOnTimer 2 1
 ;定时发材料
 #IF
 #ACT
+;SetOnTimer 3 30
 SetOnTimer 3 36400
 
 #IF

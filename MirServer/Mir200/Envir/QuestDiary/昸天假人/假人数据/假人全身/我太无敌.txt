@@ -16,7 +16,7 @@ Level=42
 UseItems0=恶魔长袍(女)
 UseItems1=魔杖
 UseItems2=荣誉勋章42号
-UseItems3=放大镜
+UseItems3=恶魔铃铛
 UseItems4=道士头盔
 UseItems5=思贝儿手镯
 UseItems6=黑檀手镯
@@ -24,7 +24,7 @@ UseItems7=降妖除魔戒指
 UseItems8=降妖除魔戒指
 UseItems9=
 UseItems10=烈焰腰带
-UseItems11=布鞋
+UseItems11=紫绸靴
 UseItems12=
 [Say]
 0=你想找死？

@@ -15,8 +15,8 @@ Level=39
 [UseItems]
 UseItems0=幽灵战衣(男)
 UseItems1=龙纹剑
-UseItems2=荣誉勋章52号
-UseItems3=竹笛
+UseItems2=荣誉勋章22号
+UseItems3=白色虎齿项链
 UseItems4=道士头盔
 UseItems5=三眼手镯
 UseItems6=天尊手镯
@@ -24,7 +24,7 @@ UseItems7=天尊戒指
 UseItems8=泰坦戒指
 UseItems9=护身符
 UseItems10=兽皮腰带
-UseItems11=紫绸靴
+UseItems11=布鞋
 UseItems12=
 [Say]
 0=你想找死？

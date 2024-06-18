@@ -3,13 +3,13 @@
 #SAY
 <$USERNAME>今日你又为王国带来了怎样的荣耀？\
 这些珍贵的道具，或许能助你一臂之力。\
-保证你的包裹有<6/AUTOCOLOR=245>个格子哦！
+保证你的包裹有<10/AUTOCOLOR=245>个格子哦！
 <领取每日道具/@领取每日道具0>\\
 <退出/@exit>
 
 [@领取每日道具0]
 #IF
-CHECKLEVEL 45
+CHECKLEVEL 40
 #ACT
 GOTO @领取每日道具1
 #ELSESAY
@@ -26,8 +26,8 @@ GOTO @领取每日道具1
   
 #ELSEACT
   GIVE 火龙凭证 2
-  GIVE  祖玛头像 2
-  GIVE  沃玛号角 2
+  GIVE  祖玛头像 4
+  GIVE  沃玛号角 4
   ADDTEXTLIST 每日领取材料\每日领取材料名单.txt <$USERNAME>
   SENDMSG 7 每日道具领取成功！
   CLOSE
