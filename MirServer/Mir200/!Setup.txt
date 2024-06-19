@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=66730
+ItemNumber=66777
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -6788,7 +6788,7 @@ WizardItems=超级金创药,超级魔法药
 TaosItems=超级金创药,超级魔法药,灰色药粉(大量),黄色药粉(大量),护身符(大)
 WarrSkill=攻杀剑术,刺杀剑术,烈火剑法,野蛮冲撞,半月弯刀
 WizardSkill=抗拒火环,雷电术,冰咆哮,魔法盾,疾光电影,地狱雷光
-TaosSkill=治愈术,施毒术,灵魂火符,神圣战甲术,幽灵盾,召唤白虎
+TaosSkill=治愈术,施毒术,灵魂火符,神圣战甲术,幽灵盾,召唤神兽
 GuardCanAttackHumMob=1
 HeroNameColor=223
 UseKaiTianTick=5000

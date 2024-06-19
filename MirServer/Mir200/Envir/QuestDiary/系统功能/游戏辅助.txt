@@ -975,11 +975,11 @@ BREAK
 
 
 #IF
-checkitem ÕÙ»½ÉñÊŞ 1
+checkitem ÕÙ»½÷¼÷Ã 1
 CHECKJOB taoist
 #ACT
-ADDSKILL ÕÙ»½ÉñÊŞ
-take ÕÙ»½ÉñÊŞ 1
+ADDSKILL ÕÙ»½÷¼÷Ã
+take ÕÙ»½÷¼÷Ã 1
 BREAK
 
 
@@ -993,11 +993,11 @@ BREAK
 
 
 #IF
-checkitem ÕÙ»½°×»¢ 1
+checkitem ÕÙ»½ÉñÊŞ 1
 CHECKJOB taoist
 #ACT
-ADDSKILL ÕÙ»½°×»¢
-take ÕÙ»½°×»¢ 1
+ADDSKILL ÕÙ»½ÉñÊŞ
+take ÕÙ»½ÉñÊŞ 1
 BREAK
 
 

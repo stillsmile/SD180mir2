@@ -670,9 +670,9 @@ take 灵魂火符 1
 GAMEGOLD + 1
 
 #if
-checkitem 召唤神兽 1
+checkitem 召唤骷髅 1
 #ACT
-take 召唤神兽 1
+take 召唤骷髅 1
 GAMEGOLD + 1
 
 #if
@@ -717,9 +717,9 @@ take 群体治疗术 1
 GAMEGOLD + 5
 
 #if
-checkitem 召唤白虎 1
+checkitem 召唤神兽 1
 #ACT
-take 召唤白虎 1
+take 召唤神兽 1
 GAMEGOLD + 5
 
 #if
@@ -771,9 +771,9 @@ take 群体治疗术 1
 GAMEGOLD + 5
 
 #if
-checkitem 召唤白虎 1
+checkitem 召唤神兽 1
 #ACT
-take 召唤白虎 1
+take 召唤神兽 1
 GAMEGOLD + 5
 
 SENDMSG 6 〖提示〗一键回收成功，你当前帐户里元宝数为：<$GAMEGOLD>

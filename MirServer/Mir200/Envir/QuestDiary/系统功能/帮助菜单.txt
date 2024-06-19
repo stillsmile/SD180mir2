@@ -28,7 +28,7 @@ CLOSE
 #IF
   checknamelist 帮助菜单自己领取物品\发送人.txt
 #ACT
-  GIVE 召唤白虎  1
+  GIVE 召唤神兽  1
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
 #elsesay
 没有东西获取！！！\
