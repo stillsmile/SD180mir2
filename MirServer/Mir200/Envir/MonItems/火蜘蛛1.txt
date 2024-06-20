@@ -1,4 +1,4 @@
-#CHILD 1/16 RANDOM
+#CHILD 1/4 RANDOM
 (
 1/1 寂静之手(战)
 1/1 寂静之手(法)
@@ -53,7 +53,7 @@
 1/1 青龙刺
 1/1 龙炎之刃
 )
-#CHILD 1/12 RANDOM
+#CHILD 1/6 RANDOM
 (
 1/1 狂雷战盔
 1/1 狂雷项链
@@ -155,7 +155,7 @@
 )
 
 
-#CHILD 1/80 RANDOM
+#CHILD 1/30 RANDOM
 (
 1/1 主宰神甲(男)
 1/1 主宰神甲(女)
