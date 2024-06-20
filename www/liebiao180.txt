@@ -1,6 +1,7 @@
 [Server]
 ; 标题|服务器标题|服务器名称|服务器IP|服务器端口|是否自动展开(0不展开，1自动展开)|微端IP|微端端口(0表示不使用微端)|安全盾防火墙端口(0表示不使用防火墙)|防火墙类型，0=安全盾防火墙 1=风盾 2=恶魔盾
 0=腾讯云服务器|盛大1.80|王思服务器|43.140.242.182|7000|1|0|0|0
+1=腾讯云服务器|盛大1.80测试服|测试服|43.140.242.182|17000|1|0|0|0
 [Setup]
 公告地址=http://43.140.242.182/jieshao.html
 官方首页=http://43.140.242.182/jieshao.html
@@ -32,6 +33,5 @@
 ;6=2     Resources\Wav     ResWav.zip     fdc49e06560f62ddbc5c178d3c02b736     http://www.gameofmir.com/ResWav.zip
 ;7=2     Resources\Graphics\Human     Human.zip     fdc49e06560f62ddbc5c178d3c02b736     http://www.gameofmir.com/Human.zip
 
-0=1	\     1.80东乡传奇1.0.exe     2e887c101eda60ef05c97d416c2e0940     http://43.140.242.182/bd/1.80东乡传奇1.0.exe
-1=2     Data     wsData.zip     f45a6d8cdcd620234139cb6db9f245bc    http://43.140.242.182/bd/wsData.zip
-2=2     Data     MMap.zip     c99103591a775169689f22f12f05e776    http://43.140.242.182/bd/MMap.zip
+0=1	\     复古1.80新登录器(双开).exe     f1bee698b55af6a43a5314f9fceef005     http://43.140.242.182/bd/复古1.80新登录器(双开).exe
+1=2     Data     补丁.zip     e141c28da4f66f33aa29c4a07b223318    http://43.140.242.182/bd/补丁.zip
