@@ -76,7 +76,7 @@ BREAK
 	#if
 	CHECKSLAVECOUNT > P1
 	#act
-	MESSAGEBOX 你最多只能买:<$STR(P1)>个宝宝！！
+	MESSAGEBOX 目前你只能拥有这些仆从了!
 	BREAK
 	#ELSEACT
 	GAMEGIRD - 20
@@ -95,7 +95,7 @@ BREAK
 	#if
 	CHECKSLAVECOUNT > P1
 	#act
-	MESSAGEBOX 你最多只能买:<$STR(P1)>个宝宝！！
+	MESSAGEBOX 目前你只能拥有这些仆从了!
 	BREAK
 	#ELSEACT
 	GAMEGIRD - 100

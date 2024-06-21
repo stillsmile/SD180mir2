@@ -32,40 +32,38 @@
 NOT EQUAL U1 1
 #SAY
 你还不是火龙勇士，我没办法让你去这么危险的地方\
+<返回/@main>\\  
+#ELSESAY
+你好，火龙勇士!
+这个区域药物无法治愈你，所有的传送魔法将失效！\
+我需要你支付200声望值，并交给我一个火龙凭证方能护送你进去。\
+里面有滚烫的岩浆，每分钟需要60元宝购买护体真气。\
+那里非常危险，你确定要去吗？\
+<我想试试/@进去>\\  
+<返回/@main>\\  
+
+[@进去] 
+#IF
+CHECKCREDITPOINT < 200
 #ACT
+MESSAGEBOX 你的声望不够！！
 BREAK
 #ELSEACT
 	#IF
 	checkitem 火龙凭证 1
 	#ACT
 	take 火龙凭证 1
-	#SAY
-	这个区域药物无法治愈你，所有的传送魔法将失效！\
-	我需要你支付200声望值，方能护送你进去。\
-	里面有滚烫的岩浆，每分钟需要60元宝购买护体真气。\
-	那里非常危险，你确定要去吗？\
-	<我要支付200声望进去/@进去>\\  
-	<返回/@main>\\  
-	#ELSESAY 
-	嗯，你的等级太低了，不过，\你给我一个火龙凭证，我就送你进去。\
+	CREDITPOINT - 200
+	MAPMOVE  hl001 385 346
+	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	#ELSEACT
+	MESSAGEBOX 没有火龙凭证我不会让你冒险的!
 	BREAK
 
-[@进去] 
-#IF
-CHECKCREDITPOINT < 200
-#ACT
-#SAY
-你的声望不够！！\
-<返回/@main>
 
-#ELSEACT
-CREDITPOINT - 200
-map hl002
-SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 
 [@成为火龙勇士]
 必须成为真正的勇士，我才能带你进去，去魔龙地图击杀boss，\
