@@ -3,31 +3,48 @@
 #SAY
 <$USERNAME>今日你又为王国带来了怎样的荣耀？\
 这些珍贵的道具，或许能助你一臂之力。\
+40级可领取雪域相关材料\
+45级可领取火龙以及雪域材料\\
 保证你的包裹有<10/AUTOCOLOR=245>个格子哦！
 <领取每日道具/@领取每日道具0>\\
 <退出/@exit>
 
-[@领取每日道具0]
+[@领取每日道具]
 #IF
 CHECKLEVEL 40
 #ACT
-GOTO @领取每日道具1
-#ELSESAY
-你的等级不满足领取每日道具，请升级到40吧！
-<退出/@exit>
-
+	#IF
+	CHECKLEVEL 45
+	#ACT
+	GOTO @领取每日道具1
+	#ELSEACT
+	GOTO @领取每日道具2
+#ELSEACT
+MESSAGEBOX 你的等级不满足领取每日道具，请升级到40吧！
+ CLOSE
+ 
 [@领取每日道具1]
 #IF
   checknamelist 每日领取材料\每日领取材料名单.txt
-  
-#SAY
-每日只能领取一次哦，请下次再来吧！
-
-  
+#ACT
+MESSAGEBOX 每日只能领取一次哦，请下次再来吧！
 #ELSEACT
   GIVE 火龙凭证 2
   GIVE  祖玛头像 4
   GIVE  沃玛号角 4
   ADDTEXTLIST 每日领取材料\每日领取材料名单.txt <$USERNAME>
-  SENDMSG 7 每日道具领取成功！
+  SENDMSG 7 45级火龙及雪域每日道具领取成功每日道具领取成功！
+  CLOSE
+  
+[@领取每日道具2]
+#IF
+  checknamelist 每日领取材料\每日领取材料名单.txt
+ 
+#ACT
+MESSAGEBOX 每日只能领取一次哦，请下次再来吧！
+#ELSEACT
+  GIVE  祖玛头像 4
+  GIVE  沃玛号角 4
+  ADDTEXTLIST 每日领取材料\每日领取材料名单.txt <$USERNAME>
+  SENDMSG 7 40级雪域每日道具领取成功！
   CLOSE
