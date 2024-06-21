@@ -34,4 +34,4 @@
 ;7=2     Resources\Graphics\Human     Human.zip     fdc49e06560f62ddbc5c178d3c02b736     http://www.gameofmir.com/Human.zip
 
 0=1	\     ¸´¹Å1.80ÐÂµÇÂ¼Æ÷(Ë«¿ª).exe     f1bee698b55af6a43a5314f9fceef005     http://43.140.242.182/bd/¸´¹Å1.80ÐÂµÇÂ¼Æ÷(Ë«¿ª).exe
-1=2     Data     ²¹¶¡.zip     e141c28da4f66f33aa29c4a07b223318    http://43.140.242.182/bd/²¹¶¡.zip
+1=2     Data     ²¹¶¡.zip     e507522d7a0ff3b8d5bde0b8a4d6c84c    http://43.140.242.182/bd/²¹¶¡.zip
