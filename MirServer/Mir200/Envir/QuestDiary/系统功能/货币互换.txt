@@ -114,7 +114,7 @@ SENDMSG 7 金币不够100000
 ;金币换10声望
 [@金币换100个声望]
 #IF
-checkgold 100000
+checkgold 1000000
 #ACT
 	take 金币 1000000
 	CREDITPOINT + 100
