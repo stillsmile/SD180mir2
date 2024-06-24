@@ -14,6 +14,12 @@
         color: #333;  
         line-height: 1.6;  
     }  
+    .scrollable-element {  
+        height: 400px; /* 设置元素的高度 */  
+        overflow: scroll; /* 始终显示滚动条 */  
+        border: 1px solid black; /* 可选：添加边框以便看到元素边界 */  
+    }  
+
   
     /* 标题样式 */  
     h1 {  
@@ -48,27 +54,10 @@
         text-indent: 2em; /* 首行缩进 */  
     }  
   
-    /* 滚动条样式（仅适用于支持自定义滚动条的浏览器） */  
-    /* 注意：这部分样式可能不会在所有浏览器中生效 */  
-    ::-webkit-scrollbar {  
-        width: 10px;  
-    }  
-  
-    ::-webkit-scrollbar-track {  
-        background: #f1f1f1;   
-    }  
-  
-    ::-webkit-scrollbar-thumb {  
-        background: #888;   
-    }  
-  
-    ::-webkit-scrollbar-thumb:hover {  
-        background: #555;   
-    }  
 </style>    
 </head>    
-<body>    
-  <h1>群服盛大复古游玩攻略</h1>  
+<body  class="scrollable-element">    
+  <h1>群服盛大复古游玩攻略2</h1>  
   <h3>______________________</h3>  
   <h3>群号:693887629</h3>  
   <ul>  
