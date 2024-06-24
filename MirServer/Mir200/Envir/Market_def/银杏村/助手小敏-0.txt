@@ -3,6 +3,43 @@
 我可以帮你.\ \
 <跟NPC说你所能做的事情/@QUEST>(主线任务，4级前领取)\
 <从NPC那里学习玩传奇的入门技巧/@next>(支线任务，8级以前领取)
+<每日领取元宝/@每日元宝>(帮助你轻松度过30级)
+[@每日元宝]
+#IF
+  CHECKLEVELEX < 20
+#ACT
+	#IF
+	CHECKLEVELEX < 30
+	#ACT
+	GOTO @每日元宝1
+	#ELSEACT
+	GOTO @每日元宝2
+#ELSEACT
+MESSAGEBOX 你的等级已经太高了,需要自力更生哦！
+ CLOSE
+ 
+[@每日元宝1]
+#IF
+  checknamelist 每日领取材料\每日领取元宝.txt
+#ACT
+MESSAGEBOX 今天我已经帮助过你了,明天我再来吧！
+#ELSEACT
+  GAMEGOLD + 100
+  ADDTEXTLIST 每日领取材料\每日领取元宝.txt <$USERNAME>
+  SENDMSG 7 增加100元宝,希望能帮助你解决目前的困境!
+  CLOSE
+  
+[@每日元宝2]
+#IF
+  checknamelist 每日领取材料\每日领取元宝.txt
+#ACT
+MESSAGEBOX 今天我已经帮助过你了,明天我再来吧！
+#ELSEACT
+  GAMEGOLD + 500
+  ADDTEXTLIST 每日领取材料\每日领取元宝.txt <$USERNAME>
+  SENDMSG 7 增加500元宝,希望能帮助你解决目前的困境!
+  CLOSE
+  
 [@next]
 首先告诉你与NPC对话的方法. \
 与NPC对话的方法是点击对话框内的有黄色下划线的字 \

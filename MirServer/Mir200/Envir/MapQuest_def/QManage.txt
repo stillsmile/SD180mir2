@@ -17,6 +17,7 @@ ADDBUTTON 8 5 00006 00006 00006 10 440 0 经验倍率：<$KILLMONEXPRATE>
 #IF
 #ACT
   CLEARNAMELIST ..\Market_def\每日领取材料\每日领取材料名单.txt
+  CLEARNAMELIST ..\Market_def\每日领取材料\每日领取元宝.txt
 
 
 #ACT
