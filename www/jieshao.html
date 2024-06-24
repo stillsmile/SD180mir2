@@ -1,51 +1,102 @@
-﻿<!DOCTYPE html>  
-<html lang="zh">  
-<head>  
-<meta charset="UTF-8">  
-<title>游戏版本说明与攻略</title>  
-    <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-        }  
-        h1, h2 {  
-            color: #333;  
-        }  
-        a {  
-            text-decoration: none;  
-            color: blue;  
-        }  
-        a:hover {  
-            text-decoration: underline;  
-        }  
-        .content {  
-            margin: 20px;  
-        }  
-        .section {  
-            margin-bottom: 30px;  
-        }  
-        .section h2 {  
-            margin-bottom: 10px;  
-        }  
-        .section ul {  
-            list-style-type: none;  
-            padding: 0;  
-        }  
-        .section li {  
-            margin-bottom: 5px;  
-        }  
-    </style>  
-</head>  
-<body>  
+﻿<!DOCTYPE html>    
+<html lang="zh">    
+<head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>群服盛大复古游玩攻略</title>    
+<style>    
+    /* 通用样式 */  
+    body {  
+        font-family: Arial, sans-serif;  
+        margin: 0;  
+        padding: 20px;  
+        background-color: #f0f0f0;  
+        color: #333;  
+        line-height: 1.6;  
+    }  
   
-<h1>更新说明</h1>  
+    /* 标题样式 */  
+    h1 {  
+        color: #555;  
+        text-align: center;  
+    }  
   
-<h2>可双开</h2>  
-
-<h3>后期地图更新小地图</h3>  
-<h3>添加雪域地图</h3>  
- 
+    h3 {  
+        color: #888;  
+        text-decoration: underline;  
+    }  
   
-<!-- 以此类推，继续添加其他物品的掉落说明 -->  
+    /* 列表样式 */  
+    ul {  
+        list-style-type: none; /* 移除默认的列表样式 */  
+        padding: 0;  
+    }  
   
-</body>  
+    li {  
+        counter-increment: step-counter; /* 递增计数器 */  
+        margin-bottom: 10px;  
+    }  
+  
+    li::before {  
+        content: counter(step-counter) ". "; /* 使用计数器的值作为序号 */  
+        color: #f00; /* 序号颜色 */  
+        font-weight: bold; /* 序号加粗 */  
+    }  
+  
+    /* 段落样式 */  
+    p {  
+        text-indent: 2em; /* 首行缩进 */  
+    }  
+  
+    /* 滚动条样式（仅适用于支持自定义滚动条的浏览器） */  
+    /* 注意：这部分样式可能不会在所有浏览器中生效 */  
+    ::-webkit-scrollbar {  
+        width: 10px;  
+    }  
+  
+    ::-webkit-scrollbar-track {  
+        background: #f1f1f1;   
+    }  
+  
+    ::-webkit-scrollbar-thumb {  
+        background: #888;   
+    }  
+  
+    ::-webkit-scrollbar-thumb:hover {  
+        background: #555;   
+    }  
+</style>    
+</head>    
+<body>    
+  <h1>群服盛大复古游玩攻略</h1>  
+  <h3>______________________</h3>  
+  <h3>群号:693887629</h3>  
+  <ul>  
+    <li>30级之前可以在新手村助手处每日领取元宝</li>
+    <li>游戏中道士免毒,免符</li>
+    <li>游戏中的护身符每人都可携带,充当传送戒指可直接右键地方传送</li>
+    <li>建议完成原版任务可获取大量经验和资金</li>
+    <li>请不要开加速!游戏会检测攻速,魔法速度,和移动速度.太快就会锁定</li>
+    <li>道士23级双骷髅,26级3骷髅,37级双神兽,40级3神兽</li>
+    <li>雪域有高级技能书爆率[召唤月灵],[火龙气焰],[逐日剑法],[群体施毒术]</li>
+    <li>雪域需要祖玛头像和沃玛号角,火龙则需要火龙凭证.请保留好怪物爆出的道具</li>
+    <li>赤月恶魔油可在神秘药店制作魔血石</li>
+    <li>法师职业可去白日门寻找召唤大师,召唤宝宝</li>
+    <li>盟重土城的国库大臣会每日为勇士发放材料</li>
+    <li>高级装备可以找苍月岛寻找大富豪回收</li>
+    <li>幻境为双倍经验,幻境中有魔龙入侵</li>
+    <li>通过辅助传送影之道,交付幻境凭证后一直往里走便是藏宝阁.里面聚满了boss</li>
+    <li>1.80游戏内容可以百度查攻略</li>
+  </ul>  
+  <p>
+    此版本还原了1.80以前的所有版本，包括著名1.10版三英雄传说的
+40级职业装，1.28富甲天下的赌场系统，盛大当时所有的任务系统，
+1.50版虎卫传说的虎卫、鹰卫，1.60版热血神鹰的虹魔、魔血套，
+1.70版魔神归来的师徒、婚姻系统，1.10版-1.80版的所有地图，所
+有地图，所有怪物，所有怪物刷新地点，所有道具，所有NPC，都一
+一还原。此版里未出现的，都是那些被人遗忘的干干净净，而没有
+任何图片文章资料的内容，凡是有相关攻略图片的地方，我都一一
+对照还原了。
+</p>
+</body>    
 </html>
