@@ -503,6 +503,14 @@ CHANGESPEED 1 10
 CHANGESPEED 2 10
 USEBONUSPOINT 8 + 100
 SENDMSG 7 GM秒怪模式
+;清理每日名单
+[@UserCmd4]
+#IF
+  ISADMIN
+#ACT
+  CLEARNAMELIST ..\Market_def\每日领取材料\每日领取材料名单.txt
+  CLEARNAMELIST ..\Market_def\每日领取材料\每日领取元宝.txt
+
 ;施毒术
 [@MagSelfFunc6]
 #IF

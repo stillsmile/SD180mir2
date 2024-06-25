@@ -97,7 +97,7 @@ SetOnTimer 2 1
 ;定时发材料
 #IF
 #ACT
-;SetOnTimer 3 30
+
 SetOnTimer 3 36400
 
 #IF
