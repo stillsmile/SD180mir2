@@ -11,16 +11,14 @@
 
 [@领取每日道具]
 #IF
-CHECKLEVEL 40
-#ACT
-	#IF
 	CHECKLEVEL 45
 	#ACT
 	GOTO @领取每日道具1
 	BREAK
-	#ELSEACT
-	GOTO @领取每日道具2
-	BREAK
+#IF
+CHECKLEVEL 40
+#ACT
+GOTO @领取每日道具2
 #ELSEACT
 MESSAGEBOX 你的等级不满足领取每日道具，请升级到40吧！
  CLOSE
