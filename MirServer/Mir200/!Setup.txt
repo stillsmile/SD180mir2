@@ -1,6 +1,6 @@
 [Server]
 ServerIndex=0
-ServerName=1.80复古测试
+ServerName=7月活动区
 ServerNumber=0
 VentureServer=FALSE
 TestServer=TRUE
@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=133964
+ItemNumber=66498
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -256,7 +256,7 @@ ShowGuildName=1
 MonSayMsg=0
 MonsterPowerRate=10
 ItemsPowerRate=10
-ItemNumberEx=1073741862
+ItemNumberEx=1073741877
 StartCastlewarTime=20
 StartPointSize=2
 PasswordLockSystem=1

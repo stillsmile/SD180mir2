@@ -68,7 +68,7 @@ MESSAGEBOX 别开玩笑了,你根本没准备好金矿和10点声望
  #act
  take 金矿 1
  CREDITPOINT - 10
-  MESSAGEBOX 我尽量了,炼出了100金币,你首先吧
+  MESSAGEBOX 我尽量了,炼出了100金币,你先拿着吧
   give 金币 100
   BREAK
   #IF
