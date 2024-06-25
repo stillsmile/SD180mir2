@@ -3,7 +3,7 @@
 \\
 #if
 #say
-\ 
+\ \
 <☆/AUTOCOLOR=154><使用移动/@使用移动><☆/AUTOCOLOR=154><☆/AUTOCOLOR=154><辅助功能/@辅助功能><☆/AUTOCOLOR=154>\
 <☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154><☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\
 [@修复技能BUG]
