@@ -7,12 +7,7 @@
 <回收装备/@回收>\\\
 <灵符回收目录/@目录>
 [@回收]
-#if
-checkitem 火龙凭证 1
-#act
-take 火龙凭证 1
-changeexp + 50000
-gamegird + 20
+
 
 #if
 checkitem 银星勋章(道) 1
