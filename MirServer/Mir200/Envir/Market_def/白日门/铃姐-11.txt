@@ -1,0 +1,113 @@
+[@main]
+#IF
+checkjob taoist
+#OR
+CHECKSKILL 召唤月灵 = 0 0
+CHECKSKILL 召唤月灵 > 0 0
+CHECKSKILL 召唤月灵二重 =  0 0
+CHECKSKILL 召唤月灵二重 > 0 0
+CHECKSKILL 召唤月灵三重 =  0 0
+CHECKSKILL 召唤月灵三重 > 0 0
+#SAY
+\
+我能看出来,你身怀绝技呀.\
+月灵是一个神奇的仆从对吧?\
+曾经我与月灵一起生活过,我熟知它的习性..\
+有什么问题就问我吧.\\
+<召唤更多的月灵/@召唤更多的月灵> \\
+<退出/@exit>\
+#ACT
+break
+
+#IF
+checkjob taoist
+#SAY
+\
+在寒冷的雪域存在一本已经失传的秘籍\
+可以召唤来着神秘次元的生物[月灵]\
+我可以帮你提升月灵的实力\\
+
+<退出/@exit>\
+#ACT
+break
+
+
+#IF
+#SAY
+\
+真是个平平无奇的人\
+我对你的职业不感兴趣\\
+<退出/@exit>\
+#ACT
+break
+[@召唤更多的月灵]
+#OR
+CHECKSKILL 召唤月灵二重 =  0 0
+CHECKSKILL 召唤月灵 = 0 0
+#SAY
+\
+召唤月灵的技能还不够熟练哦\
+再接再厉,熟练召唤月灵了,再来找我\\
+
+
+<退出/@exit>\
+#ACT
+break
+
+#IF
+CHECKSKILL 召唤月灵二重 > 0 0
+#SAY
+看来你已经很熟练了,升级月灵需要\\
+5颗冰核和2块金砖\\
+你准备好了吗?\\
+
+<准备好了/@召唤更多的月灵2> \
+<我还没准备好@exit>\
+#ACT
+break
+
+#IF
+CHECKSKILL 召唤月灵 > 0 0
+#SAY
+看来你已经很熟练了,升级月灵需要\\
+2颗冰核和一块金砖\\
+你准备好了吗?\\
+
+<准备好了/@召唤更多的月灵1> \
+<我还没准备好@exit>\
+#ACT
+break
+#IF
+#SAY
+\
+看来你已经够强了\
+我已经无法帮助你了\\
+
+<退出@exit>\
+[@召唤更多的月灵1]
+#IF
+checkitem 金砖 1
+checkitem 冰核 2
+#ACT
+ take 金砖 1
+ take 冰核 2
+ DELSKILL 召唤月灵
+ ADDSKILL 召唤月灵二重
+ SKILLLEVEL 召唤月灵二重 = 0
+ MESSAGEBOX 升级成功,你已经获得更多的月灵召唤数量!
+#ELSEACT
+MESSAGEBOX 材料不够哦,请检查一下你的背包
+
+[@召唤更多的月灵2]
+#IF
+checkitem 金砖 2
+checkitem 冰核 5
+#ACT
+ take 金砖 2
+ take 冰核 5
+ DELSKILL 召唤月灵二重
+ ADDSKILL 召唤月灵三重
+ SKILLLEVEL 召唤月灵三重 = 0
+ MESSAGEBOX 升级成功,你已经获得更多的月灵召唤数量!
+#ELSEACT
+MESSAGEBOX 材料不够哦,请检查一下你的背包
