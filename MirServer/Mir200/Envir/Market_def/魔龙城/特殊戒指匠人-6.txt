@@ -27,7 +27,7 @@ BREAK
 
 [@强化复活戒指1]
 	#IF
-	RANDOM 2
+	RANDOM 3
 	#ACT
 	take 金砖 3
 	SENDMSG 7 升级失败！只收取金砖！
@@ -55,7 +55,7 @@ BREAK
 
 [@强化护身戒指1]
 	#IF
-	RANDOM 2
+	RANDOM 3
 	#ACT
 	take 金砖 3
 	SENDMSG 7 升级失败！只收取金砖！
@@ -82,7 +82,7 @@ BREAK
 
 [@强化麻痹戒指1]
 	#IF
-	RANDOM 2
+	RANDOM 3
 	#ACT
 	take 金砖 3
 	SENDMSG 7 升级失败！只收取金砖！
