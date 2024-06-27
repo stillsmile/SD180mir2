@@ -8,7 +8,7 @@ TestLevel=1
 TestGold=0
 TestServerUserLimit=10000
 ServiceMode=FALSE
-NonPKServer=FALSE
+NonPKServer=TRUE
 DBAddr=127.0.0.1
 DBPort=16000
 IDSAddr=127.0.0.1
@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=71615
+ItemNumber=71739
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
