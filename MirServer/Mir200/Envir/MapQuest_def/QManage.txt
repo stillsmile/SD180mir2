@@ -121,7 +121,7 @@ ISNEWHUMAN
 give 金币 500000
 give 蜡烛 1
 SENDMSG 5 新手提示：请按F12呼出游戏内挂，请于4级前到助手小姐处接任务！
-
+MAP dengdai
 #IF
 #ACT
 SENDMSG 6 提示：当前的声望值为:<$CREDITPOINT>点...
