@@ -38,6 +38,7 @@ DELAYCALL 300000 @避寒神丹BUFF结束
 DELBUTTON 10
 
 ;地图事件
+
 [@火龙]
 #IF
 NOT EQUAL U1 1
