@@ -27,6 +27,7 @@ D:\热血传奇\Data\Magic8.wil
 D:\热血传奇\Data\MagIcon.wil
 D:\热血传奇\Data\MagIcon2.wil
 D:\热血传奇\Data\mmap.wil
+D:\热血传奇\Data\mmap10.wil
 D:\热血传奇\Data\Mon1.wil
 D:\热血传奇\Data\Mon10.wil
 D:\热血传奇\Data\Mon11.wil
