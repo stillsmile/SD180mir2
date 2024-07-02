@@ -22,56 +22,9 @@ goto @main-1
  <退出/@exit>
 
 [@冶炼金矿]
-你获得了金矿?\ 
-这个是个好东西呀\
-交给我,有概率能为你炼出金砖哦!!\
-每次需要消耗10点声望哦,金矿放在背包里就可以了\\\
-  <帮我炼金吧/@冶炼金矿1>\
-  <返回/@Main>
-
-[@冶炼金矿1]
 #IF
-checkitem 金矿 1
-CHECKCREDITPOINT > 10
 #ACT
-GOTO @冶炼金矿2
-#ELSEACT
-MESSAGEBOX 别开玩笑了,你根本没准备好金矿和10点声望
-[@冶炼金矿2]
-#IF
- random 100
- #act
- take 金矿 1
- CREDITPOINT - 10
-  MESSAGEBOX 天哪,你居然练出了金砖!!!恭喜你
-  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金砖!!!
-  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金砖!!!
-  GIVE 金砖 1
-  BREAK
-#IF
- random 20
- #act
- take 金矿 1
- CREDITPOINT - 10
-  MESSAGEBOX 天哪,你居然练出了金条!!恭喜你
-  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金条!!!
-  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金条!!!
-  GIVE 金条 1
-  BREAK
-#IF
- random 2
- #act
- take 金矿 1
- CREDITPOINT - 10
-  MESSAGEBOX 我尽量了,炼出了100金币,你先拿着吧
-  give 金币 100
-  BREAK
-  #IF
- #act
- take 金矿 1
- CREDITPOINT - 10
-  MESSAGEBOX 金矿质量堪忧,并没有获得什么,祝你下次好运吧
-  BREAK
+#CALL [系统功能\冶炼金矿.txt] @声望回收
 
 [@repair]
 别看我像喝醉了酒，我会好好给你磨的。\

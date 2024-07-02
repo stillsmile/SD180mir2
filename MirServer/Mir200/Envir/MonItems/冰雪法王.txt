@@ -279,7 +279,7 @@
 1/1	钢铁腰带
 
 )
-#CHILD 8/1 RANDOM
+#CHILD 1/2 RANDOM
 (
 1/1	道士头盔
 1/1	骷髅头盔

@@ -5,9 +5,19 @@
 可以通过灵符召唤仆从... \ 
 
 <开始召唤/@开始召唤> \\
-
+<学习心灵召唤/@学习心灵召唤> \\
 <退出/@exit>
 
+[@学习心灵召唤]
+#OR
+CHECKSKILL 心灵召唤 =  0 0
+CHECKSKILL 心灵召唤 >  0 0
+#ACT
+MESSAGEBOX 你已经学习过了，不用再学了
+#ELSEACT
+ADDSKILL 心灵召唤
+MESSAGEBOX 你学会了心灵召唤，随时可以呼唤你的仆从来到你的身边
+BREAK
 [@开始召唤]
 #IF
 CHECKJOB wizard
@@ -73,13 +83,67 @@ LARGE N0 2
 #SAY
 我已经感受到仆从的回应，选择你的仆从。\
 <我要召唤虎卫/@虎卫0> \\
+<我要巨型多角虫/@巨型多角虫0> \\
+<我要半兽勇士/@半兽勇士0> \\
 <我要召唤魔龙巨蛾/@魔龙巨蛾0> \\
 <退出/@exit>\
 
 #ELSESAY
 我已经感受到仆从的回应，选择你的仆从。\
 <我要召唤虎卫/@虎卫0> \\
+<我要巨型多角虫/@巨型多角虫0> \\
+<我要半兽勇士/@半兽勇士0> \\
 <退出/@exit>\
+
+
+[@半兽勇士0]
+#IF
+small <$GAMEGIRD> 20
+#ACT
+MESSAGEBOX 你的灵符不够20枚！！\
+BREAK
+
+#IF
+#OR
+small N0 1
+CHECKSLAVECOUNT = 3
+CHECKSLAVECOUNT > 3
+#act
+MESSAGEBOX 目前你只能拥有这些仆从了!
+CLOSE
+BREAK
+#if
+#act
+GAMEGIRD - 20
+RECALLMOB 半兽勇士1 30
+MESSAGEBOX 召唤成功
+CLOSE
+
+
+[@巨型多角虫0]
+#IF
+small <$GAMEGIRD> 10
+#ACT
+MESSAGEBOX 你的灵符不够10枚！！\
+BREAK
+
+#IF
+#OR
+small N0 1
+CHECKSLAVECOUNT = 3
+CHECKSLAVECOUNT > 3
+#act
+MESSAGEBOX 目前你只能拥有这些仆从了!
+CLOSE
+BREAK
+#if
+#act
+GAMEGIRD - 20
+RECALLMOB 巨型多角虫1 27
+MESSAGEBOX 召唤成功
+CLOSE
+
+
 
 [@虎卫0]
 #IF

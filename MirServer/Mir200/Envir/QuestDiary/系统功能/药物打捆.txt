@@ -16,11 +16,22 @@ checkitem 金创药(中量) 6
 #ACT
  take 金创药(中量) 6
  give 金创药(中)包 1
+  #IF
+checkitem 金创药(小量) 6
+#ACT
+ take 金创药(小量) 6
+ give 金创药(小)包 1
  #IF
 checkitem 魔法药(中量) 6
 #ACT
  take 魔法药(中量) 6
  give 魔法药(中)包 1
+ #IF
+checkitem 魔法药(小量) 6
+#ACT
+ take 魔法药(小量) 6
+ give 魔法药(小)包 1
+ 
  #IF
 checkitem 金创药 6
 #ACT

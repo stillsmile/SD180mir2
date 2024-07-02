@@ -1,0 +1,74 @@
+[@声望回收]
+{
+#IF
+#ACT
+MOV N4 0
+#SAY
+你获得了金矿?\ 
+这个是个好东西呀\
+交给我,有概率能为你炼出金砖哦!!\
+每次需要消耗1000金币,金矿放在背包里就可以了\\\
+  <帮我炼金吧/@冶炼金矿1>\
+  <返回/@Main>
+
+[@冶炼金矿1]
+#IF
+checkitem 金矿 1
+checkgold 1000
+#ACT
+GOTO @冶炼金矿2
+#ELSEACT
+MESSAGEBOX 别开玩笑了,你根本没准备好金矿和1000金币
+[@冶炼金矿2]
+#IF
+ random 40
+ #act
+ take 金矿 1
+ take 金币 1000
+  MESSAGEBOX 天哪,你居然练出了金砖!!!恭喜你
+  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金砖!!!
+  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金砖!!!
+  GIVE 金砖 1
+  MOV N4 0
+  BREAK
+#IF
+ random 20
+ #act
+ take 金矿 1
+ take 金币 1000
+  MESSAGEBOX 天哪,你居然练出了金条!!恭喜你
+  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金条!!!
+  SENDMSG 0 『<$USERNAME>』玩家在武器店冶炼金矿获得了金条!!!
+  GIVE 金条 1
+  MOV N4 0
+  BREAK
+#IF
+ random 2
+ #act
+ take 金矿 1
+ take 金币 1000
+ inc N4 1
+  MESSAGEBOX 我尽量了,炼出了100金币,你先拿着吧,\计次为<$STR(N4)>,连续10次触发保底
+  give 金币 100
+  GOTO @保底
+  BREAK
+  #IF
+ #act
+ take 金矿 1
+ take 金币 1000
+ inc N4 1
+  MESSAGEBOX 金矿质量堪忧,并没有获得什么,祝你下次好运吧！\计次为<$STR(N4)>,连续10次触发保底
+  GOTO @保底
+  BREAK
+  
+[@保底]
+#IF
+equal N4 10
+#ACT
+GIVE 金条 1
+MESSAGEBOX 你真够衰的，补偿你一根金条。
+MOV N4 0
+BREAK
+#ELSEACT
+BREAK
+}

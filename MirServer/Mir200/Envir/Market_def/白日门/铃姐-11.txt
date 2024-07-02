@@ -1,6 +1,78 @@
 [@main]
+
 #IF
 checkjob taoist
+#SAY
+\
+看来你已经步入道学大门了\
+你有什么困扰？\\
+<月灵培养/@月灵>\
+<神兽的突破/@神兽>\
+<退出/@exit>\
+#ELSESAY
+\
+真是个平平无奇的人\
+我对你的职业不感兴趣\\
+\
+
+<退出/@exit>\
+
+
+[@神兽]
+#IF
+CHECKSKILL 召唤神兽 =  3 0
+#SAY
+\
+你的神兽已经蠢蠢欲动\
+神秘的力量正在指引它\
+材料准备好了吗？为可以帮助他化形重塑真身\\
+一个火龙凭证，一个赤月恶魔油，\
+一块金砖当作手续费\
+\\
+<开始吧/@神兽1>\
+#ACT
+break
+
+#OR
+CHECKSKILL 召唤神兽 =  0 0
+CHECKSKILL 召唤神兽 =  1 0
+CHECKSKILL 召唤神兽 =  2 0
+#SAY
+我暂时还看不出你的神兽有什么异样\
+再让它多参加战斗，增加经验吧\\
+<好的/@exit>\
+#ACT
+break
+
+#IF
+#SAY
+你还无法召唤神兽啊？\
+去寻找召唤神兽的秘籍吧\\
+<好的/@exit>\
+
+
+
+[@神兽1]
+#IF
+checkitem 金砖 1
+checkitem 赤月恶魔油 1
+checkitem 火龙凭证 1
+#ACT
+take 火龙凭证 1
+take 赤月恶魔油 1
+take 金砖 1
+SENDMSG 5 你的神兽已经重塑成功，回应你的是白虎！
+DELSKILL 召唤神兽
+ADDSKILL 召唤白虎
+BREAK
+#ELSEACT
+MESSAGEBOX 准备的材料还不够,下次准备好再来。
+BREAK
+
+
+
+[@月灵]
+
 #OR
 CHECKSKILL 召唤月灵 = 0 0
 CHECKSKILL 召唤月灵 > 0 0
@@ -20,7 +92,6 @@ CHECKSKILL 召唤月灵三重 > 0 0
 break
 
 #IF
-checkjob taoist
 #SAY
 \
 在寒冷的雪域存在一本已经失传的秘籍\
@@ -31,15 +102,6 @@ checkjob taoist
 #ACT
 break
 
-
-#IF
-#SAY
-\
-真是个平平无奇的人\
-我对你的职业不感兴趣\\
-<退出/@exit>\
-#ACT
-break
 [@召唤更多的月灵]
 #OR
 CHECKSKILL 召唤月灵二重 =  0 0

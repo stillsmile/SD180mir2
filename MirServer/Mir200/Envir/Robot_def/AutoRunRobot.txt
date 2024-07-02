@@ -7,6 +7,8 @@
 #AutoRun NPC SEC 11 @模拟安全区
 
 #AutoRun NPC MIN 9 @虎卫检测
+
+;#AutoRun NPC SEC 4 @机器人测试
 ;#AutoRun NPC MIN 47 @假人假充值
 #AutoRun NPC MIN 59 @模拟红黄名
 
@@ -19,3 +21,5 @@
 
 #AutoRun NPC RUNONDAY 19:30 @幻境魔影
 #AutoRun NPC RUNONDAY 23:30 @幻境魔影
+
+#AutoRun NPC RUNONDAY 23:59 @定时发材料

@@ -844,18 +844,7 @@ checkitem 求婚戒指 1
 take 求婚戒指 1
 changeexp + 5000
 gamegird + 1
-#if
-checkitem 神秘腰带 1
-#act
-take 神秘腰带 1
-changeexp + 5000
-gamegird + 1
-#if
-checkitem 神秘头盔 1
-#act
-take 神秘头盔 1
-changeexp + 5000
-gamegird + 1
+
 #if
 checkitem 魔血戒指 1
 #act
@@ -1036,12 +1025,7 @@ checkitem 魔血手镯 1
 take 魔血手镯 1
 changeexp + 5000
 gamegird + 1
-#if
-checkitem 神秘戒指 1
-#act
-take 神秘戒指 1
-changeexp + 5000
-gamegird + 1
+
 #if
 checkitem 生命项链 1
 #act
