@@ -4,9 +4,133 @@
 如果你是法师？ \ 
 可以通过灵符召唤仆从... \ 
 
-<开始召唤/@开始召唤> \\
-<学习心灵召唤/@学习心灵召唤> \\
+<开始召唤/@开始召唤> \
+<学习心灵召唤/@学习心灵召唤> \
+<寄存仆从/@寄存仆从> \\
 <退出/@exit>
+[@寄存仆从]
+#SAY
+你要离开了？不忍心跟你的仆从分别？ \ 
+你可以寄存在我这里。只需50个元宝\ 
+一次只能寄存一只哦！\
+
+<寄存虎卫/@寄存虎卫>    <寄存半兽勇士/@寄存半兽勇士>  \\
+<寄存巨型多角虫/@寄存巨型多角虫>    <寄存魔龙巨蛾/@寄存魔龙巨蛾>  \\
+<取回仆从/@取回仆从>
+[@取回仆从]
+#IF
+large U5 0
+#ACT
+GOTO @取回虎卫
+
+#IF
+large U6 0
+#ACT
+GOTO @取回半兽勇士
+
+#IF
+large U7 0
+#ACT
+GOTO @取回巨型多角虫
+
+#IF
+large U8 0
+#ACT
+GOTO @取回魔龙巨蛾
+#IF
+#ACT
+SENDMSG 7 取回完毕
+
+
+[@取回魔龙巨蛾]
+#IF
+CHECKSLAVECOUNT < 5
+#act
+RECALLMOB 巨型多角虫1 0
+DEC U8 1
+GOTO @取回仆从
+#ELSEACT
+MESSAGEBOX 你拥有的仆从太多了，取回失败
+
+[@取回巨型多角虫]
+#IF
+CHECKSLAVECOUNT < 5
+#act
+RECALLMOB 巨型多角虫1 0
+DEC U7 1
+GOTO @取回仆从
+#ELSEACT
+MESSAGEBOX 你拥有的仆从太多了，取回失败
+
+[@取回虎卫]
+#IF
+CHECKSLAVECOUNT < 5
+#act
+RECALLMOB 虎卫 0
+DEC U5 1
+GOTO @取回仆从
+#ELSEACT
+MESSAGEBOX 你拥有的仆从太多了，取回失败
+
+
+[@取回半兽勇士]
+#IF
+CHECKSLAVECOUNT < 5
+#act
+RECALLMOB 半兽勇士1 0
+DEC U6 1
+GOTO @取回仆从
+#ELSEACT
+MESSAGEBOX 你拥有的仆从太多了，取回失败
+
+[@寄存虎卫]
+#IF
+CHECKSLAVENAME 虎卫
+large <$GAMEGOLD> 49
+#ACT
+KILLCALLMOB 虎卫 1 1
+GAMEGOLD - 50
+inc U5 1
+MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
+#ELSEACT
+MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
+
+[@寄存半兽勇士]
+#IF
+CHECKSLAVENAME 半兽勇士1
+large <$GAMEGOLD> 49
+#ACT
+KILLCALLMOB 半兽勇士1 1 1
+GAMEGOLD - 50
+inc U6 1
+MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
+#ELSEACT
+MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
+
+[@寄存巨型多角虫]
+#IF
+CHECKSLAVENAME 巨型多角虫1
+large <$GAMEGOLD> 49
+#ACT
+KILLCALLMOB 巨型多角虫1 1 1
+GAMEGOLD - 50
+inc U7 1
+MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
+#ELSEACT
+MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
+
+
+[@寄存魔龙巨蛾]
+#IF
+CHECKSLAVENAME 魔龙巨蛾
+large <$GAMEGOLD> 49
+#ACT
+KILLCALLMOB 魔龙巨蛾 1 1
+GAMEGOLD - 50
+inc U8 1
+MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
+#ELSEACT
+MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
 
 [@学习心灵召唤]
 #OR
@@ -115,7 +239,7 @@ BREAK
 #if
 #act
 GAMEGIRD - 20
-RECALLMOB 半兽勇士1 30
+RECALLMOB 半兽勇士1 0
 MESSAGEBOX 召唤成功
 CLOSE
 
@@ -139,7 +263,7 @@ BREAK
 #if
 #act
 GAMEGIRD - 20
-RECALLMOB 巨型多角虫1 27
+RECALLMOB 巨型多角虫1 0
 MESSAGEBOX 召唤成功
 CLOSE
 
@@ -164,7 +288,7 @@ BREAK
 #if
 #act
 GAMEGIRD - 20
-RECALLMOB 虎卫 3
+RECALLMOB 虎卫 0
 MESSAGEBOX 召唤成功
 CLOSE
 
@@ -189,6 +313,6 @@ BREAK
 #if
 #act
 GAMEGIRD - 100
-RECALLMOB 魔龙巨蛾 70
+RECALLMOB 魔龙巨蛾 0
 MESSAGEBOX 召唤成功
 CLOSE

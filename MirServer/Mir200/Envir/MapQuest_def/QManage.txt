@@ -10,8 +10,8 @@ SendCenterMsg 180 251 穿戴护身符可获得传送能力 0 30 0
 [@OnTimer2]
 #IF
 #ACT
-ADDBUTTON 8 3 00006 00006 00006 10 400 0 声望值：<$CREDITPOINT> 
-ADDBUTTON 8 5 00006 00006 00006 10 440 0 经验倍率：<$KILLMONEXPRATE> 
+ADDBUTTON 8 3 00006 00006 00006 10 300 1 声望值：<$CREDITPOINT> 
+ADDBUTTON 8 5 00006 00006 00006 10 340 1 经验倍率：<$KILLMONEXPRATE> 
 
 
 #ACT
@@ -69,7 +69,15 @@ CHECKJOB warrior
 #ACT
 CHANGESPEED 2 2
 
+#IF
+equal U14 0
+#ACT
+USEBONUSPOINT 8 + 20
+;记录准确加1
+MOV U14 1
+SENDMSG 7 准确增加20点.
 ;界面3个按钮
+
 #IF
 #ACT
 ADDBUTTON 8 1 00000 00001 00000 10 10 0  -1 一键回收包裹里的装备兑换灵符
@@ -77,10 +85,13 @@ ADDBUTTON 8 1 00000 00001 00000 10 10 0  -1 一键回收包裹里的装备兑换灵符
 #IF
 #ACT
 ADDBUTTON 8 2 00004 00005 00004 135 10 0  -1 金币，灵符，元宝，声望值相互兑换
-
+;判断是否等待期开服0为正常，1为开服
 #IF
+equal G0 0
 #ACT
 ADDBUTTON 8 4 00002 00003 00002 260 10 0  -1 游戏辅助和远程仓库
+#ELSEACT
+DELBUTTON 4
 
 ;定时公告
 #IF
@@ -102,12 +113,19 @@ CALCVAR HUMAN Cache = 0
 DELAYGOTO 1 @MAIN
 
 [@MAIN]
+;判断是否等待期开服0为正常，1为开服
+#IF
+equal G0 1
+#ACT
+map dengdai
+DELBUTTON 4
+
 #IF
 ISNEWHUMAN
 #ACT
-
 give 蜡烛 1
 SENDMSG 5 新手提示：请按F12呼出游戏内挂，请于4级前到助手小姐处接任务！
+
 
 #IF
 #ACT
