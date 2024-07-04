@@ -47,6 +47,11 @@ SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 
+[@火龙教主]
+#if
+#act
+SENDMSG 0 【终极火龙现世】:『<$RegMonName>』已出现，位于<$RegMonMapDesc>(<$RegMonX>:<$RegMonY>)，勇士们，结伴终结它吧！
+
 [@经验密境]
 #IF
 equal U2 0
