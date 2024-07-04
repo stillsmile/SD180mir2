@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=775062
+ItemNumber=778532
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
