@@ -518,6 +518,11 @@ checkitem <$PARAM(1)> 1
 take <$PARAM(1)> 1
 GAMEGOLD + 1
 
+[@UserCmd6]
+#ACT
+#CALL [系统功能\垃圾回收.txt] @回收垃圾
+
+
 ;施毒术
 [@MagSelfFunc6]
 #IF

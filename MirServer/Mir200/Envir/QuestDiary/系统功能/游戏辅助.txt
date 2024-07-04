@@ -606,6 +606,7 @@ HAIRSTYLE 3
 CHECKJOB warrior
 #SAY
 是不是战士不好玩呀，换换别的职业试试吧！\ \
+请注意，转职后等级会掉10级！并且需要支付100声望！\ \
 『<玩玩法师/@法师>』\
 『<玩玩道士/@道士>』\ \
 〖<返回/@辅助功能>〗
@@ -615,6 +616,7 @@ break
 CHECKJOB wizard
 #SAY
 是不是法师不好玩呀，换换别的职业试试吧！\ \
+请注意，转职后等级会掉10级！并且需要支付100声望！\ \
 『<玩玩战士/@战士>』\
 『<玩玩道士/@道士>』\ \
 〖<返回/@辅助功能>〗
@@ -625,6 +627,7 @@ break
 CHECKJOB taoist
 #SAY
 是不是道士不好玩呀，换换别的职业试试吧！\ \
+请注意，转职后等级会掉10级！并且需要支付100声望！\ \
 『<玩玩战士/@战士>』\
 『<玩玩法师/@法师>』\ \
 〖<返回/@辅助功能>〗
@@ -633,33 +636,55 @@ break
 
 [@战士]
 #IF
+CHECKCREDITPOINT > 99
+CHECKLEVELEX > 10
 #ACT
 CLEARSKILL
 CHANGEJOB warrior
+CHANGELEVEL - 10
+CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+#ELSEACT
+MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
 
 [@法师]
 #IF
+CHECKCREDITPOINT > 99
+CHECKLEVELEX > 10
 #ACT
 CLEARSKILL
 CHANGEJOB WIZARD
+CHANGELEVEL - 10
+CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+#ELSEACT
+MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
 
 [@道士]
 #IF
+CHECKCREDITPOINT > 99
+CHECKLEVELEX > 10
 #ACT
 CLEARSKILL
 CHANGEJOB taoist
+CHANGELEVEL - 10
+CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+#ELSEACT
+MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
 
 [@PK值点数]
 #IF
+CHECKCREDITPOINT > 99
 #ACT
+CREDITPOINT - 100
 CHANGEPKPOINT = 0
 messagebox 你的PK点数已经清零！！
+#ELSEACT
+MESSAGEBOX 失败，请确认是否拥有100声望！
 BREAK
 [@学习角色技能]
 #IF

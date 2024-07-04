@@ -97,10 +97,10 @@ MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
 
 [@寄存半兽勇士]
 #IF
-CHECKSLAVENAME 半兽勇士1
+CHECKSLAVENAME 半兽勇士
 large <$GAMEGOLD> 49
 #ACT
-KILLCALLMOB 半兽勇士1 1 1
+KILLCALLMOB 半兽勇士 1 1
 GAMEGOLD - 50
 inc U6 1
 MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
@@ -109,10 +109,10 @@ MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
 
 [@寄存巨型多角虫]
 #IF
-CHECKSLAVENAME 巨型多角虫1
+CHECKSLAVENAME 巨型多角虫
 large <$GAMEGOLD> 49
 #ACT
-KILLCALLMOB 巨型多角虫1 1 1
+KILLCALLMOB 巨型多角虫 1 1
 GAMEGOLD - 50
 inc U7 1
 MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
