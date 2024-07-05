@@ -644,6 +644,7 @@ CHANGEJOB warrior
 CHANGELEVEL - 10
 CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+GOTO  @@战士加强
 #ELSEACT
 MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
@@ -658,6 +659,7 @@ CHANGEJOB WIZARD
 CHANGELEVEL - 10
 CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+GOTO @战士平衡
 #ELSEACT
 MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
@@ -672,9 +674,35 @@ CHANGEJOB taoist
 CHANGELEVEL - 10
 CREDITPOINT - 100
 MESSAGEBOX 恭喜:玩家「<$USERNAME>」成功转职。
+GOTO @战士平衡
 #ELSEACT
 MESSAGEBOX 转职业失败，请确认等级大于10级，且拥有100声望！
 BREAK
+
+[@战士平衡]
+#IF
+equal T12 战士
+#ACT
+CHANGESPEED 2 0
+mov T12 不是战士
+#IF
+equal U14 1
+#ACT
+USEBONUSPOINT 8 - 20
+mov U14 0
+
+[@战士加强]
+#IF
+CHECKJOB warrior
+#ACT
+CHANGESPEED 2 2
+mov T12 战士
+#IF
+equal U14 0
+#ACT
+USEBONUSPOINT 8 + 20
+;记录准
+MOV U14 1
 
 [@PK值点数]
 #IF

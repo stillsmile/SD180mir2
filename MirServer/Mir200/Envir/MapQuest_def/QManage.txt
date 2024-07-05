@@ -68,12 +68,12 @@ BREAK
 CHECKJOB warrior
 #ACT
 CHANGESPEED 2 2
-
+mov T12 战士
 #IF
 equal U14 0
 #ACT
 USEBONUSPOINT 8 + 20
-;记录准确加1
+;记录准
 MOV U14 1
 SENDMSG 7 准确增加20点.
 ;界面3个按钮
