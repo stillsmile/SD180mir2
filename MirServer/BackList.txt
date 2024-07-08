@@ -1,13 +1,13 @@
 [0]
-Source=D:\github\MirServer\DBServer\FDB\
-Save=D:\github\MirServer\数据备份\
+Source=D:\new\MirServer\DBServer\FDB\
+Save=D:\new\MirServer\数据备份\
 Hour=6
 Min=0
 BackMode=1
 GetBack=1
 [1]
-Source=D:\github\MirServer\LoginSrv\IDDB\
-Save=D:\github\MirServer\数据备份\
+Source=D:\new\MirServer\LoginSrv\IDDB\
+Save=D:\new\MirServer\数据备份\
 Hour=6
 Min=0
 BackMode=1
