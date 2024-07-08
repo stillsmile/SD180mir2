@@ -21,8 +21,26 @@
 
 ;背包按钮
 [@ItemBagButtonClick1]
+#IF
+#ACT
+MOV M0 0
+MOV N12 0
+GOTO @背包回收垃圾
+[@背包回收垃圾]
+#IF
+SMALL M0 40
+#ACT
+GOTO @计次回收
+#ELSEACT
+SENDMSG 6 〖提示〗一键回收成功<$STR(N12)>金币
+MOV M0 0
+
+[@计次回收]
+#IF
 #ACT
 #CALL [系统功能\垃圾回收.txt] @回收垃圾
+INC M0 1
+GOTO @背包回收垃圾
 
 [@ItemBagButtonClick2]
 #ACT
