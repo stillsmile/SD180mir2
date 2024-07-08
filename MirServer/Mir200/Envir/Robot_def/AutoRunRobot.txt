@@ -1,16 +1,5 @@
-#AutoRun NPC SEC 2 @登陆陪练
-#AutoRun NPC SEC 17 @一号攻城点
-#AutoRun NPC SEC 23 @二号攻城点
-#AutoRun NPC SEC 31 @三号攻城点
-#AutoRun NPC SEC 37 @攻打皇宫
-
-#AutoRun NPC SEC 11 @模拟安全区
 
 #AutoRun NPC MIN 9 @虎卫检测
-
-;#AutoRun NPC SEC 4 @机器人测试
-;#AutoRun NPC MIN 47 @假人假充值
-#AutoRun NPC MIN 59 @模拟红黄名
 
 #AutoRun NPC RUNONDAY 15:00 @下午宫殿
 #AutoRun NPC RUNONDAY 19:00 @晚上宫殿
