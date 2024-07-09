@@ -119,8 +119,9 @@ break
 #IF
 CHECKSKILL 召唤月灵二重 > 0 0
 #SAY
-看来你已经很熟练了,升级月灵需要\\
-5颗冰核和2块金砖\\
+看来你已经很熟练了,升级月灵需要\
+至少等级55级\
+5颗冰核，4个火龙凭证和2块金砖\\
 你准备好了吗?\\
 
 <准备好了/@召唤更多的月灵2> \
@@ -131,8 +132,9 @@ break
 #IF
 CHECKSKILL 召唤月灵 > 0 0
 #SAY
-看来你已经很熟练了,升级月灵需要\\
-2颗冰核和一块金砖\\
+看来你已经很熟练了,升级月灵需要\
+至少等级52级\
+2颗冰核，2个火龙凭证和一块金砖\\
 你准备好了吗?\\
 
 <准备好了/@召唤更多的月灵1> \
@@ -150,26 +152,32 @@ break
 #IF
 checkitem 金砖 1
 checkitem 冰核 2
+checkitem 火龙凭证 2
+CHECKLEVELEX > 51
 #ACT
  take 金砖 1
  take 冰核 2
+ take 火龙凭证 2
  DELSKILL 召唤月灵
  ADDSKILL 召唤月灵二重
  SKILLLEVEL 召唤月灵二重 = 0
  MESSAGEBOX 升级成功,你已经获得更多的月灵召唤数量!
 #ELSEACT
-MESSAGEBOX 材料不够哦,请检查一下你的背包
+MESSAGEBOX 失败，请检查你的等级是否52级,材料是否齐全。
 
 [@召唤更多的月灵2]
 #IF
+CHECKLEVELEX > 54
 checkitem 金砖 2
+checkitem 火龙凭证 4
 checkitem 冰核 5
 #ACT
  take 金砖 2
  take 冰核 5
+ take 火龙凭证 4
  DELSKILL 召唤月灵二重
  ADDSKILL 召唤月灵三重
  SKILLLEVEL 召唤月灵三重 = 0
  MESSAGEBOX 升级成功,你已经获得更多的月灵召唤数量!
 #ELSEACT
-MESSAGEBOX 材料不够哦,请检查一下你的背包
+MESSAGEBOX 失败，请检查你的等级是否55级,材料是否齐全。

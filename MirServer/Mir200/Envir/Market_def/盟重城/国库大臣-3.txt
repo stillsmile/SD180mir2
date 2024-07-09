@@ -1,6 +1,14 @@
 [@main]
 \\
-#SAY
+#IF
+equal G2 0
+#say
+发放？算了吧，货物紧缺呢。...\
+你有材料吗？可以上交国库吗？我会支付报酬的。\\
+
+<包裹里的你都拿走吧/@回收材料>上交沃玛号角，祖玛头像，火龙凭证\
+<我没材料/@exit>\
+#ELSESAY
 <$USERNAME>今日你又为王国带来了怎样的荣耀？\
 这些珍贵的道具，或许能助你一臂之力。\
 40级可领取雪域相关材料\
@@ -8,6 +16,49 @@
 保证你的包裹有<10/AUTOCOLOR=245>个格子哦！
 <领取每日道具/@领取每日道具>\\
 <退出/@exit>
+[@回收材料]
+#IF
+#ACT
+MOV M0 0
+MOV N12 0
+GOTO @回收材料1
+#if
+#act
+SENDMSG 6 这是你的报酬<$STR(N12)>金币
+BREAK
+[@回收材料1]
+#IF
+SMALL M0 40
+#ACT
+GOTO @回收材料2
+[@回收材料2]
+#if
+checkitem 沃玛号角 1
+#act
+take 沃玛号角 1
+give 金币 200000
+INC N12 200000
+INC M0 1
+GOTO @回收材料1
+
+#if
+checkitem 祖玛头像 1
+#act
+take 祖玛头像 1
+give 金币 200000
+INC N12 200000
+INC M0 1
+GOTO @回收材料1
+
+#if
+checkitem 火龙凭证 1
+#act
+take 火龙凭证 1
+give 金币 400000
+INC N12 400000
+INC M0 1
+GOTO @回收材料1
+
 
 [@领取每日道具]
 #IF

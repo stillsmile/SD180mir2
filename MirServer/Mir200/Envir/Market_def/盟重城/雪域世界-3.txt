@@ -2,10 +2,12 @@
 \\
 #IF
 equal G1 0
-#ACT
-MESSAGEBOX 雪域开没开放,请等待时机再进\\
-BREAK
-
+#say
+雪域开没开放,请等待时机再进\\
+<好吧/@exit>
+#ELSEACT
+GOTO @开放验等级
+[@开放验等级]
 #IF
   CHECKLEVELEX < 41
 #ACT

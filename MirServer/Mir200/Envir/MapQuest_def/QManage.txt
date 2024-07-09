@@ -39,6 +39,7 @@ CHECKJOB warrior
 CHANGESPEED 2 2
 mov T12 战士
 #IF
+CHECKJOB warrior
 equal U14 0
 #ACT
 USEBONUSPOINT 8 + 20
@@ -80,6 +81,8 @@ equal G0 1
 #ACT
 map dengdai
 DELBUTTON 4
+#ELSEACT
+SENDMSG 5 服务器已开启，祝你游戏愉快
 
 #IF
 ISNEWHUMAN
