@@ -917,12 +917,6 @@ take 银矿 1
 give 金币 2500
 INC N12 2500
 
-#if
-checkitem 金矿 1
-#act
-take 金矿 1
-give 金币 6000
-INC N12 6000
 
 #if
 checkitem 黑铁矿石 1

@@ -20,7 +20,7 @@ MOV I11 1
 [@ª¢Œ¿À¢–¬]
 #IF
 #ACT
-MonGenEx 1002 12 12 ª¢Œ¿ 5 1 0 255
+MonGenEx 1002 12 12 ª¢Œ¿ 5 3 0 255
 MOV I11 1
 break
 
