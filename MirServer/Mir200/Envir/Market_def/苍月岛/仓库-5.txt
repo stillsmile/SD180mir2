@@ -292,7 +292,7 @@
 checkgold 20000
 checkitem 幻境凭证 1
 #act
-take 金币 300000
+take 金币 20000
 take  幻境凭证 1
 GIVE 回城卷 1
 mapmove H001 73 67

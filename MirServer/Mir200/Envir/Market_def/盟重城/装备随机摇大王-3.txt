@@ -1,7 +1,13 @@
 [@main]
 \\
-<你觉得足够幸运吗？/AutoColor=254>\给我5个灵符，给你一件装备随机摇一个属性。\
-幸运的话属性加点的1-3，但是有一半可能洗掉所有加点！\
+#if
+#ACT
+;概率默认为2
+mov P10 2
+SUM P10 U15
+#SAY
+<你觉得足够幸运吗？/AutoColor=254>\给我10个灵符，给你一件装备随机摇一个属性。\
+幸运的话属性加点的1-3，但是有一半可能洗掉所有加点！越往后几率越低哦\
 <手镯/@手镯>   <戒指/@戒指>\
 <勋章/@勋章>   <腰带/@腰带>\
 <武器/@武器>   <靴子/@靴子>\
@@ -184,8 +190,9 @@ small <$GAMEGIRD> 5
 <返回/@@main>
 #ELSEACT
 GAMEGIRD - 5
+
 #IF
-RANDOM 2
+RANDOM P10
 #ACT
 CHANGEITEMADDVALUE P1 0 = 0
 CHANGEITEMADDVALUE P1 1 = 0
@@ -201,8 +208,12 @@ CHANGEITEMADDVALUE P1 10 = 0
 CHANGEITEMADDVALUE P1 11 = 0
 CHANGEITEMADDVALUE P1 12 = 0
 CHANGEITEMADDVALUE P1 13 = 0
-CREDITPOINT - 5
-SENDMSG 7 加点失败！！
+CREDITPOINT - 10
+;概率衰减重置
+MOV U15 0
+mov P10 2
+SUM P10 U15
+SENDMSG 7 加点失败！！下次升级的成功率提升，几率为 1/<$STR(P10)>.
 BREAK
 #ELSEACT
 GOTO @摇
@@ -210,9 +221,13 @@ GOTO @摇
 [@摇]
 #IF
 #ACT
+
 UPGRADEITEMEX P1 P3 1 P2 0
-CREDITPOINT - 5
-SENDMSG 7 加点成功！
+CREDITPOINT - 10
+inc U15 1
+mov P10 2
+SUM P10 U15
+SENDMSG 7 加点成功！下次升级的风险提升，几率为 1/<$STR(P10)>.
 
 
 
