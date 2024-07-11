@@ -35,12 +35,6 @@ take 野蛮冲撞 1
 give 金币 8000
 INC N12 8000
 
-#if
-checkitem 烈火剑法 1
-#act
-take 烈火剑法 1
-give 金币 20000
-INC N12 20000
 
 #if
 checkitem 火球术 1
@@ -119,12 +113,6 @@ take 地狱雷光 1
 give 金币 8000
 INC N12 8000
 
-#if
-checkitem 魔法盾 1
-#act
-take 魔法盾 1
-give 金币 10000
-INC N12 10000
 
 #if
 checkitem 圣言术 1
@@ -133,12 +121,6 @@ take 圣言术 1
 give 金币 10000
 INC N12 10000
 
-#if
-checkitem 冰咆哮 1
-#act
-take 冰咆哮 1
-give 金币 20000
-INC N12 20000
 
 #if
 checkitem 治愈术 1
@@ -223,13 +205,6 @@ checkitem 群体治疗术 1
 take 群体治疗术 1
 give 金币 10000
 INC N12 10000
-
-#if
-checkitem 召唤神兽 1
-#act
-take 召唤神兽 1
-give 金币 20000
-INC N12 20000
 
 #if
 checkitem 青铜头盔 1
@@ -438,6 +413,13 @@ INC N12 7000
 checkitem 魔法手镯 1
 #act
 take 魔法手镯 1
+give 金币 4000
+INC N12 4000
+
+#if
+checkitem 魔力手镯 1
+#act
+take 魔力手镯 1
 give 金币 4000
 INC N12 4000
 

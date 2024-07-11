@@ -658,6 +658,35 @@ checkitem Ê¥Áú¿ø 1
 take Ê¥Áú¿ø 1
 changeexp + 10000
 gamegird + 5
+
+#if
+checkitem ÁÒ»ğ½£·¨ 1
+#act
+take ÁÒ»ğ½£·¨ 1
+changeexp + 1000
+gamegird + 2
+
+#if
+checkitem Ä§·¨¶Ü 1
+#act
+take Ä§·¨¶Ü 1
+changeexp + 1000
+gamegird + 2
+
+#if
+checkitem ±ùÅØÏø 1
+#act
+take ±ùÅØÏø 1
+changeexp + 1000
+gamegird + 2
+
+#if
+checkitem ÕÙ»½ÉñÊŞ 1
+#act
+take ÕÙ»½ÉñÊŞ 1
+changeexp + 1000
+gamegird + 2
+
 #if
 checkitem Æø¹¦²¨ 1
 #act
