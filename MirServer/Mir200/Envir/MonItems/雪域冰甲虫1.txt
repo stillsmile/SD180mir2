@@ -1,5 +1,5 @@
 
-#CHILD 1/50 RANDOM
+#CHILD 1/100 RANDOM
 (
 1/1 БъСА
 1/1 Е­Х¶
