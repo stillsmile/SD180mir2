@@ -5,7 +5,8 @@ equal G2 0
 #say
 发放？算了吧，货物紧缺呢。...\
 你有材料吗？可以上交国库吗？我会支付报酬的。\\
-
+<领取补偿/@领取补偿>\\
+<40级补偿破馆珍剑/@领取破馆珍剑>\\
 <包裹里的你都拿走吧/@回收材料>上交沃玛号角，祖玛头像，火龙凭证\
 <我没材料/@exit>\
 #ELSESAY
@@ -16,6 +17,7 @@ equal G2 0
 保证你的包裹有<10/AUTOCOLOR=245>个格子哦！
 <领取每日道具/@领取每日道具>\\
 <退出/@exit>
+
 [@回收材料]
 #IF
 #ACT
@@ -99,3 +101,63 @@ MESSAGEBOX 每日只能领取一次哦，请下次再来吧！
   ADDTEXTLIST 每日领取材料\每日领取材料名单.txt <$USERNAME>
   SENDMSG 7 40级雪域每日道具领取成功！
   CLOSE
+[@领取破馆珍剑]
+#IF
+  checknamelist 每日领取材料\补偿破馆珍剑.txt
+#ACT
+MESSAGEBOX 只能领取一次哦
+BREAK
+
+
+#IF
+CHECKLEVEL 40
+#ACT
+  GIVE 破馆珍剑 1
+  ADDTEXTLIST 每日领取材料\补偿破馆珍剑.txt <$USERNAME>
+  SENDMSG 7 领取成功！
+  CLOSE
+#ELSEACT
+ SENDMSG 等级不够40哦
+  CLOSE
+
+
+[@领取补偿]
+
+#IF
+  checknamelist 每日领取材料\补偿名单.txt
+#ACT
+MESSAGEBOX 7 只能领取一次哦
+BREAK
+
+
+#IF
+#ACT
+  GIVE 金砖 10
+  GIVE  十倍经验神丹 5
+  GIVE  魔血石(大) 1
+  GIVE  火龙凭证 5
+  ADDTEXTLIST 每日领取材料\补偿名单.txt <$USERNAME>
+    GOTO @补偿随机
+  SENDMSG 7 领取成功！
+  CLOSE
+  
+[@补偿随机]
+#IF
+RANDOM 3
+#ACT
+  GIVE 王者勋章(战) 1
+  GIVE 虎啸战甲(男) 1
+BREAK
+
+#IF
+RANDOM 2
+#ACT
+  GIVE 王者勋章(法) 1
+  GIVE 聚魔法衣(女) 1
+BREAK
+
+#IF
+#ACT
+  GIVE 王者勋章(道) 1
+  GIVE 暗咒道袍(男) 1
+BREAK

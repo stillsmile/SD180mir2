@@ -1,6 +1,8 @@
 [@帮菜]
+
 #SAY
-<$USERNAME>你好，有什么需要领取的礼品？
+<$USERNAME>你好，有什么需要领取的礼品？\\
+<领取补偿/@紧急补偿>\\
 <领取礼品/@发送装备1>\\
 <退出/@exit>
 
@@ -9,11 +11,213 @@
 #IF
   checknamelist 帮助菜单自己领取物品\发送人.txt
 #ACT
-  GIVE 火龙凭证 4
-  GIVE 祖玛头像 8
-  GIVE 沃玛号角 8
+
+give 天尊头盔
+give 天尊戒指
+give 天尊项链
+give 天尊道袍
+give 光芒道戒
+give 光芒腰带
+give 光芒道靴
+give 真魂手镯
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
-#elsesay
-没有东西获取！！！\
-<退出/@exit>\
+SENDMSG 7 领取成功
+
+[@紧急补偿]
+
+#IF
+large <$STR(U20)> 0
+#ACT
+SENDMSG 7 没有你的补偿
+#ELSEACT
+SENDMSG 7 没领取过
+GOTO @紧急补偿1
+
+[@紧急补偿1]
+#IF
+equal <$USERNAME> 我2200寸顶
+#ACT
+give 屠龙
+give 天魔神甲
+give 圣战头盔
+give 雷霆护腕 2
+give 圣战纹章
+give 记忆项链 2
+give 雷霆战戒 1 0|0|2|0|0|0|0|0|0|0|0|0|0
+give 战神项链 1 0|2|2|0|0|0|0|0|0|0|0|0|0
+
+GAMEGIRD + 5000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 狼悠悠o
+#ACT
+give 屠龙
+give 天魔神甲
+give 圣战头盔
+give 雷霆护腕 2
+give 圣战纹章
+give 记忆项链 2
+give 雷霆腰带
+give 雷霆战靴
+give 虹魔戒指 2
+give 黄金裁决
+GAMEGIRD + 5000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 呆毛
+#ACT
+give 真魂手镯
+give 雷霆护腕
+give 雷霆战甲(男)
+give 天魔神甲
+give 圣战头盔
+give 圣战项链
+give 圣战手镯 2
+give 圣战戒指 2
+give 天尊头盔
+give 天尊项链
+give 天尊手镯 2
+give 天尊戒指 2
+give 天尊道袍
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 法爷
+#ACT
+give 真魂手镯
+give 雷霆护腕
+give 雷霆战甲(男)
+give 天魔神甲
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 今晚打刀别
+#ACT
+give 裁决之杖 2
+give 虹魔戒指 2
+give 雷霆腰带 2
+give 雷霆战靴 2
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> HEiyA
+#ACT
+give 泰坦战衣(女)
+give 骑士手镯 2
+give 虹魔戒指 2
+give 雷霆项链
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+
+
+
+#IF
+equal <$USERNAME> 浅忆轻风吟
+#ACT
+give 破馆珍剑
+give 铁腰带
+give 鹿皮靴
+give 虹魔戒指 2
+give 雷霆战戒 1 0|0|2|0|0|0|0|0|0|0|0|0|0
+give 荣誉勋章42号
+give 幽灵项链
+give 记忆头盔
+give 死神手套 2
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 阿毛
+#ACT
+give 破馆珍剑
+give 天魔神甲
+give 雷霆护腕
+give 雷霆项链
+
+
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+
+#IF
+equal <$USERNAME> 榴莲
+#ACT
+give 雷霆腰带 1
+give 雷霆战靴 1
+give 雷霆护腕 2
+give 虹魔戒指 2
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 哇似滋叽居
+#ACT
+give 战神项链 1 0|2|2|0|0|0|0|0|0|0|0|0|0
+give 黄金头盔 1
+give 雷霆护腕 1 0|0|1|0|0|0|0|0|0|0|0|0|0
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 欧皇
+#ACT
+give 镇天
+give 圣魔项链
+give 圣魔手镯 2
+give 圣魔戒指 2
+GAMEGIRD + 1000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 乌瑟尔
+#ACT
+give 无极棍
+give 灵魂项链
+give 布鞋
+give 兽皮腰带
+give 道士手镯
+give 黑檀手镯
+give 苹果
+give 青铜头盔
+GAMEGIRD + 2000
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 悟道
+#ACT
+give 鹿皮靴
+give 荣誉勋章45号
+give 青铜腰带
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 召唤师
+#ACT
+give 烈焰魔衣(男)
+give 烈焰护腕
+give 烈焰项链
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+equal <$USERNAME> 虎虎虎
+#ACT
+give 天尊头盔
+give 天尊戒指
+give 天尊项链
+give 天尊道袍
+give 光芒道戒
+give 光芒腰带
+give 光芒道靴
+give 真魂手镯
+SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+
+#IF
+#ACT
+mov <$STR(U20)> 1
+SENDMSG 7 已记录
 }
