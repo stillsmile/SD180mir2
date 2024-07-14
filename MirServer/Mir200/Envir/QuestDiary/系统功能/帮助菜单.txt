@@ -12,16 +12,8 @@
   checknamelist 帮助菜单自己领取物品\发送人.txt
 #ACT
 
-give 天尊头盔
-give 天尊戒指
-give 天尊项链
-give 天尊道袍
-give 光芒道戒
-give 光芒腰带
-give 光芒道靴
-give 真魂手镯
-GAMEGIRD + 1000
-SENDMSG 7 只能补偿大概基础装备，加点以灵符形式补偿
+give 凤天魔甲
+give 烈焰魔衣(男)
 
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
 SENDMSG 7 领取成功

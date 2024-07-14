@@ -3,13 +3,13 @@
 \\
 #SAY
 灵符与金币的比例是 1：10000\
-<灵符换金币/@@InPutInteger1>   <金币换10个灵符/@金币换10个灵符>   <金币换100个灵符/@金币换100个灵符>\
+<灵符换金币/@@InPutInteger1>   <金币换10个灵符/@金币换10个灵符>   <金币换100个灵符/@金币换100个灵符>  <金币换1000个灵符/@金币换1000个灵符>\
 <☆/AUTOCOLOR=154><≡≡≡≡≡≡≡≡/AUTOCOLOR=245><☆/AUTOCOLOR=154>\
 元宝与金币的比例是 1：1000\
-<元宝换金币/@@InPutInteger3>   <金币换100个元宝/@金币换100个元宝>   <金币换1000个元宝/@金币换1000个元宝>\
+<元宝换金币/@@InPutInteger3>   <金币换100个元宝/@金币换100个元宝>   <金币换1000个元宝/@金币换1000个元宝>   <金币换10000个元宝/@金币换10000个元宝>\
 <☆/AUTOCOLOR=154><≡≡≡≡≡≡≡≡/AUTOCOLOR=245><☆/AUTOCOLOR=154>\
 声望与金币的比例是 1：10000\
-<声望换金币/@@InPutInteger5>   <金币换10个声望/@金币换10个声望>   <金币换100个声望/@金币换100个声望>\
+<声望换金币/@@InPutInteger5>   <金币换10个声望/@金币换10个声望>   <金币换100个声望/@金币换100个声望>   <金币换1000个声望/@金币换1000个声望>\
 ;灵符换金币
 [@InPutInteger1]
 #IF
@@ -47,6 +47,16 @@ checkgold 1000000
 #ELSEACT
 SENDMSG 7 金币不够1000000
 
+[@金币换1000个灵符]
+#IF
+checkgold 10000000
+#ACT
+	take 金币 10000000
+	GAMEGIRD + 1000
+	SENDMSG 7 兑换1000灵符！
+	BREAK
+#ELSEACT
+SENDMSG 7 金币不够1000000
 ;元宝换金币
 [@InPutInteger3]
 #IF
@@ -84,6 +94,17 @@ checkgold 1000000
 #ELSEACT
 SENDMSG 7 金币不够1000000
 
+[@金币换10000个元宝]
+#IF
+checkgold 10000000
+#ACT
+	take 金币 10000000
+	GAMEGOLD + 10000
+	SENDMSG 7 兑换10000元宝！
+	BREAK
+#ELSEACT
+SENDMSG 7 金币不够10000000
+
 ;声望换金币
 [@InPutInteger5]
 #IF
@@ -111,7 +132,7 @@ checkgold 100000
 SENDMSG 7 金币不够100000
 
 
-;金币换10声望
+;金币换100声望
 [@金币换100个声望]
 #IF
 checkgold 1000000
@@ -122,4 +143,17 @@ checkgold 1000000
 	BREAK
 #ELSEACT
 SENDMSG 7 金币不够1000000
+
+
+;金币换1000声望
+[@金币换1000个声望]
+#IF
+checkgold 10000000
+#ACT
+	take 金币 10000000
+	CREDITPOINT + 1000
+	SENDMSG 7 兑换1000声望！
+	BREAK
+#ELSEACT
+SENDMSG 7 金币不够10000000
 }

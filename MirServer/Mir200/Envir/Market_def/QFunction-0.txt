@@ -82,7 +82,6 @@ SENDMSG 7 你没有经验密镜许可！不能踏入！
 #IF
 #ACT
 Mov D41 10000000
-	Mul D41 <$KILLMONEXPRATE>
 	changeexp + D41
 	
 
@@ -90,7 +89,6 @@ Mov D41 10000000
 #IF
 #ACT
 Mov D40 5000000
-	Mul D40 <$KILLMONEXPRATE>
 	changeexp + D40
 	
 
@@ -98,28 +96,24 @@ Mov D40 5000000
 #IF
 #ACT
 Mov D39 1000000
-	Mul D39 <$KILLMONEXPRATE>
 	changeexp + D39
 	
 [@StdModeFunc38]
 #IF
 #ACT
 Mov D38 200000
-	Mul D38 <$KILLMONEXPRATE>
 	changeexp + D38
 	
 [@StdModeFunc37]
 #IF
 #ACT
 Mov D37 100000
-	Mul D37 <$KILLMONEXPRATE>
 	changeexp + D37
 	
 [@StdModeFunc36]
 #IF
 #ACT
 Mov D36 50000
-	Mul D36 <$KILLMONEXPRATE>
 	changeexp + D36
 
 [@StdModeFunc35]

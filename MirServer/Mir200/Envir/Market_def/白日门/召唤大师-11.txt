@@ -15,7 +15,7 @@
 一次只能寄存一只哦！\
 
 <寄存虎卫/@寄存虎卫>    <寄存半兽勇士/@寄存半兽勇士>  \\
-<寄存巨型多角虫/@寄存巨型多角虫>    <寄存花吻蜘蛛/@寄存花吻蜘蛛>  \\
+<寄存巨型多角虫/@寄存巨型多角虫>    <寄存魔龙巨蛾/@寄存魔龙巨蛾>  \\
 <取回仆从/@取回仆从>
 [@取回仆从]
 #IF
@@ -36,13 +36,13 @@ GOTO @取回巨型多角虫
 #IF
 large U8 0
 #ACT
-GOTO @取回花吻蜘蛛
+GOTO @取回魔龙巨蛾
 #IF
 #ACT
 SENDMSG 7 取回完毕
 
 
-[@取回花吻蜘蛛]
+[@取回魔龙巨蛾]
 #IF
 CHECKSLAVECOUNT < 5
 #act
@@ -120,12 +120,12 @@ MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
 MESSAGEBOX 寄存失败，确认你是否有仆从和元宝？
 
 
-[@寄存花吻蜘蛛]
+[@寄存魔龙巨蛾]
 #IF
-CHECKSLAVENAME 花吻蜘蛛
+CHECKSLAVENAME 魔龙巨蛾
 large <$GAMEGOLD> 49
 #ACT
-KILLCALLMOB 花吻蜘蛛 1 1
+KILLCALLMOB 魔龙巨蛾 1 1
 GAMEGOLD - 50
 inc U8 1
 MESSAGEBOX 寄存成功了，记得快点回来领取你仆从
@@ -162,14 +162,14 @@ GOTO @等级判断1
 BREAK
 
 #IF
-CHECKLEVELEX > 44
+CHECKLEVELEX > 47
 #ACT
 MOV N0 4
 GOTO @等级判断1
 BREAK
 
 #IF
-CHECKLEVELEX > 41
+CHECKLEVELEX > 44
 #ACT
 MOV N0 3
 GOTO @等级判断1
@@ -209,7 +209,7 @@ LARGE N0 2
 <我要召唤虎卫/@虎卫0> \\
 <我要巨型多角虫/@巨型多角虫0> \\
 <我要半兽勇士/@半兽勇士0> \\
-<我要召唤花吻蜘蛛/@花吻蜘蛛0> \\
+<我要召唤魔龙巨蛾/@魔龙巨蛾0> \\
 <退出/@exit>\
 
 #ELSESAY
@@ -292,7 +292,7 @@ RECALLMOB 虎卫 0
 MESSAGEBOX 召唤成功
 CLOSE
 
-[@花吻蜘蛛0]
+[@魔龙巨蛾0]
 #IF
 small <$GAMEGIRD> 100
 #ACT
@@ -313,6 +313,6 @@ BREAK
 #if
 #act
 GAMEGIRD - 100
-RECALLMOB 花吻蜘蛛 0
+RECALLMOB 魔龙巨蛾 0
 MESSAGEBOX 召唤成功
 CLOSE

@@ -54,6 +54,13 @@ checkitem 强效太阳水 6
  #ACT
  take 强效太阳水 6
  give 强效太阳水包 1
+ 
+#IF
+checkitem 疗伤药 6
+ #ACT
+ take 疗伤药 6
+ give 疗伤药包 1
+ 
 }
  
  

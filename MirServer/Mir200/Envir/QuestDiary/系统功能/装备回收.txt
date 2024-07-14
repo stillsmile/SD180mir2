@@ -5,6 +5,7 @@
 <注意：重要物品请一定存放好后再回收，以免被误回收!!!!!!!!!!/AUTOCOLOR=249>\
 <重复道具/AUTOCOLOR=161>  请多回收几次\
 <回收装备/@回收>\\\
+<网页测试/@网页测试>\\
 <灵符回收目录/@目录>
 [@回收]
 
@@ -1134,6 +1135,20 @@ take 紫碧螺 1
 changeexp + 5000
 gamegird + 1
 
+#if
+checkitem 布鞋 1
+#act
+take 布鞋 1
+changeexp + 500
+gamegird + 1
+
+#if
+checkitem 兽皮腰带 1
+#act
+take 兽皮腰带 1
+changeexp + 500
+gamegird + 1
+
 #ELSEACT
 SENDMSG 6 你的灵符数位：<$GAMEGIRD>
 [@目录]
@@ -1170,4 +1185,9 @@ SENDMSG 6 你的灵符数位：<$GAMEGIRD>
  荣誉勋章51号|荣誉勋章52号|荣誉勋章53号|荣誉勋章54号|\
  荣誉勋章55号 \\\
  <返回/@声望回收>
+ 
+[@网页测试]
+#IF
+#ACT
+ WebBrowser https://www.baidu.com
 }

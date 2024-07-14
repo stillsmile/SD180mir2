@@ -8,6 +8,7 @@ checkjob taoist
 你有什么困扰？\\
 <月灵培养/@月灵>\
 <神兽的突破/@神兽>\
+<白虎培养/@白虎>\
 <退出/@exit>\
 #ELSESAY
 \
@@ -69,6 +70,110 @@ BREAK
 MESSAGEBOX 准备的材料还不够,下次准备好再来。
 BREAK
 
+
+
+[@白虎]
+
+#OR
+CHECKSKILL 召唤白虎 = 0 0
+CHECKSKILL 召唤白虎 > 0 0
+CHECKSKILL 召唤白虎二重 =  0 0
+CHECKSKILL 召唤白虎二重 > 0 0
+CHECKSKILL 召唤白虎三重 =  0 0
+CHECKSKILL 召唤白虎三重 > 0 0
+#SAY
+\
+我听见白虎的低吟\\
+<召唤更多的白虎/@召唤更多的白虎> \\
+<退出/@exit>\
+#ACT
+break
+
+#IF
+#SAY
+\
+你还没学习跟白虎沟通呢\\
+
+<退出/@exit>\
+#ACT
+break
+
+[@召唤更多的白虎]
+#OR
+CHECKSKILL 召唤白虎二重 =  0 0
+CHECKSKILL 召唤白虎 = 0 0
+#SAY
+\
+你的白虎还不够强大，再去多培养它吧\\
+
+
+<退出/@exit>\
+#ACT
+break
+
+#IF
+CHECKSKILL 召唤白虎二重 > 0 0
+#SAY
+你的白虎正在蠢蠢欲动，我可以帮助你\
+至少等级45级\
+1颗冰核，1个火龙凭证和1块金砖\\
+你准备好了吗?\\
+
+<准备好了/@召唤更多的白虎2> \
+<我还没准备好/@exit>\
+#ACT
+break
+
+#IF
+CHECKSKILL 召唤白虎 > 0 0
+#SAY
+你的白虎正在蠢蠢欲动，我可以帮助你\
+至少等级42级\
+1个火龙凭证和1块金砖\\
+你准备好了吗?\\
+
+<准备好了/@召唤更多的白虎1> \
+<我还没准备好/@exit>\
+#ACT
+break
+#IF
+#SAY
+\
+看来你已经够强了\
+我已经无法帮助你了\\
+
+<退出/@exit>\
+[@召唤更多的白虎1]
+#IF
+checkitem 金砖 1
+checkitem 火龙凭证 1
+CHECKLEVELEX > 41
+#ACT
+ take 金砖 1
+ take 火龙凭证 1
+ DELSKILL 召唤白虎
+ ADDSKILL 召唤白虎二重
+ SKILLLEVEL 召唤白虎二重 = 0
+ MESSAGEBOX 升级成功,你已经获得更多的白虎召唤数量!
+#ELSEACT
+MESSAGEBOX 失败，请检查你的等级是否42级,材料是否齐全。
+
+[@召唤更多的白虎2]
+#IF
+CHECKLEVELEX > 44
+checkitem 金砖 1
+checkitem 火龙凭证 1
+checkitem 冰核 1
+#ACT
+ take 金砖 1
+ take 冰核 1
+ take 火龙凭证 1
+ DELSKILL 召唤白虎二重
+ ADDSKILL 召唤白虎三重
+ SKILLLEVEL 召唤白虎三重 = 0
+ MESSAGEBOX 升级成功,你已经获得更多的白虎召唤数量!
+#ELSEACT
+MESSAGEBOX 失败，请检查你的等级是否45级,材料是否齐全。
 
 
 [@月灵]
