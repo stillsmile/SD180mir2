@@ -7,6 +7,12 @@
   CLEARNAMELIST ..\Market_def\每日领取材料\每日领取元宝.txt
 
 
+[@密境刷新]
+#IF
+CheckMapSameMonCount hero1 经验白野猪 < 400
+#ACT
+MonGenEx hero1 127 122 经验白野猪 200 400 0 156
+
 
 [@虎卫检测]
 #IF

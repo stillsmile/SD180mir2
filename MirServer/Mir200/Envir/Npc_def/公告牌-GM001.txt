@@ -1638,6 +1638,7 @@ MOBPLACE 地藏王
 MOBPLACE 沃玛教主
 MOBPLACE 虹魔教主
 MOBPLACE 祖玛教主
+MOBPLACE 雪域领主
 SENDMSG 0 怪物进攻了盟重省！
 goto @盟重省
 

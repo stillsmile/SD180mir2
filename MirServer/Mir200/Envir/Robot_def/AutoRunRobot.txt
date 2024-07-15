@@ -12,3 +12,5 @@
 #AutoRun NPC RUNONDAY 23:30 @幻境魔影
 
 #AutoRun NPC RUNONDAY 23:59 @定时发材料
+
+#AutoRun NPC MIN 1 @密境刷新

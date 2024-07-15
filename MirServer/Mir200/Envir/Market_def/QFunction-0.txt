@@ -55,6 +55,11 @@ DELAYCALL 300000 @避寒神丹BUFF结束
 [@避寒神丹BUFF结束]
 #ACT
 DELBUTTON 10
+;称号
+[@TitleChanged_0]
+#IF
+#ACT
+SENDMSG 5 新增一个老登
 
 ;地图事件
 [@火龙]
