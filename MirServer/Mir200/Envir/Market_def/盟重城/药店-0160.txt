@@ -25,13 +25,59 @@ goto @main-1
 
 [@魔血石]
 #SAY
-魔血石的材料非常特殊，需要1个赤月恶魔油，1个品质为12的\
+魔血石的材料非常特殊，需要1个赤月恶魔油，1个品质为25的\
 黑铁矿石，一块金砖作为报酬。\\
 
 <开始锻造/@开始锻造>(赤月恶魔会爆出恶魔油)\
 <升级魔血石/@升级魔血石>\\
 <补充魔血石/@补充魔血石>\
+<魔血石转气血石/@魔血石转气血石>\
+<魔血石转幻魔石/@魔血石转幻魔石>\
+<修复OK框BUG/@复OK框BUG>\
+[@魔血石转气血石]
+#ACT
+MOV N10 1
+OPENUPGRADEDLG 石头转换
 
+[@魔血石转幻魔石]
+#ACT
+MOV N10 0
+OPENUPGRADEDLG 石头转换
+
+[@UpgradeDlgItem]
+#ACT
+MOV S0 <$DLGITEM.NAME>
+MOV P1 <$DLGITEM.DURA>
+SENDMSG 5 完成赋值
+#IF
+equal S0 魔血石
+#ACT
+
+#ELSEACT
+MESSAGEBOX 这不是魔血石，请收回
+RECLAIMITEM
+BREAK
+#IF
+large N10 0
+#ACT
+MOV S1 气血石
+#ELSEACT
+MOV S1 幻魔石
+
+#IF
+small P1 50000
+#ACT
+MESSAGEBOX 请准备一个全新的魔血石
+RECLAIMITEM
+#ELSEACT
+TAKEDLGITEM
+GIVE <$STR(S1)> 1
+MESSAGEBOX 兑换成功，你获得了一个全新的<$STR(S1)>
+
+[@复OK框BUG]
+#IF
+#ACT
+RECLAIMITEM
 [@补充魔血石]
 #SAY
 魔血石是个好东西呀,制作非常不易.如果你有材料,我可以帮助你\
@@ -41,6 +87,8 @@ goto @main-1
 <补充魔血石(中)/@补充魔血石中>(需要2块金砖)\
 <补充魔血石(大)/@补充魔血石大>(需要3块金砖)\
 <补充魔血石/@补充魔血石完整>(需要3块金砖,1个赤月恶魔油)\
+<补充气血石/@补充气血石完整>(需要3块金砖,1个赤月恶魔油)\
+<补充幻魔石/@补充幻魔石完整>(需要3块金砖,1个赤月恶魔油)\
 <退出/@exit>\
 [@补充魔血石小]
 #IF
@@ -98,6 +146,38 @@ GIVE 魔血石 1
 BREAK
 #ELSEACT
 MESSAGEBOX 准备的材料还不够,请检查一下你所准备的材料,请把魔血石放在背包里
+BREAK
+
+[@补充气血石完整]
+#IF
+checkitem 赤月恶魔油 1
+checkitem 金砖 3
+checkitem 气血石 1
+#ACT
+take 赤月恶魔油 1
+take 金砖 3
+take 气血石 1
+SENDMSG 5 提示：魔力注入成功,气血石恢复如初!
+GIVE 气血石 1
+BREAK
+#ELSEACT
+MESSAGEBOX 准备的材料还不够,请检查一下你所准备的材料,请把气血石放在背包里
+BREAK
+
+[@补充幻魔石完整]
+#IF
+checkitem 赤月恶魔油 1
+checkitem 金砖 3
+checkitem 幻魔石 1
+#ACT
+take 赤月恶魔油 1
+take 金砖 3
+take 幻魔石 1
+SENDMSG 5 提示：魔力注入成功,幻魔石恢复如初!
+GIVE 幻魔石 1
+BREAK
+#ELSEACT
+MESSAGEBOX 准备的材料还不够,请检查一下你所准备的材料,请把幻魔石放在背包里
 BREAK
 
 
@@ -167,7 +247,7 @@ GIVE 魔血石(中) 1
 checkitem 赤月恶魔油 1
 checkitem 金砖 1
 checkitem 黑铁矿石 1
-checkdura 黑铁矿石 12
+checkdura 黑铁矿石 25
 #ACT
 take 赤月恶魔油 1
 take 金砖 1

@@ -207,6 +207,50 @@ GAMEGOLD + 1
 [@UserCmd6]
 #ACT
 #CALL [系统功能\垃圾回收.txt] @回收垃圾
+;加强群体治疗
+
+;对自己触发
+[@MagTagFunc29]
+#IF
+CHECKSKILL 群体治疗术 = 1 0
+#ACT
+MOV I8 1
+
+#IF
+CHECKSKILL 群体治疗术 = 2 0
+#ACT
+MOV I8 2
+
+#IF
+CHECKSKILL 群体治疗术 = 3 0
+#ACT
+MOV I8 3
+#IF
+CHECKSKILL 群体治疗术 = 4 0
+#ACT
+MOV I8 4
+#IF
+CHECKSKILL 群体治疗术 = 5 0
+#ACT
+MOV I8 5
+#IF
+CHECKSKILL 群体治疗术 = 6 0
+#ACT
+MOV I8 6
+#IF
+CHECKSKILL 群体治疗术 = 7 0
+#ACT
+MOV I8 7
+;对他人触发
+[@MagTagFuncEx29]
+#IF
+#ACT
+MUL N88 <$STR(I8)> 20
+HUMANHP + <$STR(N88)>
+SendMsg 5 得到治疗：<$STR(N88)>
+;对BB触发
+[@MagMonFunc29]
+
 
 [@StartAutoPlayGame]
 #ACT

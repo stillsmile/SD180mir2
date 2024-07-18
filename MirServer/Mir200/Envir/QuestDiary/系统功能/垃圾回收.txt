@@ -424,6 +424,21 @@ give 金币 4000
 INC N12 4000
 
 #if
+checkitem 魔力戒指 1
+#act
+take 魔力戒指 1
+give 金币 4000
+INC N12 4000
+
+#if
+checkitem 魔力项链 1
+#act
+take 魔力项链 1
+give 金币 4000
+INC N12 4000
+
+
+#if
 checkitem 辟邪手镯 1
 #act
 take 辟邪手镯 1

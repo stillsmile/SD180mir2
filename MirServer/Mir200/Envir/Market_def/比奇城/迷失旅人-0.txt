@@ -55,7 +55,7 @@ checkitem 冰核 1
 #ACT
 take 冰核 1
 give 五倍经验神丹 1
-SENDMSG 2 兑换成功！
+SENDMSG 5 兑换成功！
 #ELSEACT
 SENDMSG 2 你没有那么多的冰核啊！
 
@@ -65,7 +65,7 @@ checkitem 冰核 4
 #ACT
 take 冰核 4
 give 十倍经验神丹 1
-SENDMSG 2 兑换成功！
+SENDMSG 5 兑换成功！
 SENDMSG 0 『<$USERNAME>』在迷失旅人NPC处用4个冰核兑换了十倍经验神丹！！
 #ELSEACT
 SENDMSG 2 你没有那么多的冰核啊！

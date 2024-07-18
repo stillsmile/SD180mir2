@@ -6,9 +6,10 @@ checkjob taoist
 \
 看来你已经步入道学大门了\
 你有什么困扰？\\
-<月灵培养/@月灵>\
+
 <神兽的突破/@神兽>\
 <白虎培养/@白虎>\
+<月灵培养/@月灵>\
 <退出/@exit>\
 #ELSESAY
 \
@@ -20,6 +21,19 @@ checkjob taoist
 
 
 [@神兽]
+#OR
+CHECKSKILL 召唤月灵 = 0 0
+CHECKSKILL 召唤月灵 > 0 0
+CHECKSKILL 召唤月灵二重 =  0 0
+CHECKSKILL 召唤月灵二重 > 0 0
+CHECKSKILL 召唤月灵三重 =  0 0
+CHECKSKILL 召唤月灵三重 > 0 0
+#SAY
+你已经拥有月灵了，无法再拥有白虎\
+<退出/@exit>\
+#ACT
+BREAK
+
 #IF
 CHECKSKILL 召唤神兽 =  3 0
 #SAY

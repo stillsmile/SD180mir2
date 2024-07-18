@@ -9,6 +9,43 @@
 <灵符回收目录/@目录>
 [@回收]
 
+#if
+checkitem 探测项链 1
+#act
+take 探测项链 1
+changeexp + 1000
+gamegird + 2
+
+#if
+checkitem 黑铁手套 1
+#act
+take 黑铁手套 1
+changeexp + 1000
+gamegird + 2
+
+
+#if
+checkitem 火焰戒指 1
+#act
+take 火焰戒指 1
+changeexp + 1000
+gamegird + 2
+
+
+
+#if
+checkitem 狂风戒指 1
+#act
+take 狂风戒指 1
+changeexp + 1000
+gamegird + 2
+
+#if
+checkitem 狂风项链 1
+#act
+take 狂风项链 1
+changeexp + 2000
+gamegird + 4
 
 #if
 checkitem 银星勋章(道) 1
@@ -136,18 +173,7 @@ checkitem 霸者之刃 1
 take 霸者之刃 1
 changeexp + 50000
 gamegird + 20
-#if
-checkitem 赤血魔剑 1
-#act
-take 赤血魔剑 1
-changeexp + 50000
-gamegird + 20
-#if
-checkitem 破馆珍剑 1
-#act
-take 破馆珍剑 1
-changeexp + 50000
-gamegird + 20
+
 #if
 checkitem 命运之刃 1
 #act

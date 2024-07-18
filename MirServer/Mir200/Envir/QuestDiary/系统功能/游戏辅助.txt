@@ -1,13 +1,33 @@
 [@辅助]
 {
 \\
-#if
+#IF
+  ISADMIN
 #say
 \ \
-<☆/AUTOCOLOR=154><使用移动/@使用移动><☆/AUTOCOLOR=154><☆/AUTOCOLOR=154><辅助功能/@辅助功能><☆/AUTOCOLOR=154>\
-<☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154><☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\
-<☆/AUTOCOLOR=154><二分之一测试/@二分之一测试>
-
+<☆/AUTOCOLOR=154><使用移动/@使用移动><☆/AUTOCOLOR=154>                    <☆/AUTOCOLOR=154><辅助功能/@辅助功能><☆/AUTOCOLOR=154>\ \
+\ \
+<☆/AUTOCOLOR=154><飞GM等待房/@GM><☆/AUTOCOLOR=154>      <☆/AUTOCOLOR=154><GM功能/@GM功能><☆/AUTOCOLOR=154>   \ 
+\ \
+<☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
+;<☆/AUTOCOLOR=154><二分之一测试/@二分之一测试>
+#ELSESAY
+\ \
+<☆/AUTOCOLOR=154><使用移动/@使用移动><☆/AUTOCOLOR=154>                    <☆/AUTOCOLOR=154><辅助功能/@辅助功能><☆/AUTOCOLOR=154>\ \
+\ \
+\ \
+<☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
+[@GM功能]
+#IF
+CHECKRANGEMONCOUNTEX hl002 火蟒 36 183 400 > 0 
+#SAY
+威胁还存在，清除掉所有的火蟒。
+#ELSESAY
+这片区域安全了，感谢你
+[@GM]
+#IF
+#ACT
+ mapmove GM001 25 28
 [@二分之一测试]
 #IF
 RANDOM 2
