@@ -68,10 +68,10 @@ NOT EQUAL U1 1
 	take 金砖 2
 	take 火龙凭证 1
 	MAPMOVE  hl001 385 346
-	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
-	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 0 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 0 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 0 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
+	SENDMSG 0 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	#ELSEACT
 	MESSAGEBOX 请准备好道具!
 	BREAK
