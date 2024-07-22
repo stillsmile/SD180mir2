@@ -168,6 +168,15 @@ Gmexecute showeffect 76
 POWERRATE 150 1800
 SENDMSG 7 你获得了半小时1.5倍攻击力,期间死亡或下线效果即刻消失,重复使用无效!
 
+[@StdModeFunc19]
+#ACT
+HighLevelKillMonFixExp 3600 1
+sendmsg 5 开启真视卷轴，获取经验已无视等级。
+
+[@StdModeFunc20]
+#ACT
+HighLevelKillMonFixExp 10800 1
+sendmsg 5 开启真视卷轴，获取经验已无视等级。
 
 [@UserCmd1]
 #ACT
