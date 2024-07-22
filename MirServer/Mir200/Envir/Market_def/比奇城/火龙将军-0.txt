@@ -36,6 +36,13 @@ equal G2 0
 <返回/@main>\\  
 [@我要去火龙洞穴]           
 #IF
+  CHECKLEVELEX < 50
+#ACT
+MESSAGEBOX 您的等级还没到50级，去不了火龙洞穴
+BREAK
+
+
+#IF
 NOT EQUAL U1 1
 #SAY
 你还不是火龙勇士，我没办法让你去这么危险的地方\
@@ -43,33 +50,59 @@ NOT EQUAL U1 1
 #ELSESAY
 你好，火龙勇士!
 这个区域药物无法治愈你，所有的传送魔法将失效！\
-我需要你支付200声望值，并交给我一个火龙凭证方能护送你进去。\
+我需要你支付2块金砖，并交给我一个火龙凭证方能护送你进去。\
+如果你需要组队进入,再给我一个祖玛头像和沃玛号角.\
+注意:全队必须要是火龙勇士,不然会被遣返!\
 里面有滚烫的岩浆，每分钟需要60元宝购买护体真气。\
 那里非常危险，你确定要去吗？\
-<我想试试/@进去>\\  
+<我想试试/@进去>单人进入\\  
+<我带队进入/@组队进去>组队进入\\  
 <返回/@main>\\  
 
 [@进去] 
-#IF
-CHECKCREDITPOINT < 200
-#ACT
-MESSAGEBOX 你的声望不够！！
-BREAK
-#ELSEACT
+
 	#IF
 	checkitem 火龙凭证 1
+	checkitem 金砖 2
 	#ACT
+	take 金砖 2
 	take 火龙凭证 1
-	CREDITPOINT - 200
 	MAPMOVE  hl001 385 346
 	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	SENDMSG 6 勇敢的『<$USERNAME>』勇士正在前往恐怖火龙洞穴。
 	#ELSEACT
-	MESSAGEBOX 没有火龙凭证我不会让你冒险的!
+	MESSAGEBOX 请准备好道具!
 	BREAK
 
+[@组队进去]
+#if
+NOT ISGROUPMASTER
+#ACT
+SendMsg 5 你不是组长,不能组队传送
+BREAK
+
+#IF
+checkitem 金砖 2
+checkitem 祖玛头像 1
+checkitem 沃玛号角 1
+checkitem 火龙凭证 1
+#ACT
+take 金砖 2
+take 火龙凭证 1
+take 祖玛头像 1
+take 沃玛号角 1
+
+GROUPMAPMOVE hl001 385 346 50
+SENDMSG 0 伟大的『<$USERNAME>』勇士们组队前往恐怖火龙洞穴。
+SENDMSG 0 伟大的『<$USERNAME>』勇士们组队前往恐怖火龙洞穴。
+SENDMSG 0 伟大的『<$USERNAME>』勇士们组队前往恐怖火龙洞穴。
+SENDMSG 0 伟大的『<$USERNAME>』勇士们组队前往恐怖火龙洞穴。
+
+#ELSESAY 
+你准备的材料不齐全, 你知道材料种类， \
+就快去准备材料吧，我会在这里等你的。 \ \
 
 
 [@成为火龙勇士]
