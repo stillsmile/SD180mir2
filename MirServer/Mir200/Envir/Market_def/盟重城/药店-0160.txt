@@ -32,8 +32,20 @@ goto @main-1
 <升级魔血石/@升级魔血石>\\
 <补充魔血石/@补充魔血石>\
 <魔血石转气血石/@魔血石转气血石>\
+<气血石转魔血石/@气血石转魔血石>\
 <魔血石转幻魔石/@魔血石转幻魔石>\
+<幻魔石转魔血石/@幻魔石转魔血石>\
 <修复OK框BUG/@复OK框BUG>\
+[@幻魔石转魔血石]
+#ACT
+MOV N10 3
+OPENUPGRADEDLG 石头转换
+
+[@气血石转魔血石]
+#ACT
+MOV N10 2
+OPENUPGRADEDLG 石头转换
+
 [@魔血石转气血石]
 #ACT
 MOV N10 1
@@ -49,25 +61,41 @@ OPENUPGRADEDLG 石头转换
 MOV S0 <$DLGITEM.NAME>
 MOV P1 <$DLGITEM.DURA>
 SENDMSG 5 完成赋值
-#IF
-equal S0 魔血石
-#ACT
 
+#OR
+equal S0 魔血石
+equal S0 气血石
+equal S0 幻魔石
+#ACT
 #ELSEACT
-MESSAGEBOX 这不是魔血石，请收回
+MESSAGEBOX 这不是血石，请收回
 RECLAIMITEM
 BREAK
+
 #IF
 large N10 0
 #ACT
 MOV S1 气血石
-#ELSEACT
+
+#IF
+large N10 1
+#ACT
 MOV S1 幻魔石
+
+#IF
+large N10 2
+#ACT
+MOV S1 魔血石
+
+#IF
+large N10 3
+#ACT
+MOV S1 魔血石
 
 #IF
 small P1 50000
 #ACT
-MESSAGEBOX 请准备一个全新的魔血石
+MESSAGEBOX 请准备一个全新的血石
 RECLAIMITEM
 #ELSEACT
 TAKEDLGITEM
