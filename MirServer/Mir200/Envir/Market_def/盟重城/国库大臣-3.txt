@@ -1,11 +1,12 @@
 [@main]
 \\
 #IF
-equal G2 0
+equal G4 0
 #say
 发放？算了吧，货物紧缺呢。...\
 你有材料吗？可以上交国库吗？我会支付报酬的。\\
-<开服一周福利/@增加称号>\\
+<开服两周福利/@增加称号1>\\
+;<开服一周福利/@增加称号>\\
 ;<40级补偿破馆珍剑/@领取破馆珍剑>\\
 <包裹里的你都拿走吧/@回收材料>上交沃玛号角，祖玛头像，火龙凭证\
 <我没材料/@exit>\
@@ -29,6 +30,20 @@ BREAK
 NOT CHECKTITLE 老登
 #ACT
 CONFERTITLE 老登
+#ELSEACT
+SENDMSG 6 已经有了该称号
+
+[@增加称号1]
+#IF
+CHECKFENGHAOCOUNT > 29 
+#ACT
+SENDMSG 6 已经有了所有称号
+BREAK
+
+#IF
+NOT CHECKTITLE 老毕登
+#ACT
+CONFERTITLE 老毕登
 #ELSEACT
 SENDMSG 6 已经有了该称号
 

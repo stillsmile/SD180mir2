@@ -15,4 +15,4 @@
 
 #AutoRun NPC MIN 1 @ÃÜ¾³Ë¢ÐÂ
 
-#AutoRun NPC RUNONDAY 21:30 @»ðÁú½µÁÙ
+#AutoRun NPC RUNONDAY 23:50 @»ðÁú½µÁÙ
