@@ -14,5 +14,6 @@
 #AutoRun NPC RUNONDAY 23:59 @定时发材料
 
 #AutoRun NPC MIN 1 @密境刷新
+#AutoRun NPC RUNONDAY 10:00 @火龙降临
 
-#AutoRun NPC RUNONDAY 23:50 @火龙降临
+#AutoRun NPC RUNONDAY 20:00 @火龙降临

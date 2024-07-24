@@ -15,25 +15,27 @@
 #ACT
 OpenShopDlg 0 
 [@组员经验倍率]
-mov M21 <$GROUPMEMBERCOUNT>
-Mul M22 100 <$STR(M21)>
-#IF
-large M21 1
-#ACT
-Gmexecute showeffect 76
-KILLMONEXPRATE <$STR(M22)> 600
+;#IF
+;#ACT
+;mov M21 <$GROUPMEMBERCOUNT>
+;Mul M22 100 <$STR(M21)>
+;#IF
+;large M21 1
+;#ACT
+;Gmexecute showeffect 76
+;KILLMONEXPRATE <$STR(M22)> 600
 
 
 [@组员攻击倍率]
-#IF
-#ACT
-mov M19 <$GROUPMEMBERCOUNT>
-Mul M20 100 <$STR(M19)>
-#IF
-large M19 1
-#ACT
-POWERRATE <$STR(M20)> 60 
-
+;#IF
+;#ACT
+;mov M19 <$GROUPMEMBERCOUNT>
+;Mul M20 100 <$STR(M19)>
+;#IF
+;large M19 1
+;#ACT
+;POWERRATE <$STR(M20)> 60 
+;没啥用
 ;==========================================
 
 [@ButtonClick4]

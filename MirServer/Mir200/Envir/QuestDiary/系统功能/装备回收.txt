@@ -10,6 +10,13 @@
 [@回收]
 
 #if
+checkitem 求婚戒指 1
+#act
+take 求婚戒指 1
+changeexp + 1000
+gamegird + 2
+
+#if
 checkitem 探测项链 1
 #act
 take 探测项链 1
