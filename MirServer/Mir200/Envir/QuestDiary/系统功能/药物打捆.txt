@@ -60,7 +60,12 @@ checkitem 疗伤药 6
  #ACT
  take 疗伤药 6
  give 疗伤药包 1
- 
+
+#IF
+checkitem 万年雪霜 6
+ #ACT
+ take 万年雪霜 6
+ give 万年雪霜包 1
 }
  
  
