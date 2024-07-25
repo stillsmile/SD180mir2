@@ -1,0 +1,193 @@
+[@main]
+真是令人惊叹的力量与勇气啊，年轻的英雄们。\
+向你们表示最崇高的敬意。你们不仅击败了火龙教主，\
+更打破了恐惧与绝望的枷锁，为这片土地带来了希望。\
+作为对你们英勇行为的奖赏，我愿意为你们重塑体魄，\
+使你们得到前所未有的提升。\\
+
+另外我也可以把顶级的装备相互熔炼，\
+元素精灵赋予你的道具上。\\
+<请为我重塑体魄/@重塑体魄> \ 
+<熔炼元素属性/@元素属性> \ 
+
+<退出/@exit>\
+[@重塑体魄]
+我需要一个[焰魂龙纹]，使用内力将它融入你的身体，\
+过程非常痛苦，你的等级会被清空。请慎重选择。\\\
+<帮我重生/@帮我重生> 使用焰魂龙纹进行重生\ 
+<我还没准备好/@exit>\
+
+
+
+[@帮我重生]
+#IF
+checkitem 焰魂龙纹 1
+#ACT
+take 焰魂龙纹 1
+RENEWLEVEL 1 1 200
+TakeOffItem 0
+TakeOffItem 1
+TakeOffItem 2
+TakeOffItem 3
+TakeOffItem 4
+TakeOffItem 5
+TakeOffItem 6
+TakeOffItem 7
+TakeOffItem 8
+TakeOffItem 9
+TakeOffItem 10
+TakeOffItem 11
+TakeOffItem 12
+#SAY
+你已经重塑体魄了。
+#ELSESAY
+你没有焰魂龙纹，我无法为你重塑！
+
+[@元素属性]
+你的包裹里有主宰装备和传奇装备吗？\
+我可以熔炼出他们的元素，注入你的体内。\
+踏云尊者会帮你释放在物体上。\\
+<熔炼主宰装备/@熔炼主宰装备> \
+<熔炼传奇装备/@熔炼传奇装备> \
+
+
+[@熔炼传奇装备]
+#IF
+checkitem 传奇神甲(男)) 1
+#ACT
+take 传奇神甲(男) 1
+inc U19 2
+
+#IF
+checkitem 传奇神甲(女) 1
+#ACT
+take 传奇神甲(女) 1
+inc U19 2
+
+#IF
+checkitem 传奇神剑 1
+#ACT
+take 传奇神剑 1
+inc U19 2
+
+#IF
+checkitem 传奇之戒 1
+#ACT
+take 传奇之戒 1
+inc U19 2
+
+#IF
+checkitem 传奇护腕 1
+#ACT
+take 传奇护腕 1
+inc U19 2
+
+#IF
+checkitem 传奇之冠 1
+#ACT
+take 传奇之冠 1
+inc U19 2
+
+
+#IF
+checkitem 传奇项链 1
+#ACT
+take 传奇项链 1
+inc U19 2
+
+#IF
+checkitem 传奇腰带 1
+#ACT
+take 传奇腰带 1
+inc U19 2
+
+#IF
+checkitem 传奇之靴 1
+#ACT
+take 传奇之靴 1
+inc U19 2
+
+#IF
+checkitem 传奇勋章 1
+#ACT
+take 传奇勋章 1
+inc U19 2
+
+#IF
+checkitem 传奇面巾 1
+#ACT
+take 传奇面巾 1
+inc U19 2
+
+MESSAGEBOX 你的熔炼值是<$STR(U19)>
+
+
+[@熔炼主宰装备]
+#IF
+checkitem 主宰神甲(男) 1
+#ACT
+take 主宰神甲(男) 1
+inc U19 1
+
+#IF
+checkitem 主宰神甲(女) 1
+#ACT
+take 主宰神甲(女) 1
+inc U19 1
+
+#IF
+checkitem 主宰神剑 1
+#ACT
+take 主宰神剑 1
+inc U19 1
+
+#IF
+checkitem 主宰项链 1
+#ACT
+take 主宰项链 1
+inc U19 1
+
+#IF
+checkitem 主宰护腕 1
+#ACT
+take 主宰护腕 1
+inc U19 1
+
+#IF
+checkitem 主宰之戒 1
+#ACT
+take 主宰之戒 1
+inc U19 1
+
+
+#IF
+checkitem 主宰之冠 1
+#ACT
+take 主宰之冠 1
+inc U19 1
+
+#IF
+checkitem 主宰腰带 1
+#ACT
+take 主宰腰带 1
+inc U19 1
+
+#IF
+checkitem 主宰之靴 1
+#ACT
+take 主宰之靴 1
+inc U19 1
+
+#IF
+checkitem 主宰面巾 1
+#ACT
+take 主宰面巾 1
+inc U19 1
+
+#IF
+checkitem 主宰勋章 1
+#ACT
+take 主宰勋章 1
+inc U19 1
+
+MESSAGEBOX 你的熔炼值是<$STR(U19)>

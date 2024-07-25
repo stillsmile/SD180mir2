@@ -14,7 +14,12 @@
 [@ButtonClick6]
 #ACT
 OpenShopDlg 0 
-[@组员经验倍率]
+[@火龙NPC]
+#IF
+#ACT
+SENDMSG 6 测试成功
+
+;[@组员经验倍率]
 ;#IF
 ;#ACT
 ;mov M21 <$GROUPMEMBERCOUNT>
@@ -25,8 +30,7 @@ OpenShopDlg 0
 ;Gmexecute showeffect 76
 ;KILLMONEXPRATE <$STR(M22)> 600
 
-
-[@组员攻击倍率]
+;[@组员攻击倍率]
 ;#IF
 ;#ACT
 ;mov M19 <$GROUPMEMBERCOUNT>
@@ -37,7 +41,12 @@ OpenShopDlg 0
 ;POWERRATE <$STR(M20)> 60 
 ;没啥用
 ;==========================================
-
+[@OnKillMob]
+#IF
+CheckKillMonName 火龙教主
+CreateNPC 云隐宗师 D2083 81 45 78 云隐宗师-D2083
+#SAY
+通过脚本建立了一个NPC.
 [@ButtonClick4]
 
 #IF
