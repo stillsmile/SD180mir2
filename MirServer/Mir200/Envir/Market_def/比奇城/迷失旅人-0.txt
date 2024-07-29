@@ -10,6 +10,62 @@ equal G3 0
 #ACT
 BREAK
 
+#IF
+CheckMapHumanCount hero1  = 0
+#ACT
+MOV G11 0
+#IF
+CheckMapHumanCount hero1  = 1
+#ACT
+MOV G11 1
+#IF
+CheckMapHumanCount hero1  = 2
+#ACT
+MOV G11 2
+
+#IF
+CheckMapHumanCount hero1  = 3
+#ACT
+MOV G11 3
+
+#IF
+CheckMapHumanCount hero1  = 4
+#ACT
+MOV G11 4
+
+#IF
+CheckMapHumanCount hero1  = 5
+#ACT
+MOV G11 5
+
+#IF
+CheckMapHumanCount hero2  = 0
+#ACT
+MOV G12 0
+#IF
+CheckMapHumanCount hero2  = 1
+#ACT
+MOV G12 1
+#IF
+CheckMapHumanCount hero2  = 2
+#ACT
+MOV G12 2
+
+#IF
+CheckMapHumanCount hero2  = 3
+#ACT
+MOV G12 3
+
+#IF
+CheckMapHumanCount hero2  = 4
+#ACT
+MOV G12 4
+
+#IF
+CheckMapHumanCount hero2  = 5
+#ACT
+MOV G12 5
+
 
 #IF
   CHECKLEVELEX < 45
@@ -20,38 +76,53 @@ BREAK
 比奇附近出现了一个密境，我刚从里面逃了出来。\
 里面可以获得大量经验，提升等级的好地方。\
 准备好一个冰核，我可以把你送进去一个小时。\
-<给你冰核/@给你冰核>\\ 
+<密境东区/@密境东区>目前东区有<$STR(G11)>位\\ 
+<密境西区/@密境西区>目前西区有<$STR(G12)>位\\ 
 什么？冰核你还很富裕？我正好需要，我们做个交易\\
 <冰核兑换经验神丹/@冰核兑换经验神丹>\\ 
 
-[@给你冰核]
+[@密境东区]
 #IF
 checkitem 冰核 1
-#ACT
-goto @随机分房
-#ELSESAY 
-你还没有冰核呢，去雪域地图获取吧！\
-<返回/@main>\\               
-
-[@随机分房]
-#IF
-RANDOM 2
 #ACT
 take 冰核 1
 mov U2 1
 map hero1
-SENDDELAYMSG 密境探险时间还剩%s 3600 255 1 @经验密境结束
-#ELSEACT
+SENDDELAYMSG 密境探险时间还剩%s 3600 255 1 @密境东区结束
+inc G11 1
+#ELSESAY 
+你还没有冰核呢，去雪域地图获取吧！\
+<返回/@main>\\               
+
+[@密境西区]
+#IF
+checkitem 冰核 1
+#ACT
 take 冰核 1
 mov U2 1
 map hero2
-SENDDELAYMSG 密境探险时间还剩%s 3600 255 1 @经验密境结束
+SENDDELAYMSG 密境探险时间还剩%s 3600 255 1 @密境西区结束
+inc G12 1
+#ELSESAY 
+你还没有冰核呢，去雪域地图获取吧！\
+<返回/@main>\\               
 
-[@经验密境结束]
+
+
+[@密境东区结束]
 #IF
 #ACT
 mov U2 0 ;给变量赋值
 map 1
+DEC G11 1
+SENDMSG 7 经验密境探险结束了！
+
+[@密境西区结束]
+#IF
+#ACT
+mov U2 0 ;给变量赋值
+map 1
+DEC G12 1
 SENDMSG 7 经验密境探险结束了！
 
 [@冰核兑换经验神丹]
