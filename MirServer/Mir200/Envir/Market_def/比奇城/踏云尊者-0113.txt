@@ -55,6 +55,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 0 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -69,6 +71,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 1 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -83,6 +87,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 2 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -97,6 +103,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 3 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -111,6 +119,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 4 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -125,6 +135,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 5 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -139,6 +151,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 6 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -153,6 +167,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 7 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!
@@ -167,6 +183,8 @@ LARGE U19 0
 DEC U19 1
 MOVR P5 1 5
 SetNewItemValue -1 8 + <$STR(P5)>
+SetItemBind -1 1
+SetItemBind -1 4
 RECLAIMITEM
 #SAY
 ¹§Ï²°¡!

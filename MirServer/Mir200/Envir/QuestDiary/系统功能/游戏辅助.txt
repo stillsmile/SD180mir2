@@ -7,7 +7,7 @@
 \ \
 <☆/AUTOCOLOR=154><使用移动/@使用移动><☆/AUTOCOLOR=154>                    <☆/AUTOCOLOR=154><辅助功能/@辅助功能><☆/AUTOCOLOR=154>\ \
 \ \
-<☆/AUTOCOLOR=154><飞GM等待房/@GM><☆/AUTOCOLOR=154>      <☆/AUTOCOLOR=154><GM功能/@GM功能><☆/AUTOCOLOR=154>   \ 
+<☆/AUTOCOLOR=154><飞GM等待房/@GM><☆/AUTOCOLOR=154>      <☆/AUTOCOLOR=154><GM功能/@GM功能><☆/AUTOCOLOR=154> <☆/AUTOCOLOR=154><云隐宗师消失/@云隐宗师消失><☆/AUTOCOLOR=154>  \ 
 \ \
 <☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
 ;<☆/AUTOCOLOR=154><二分之一测试/@二分之一测试>
@@ -22,6 +22,11 @@
 #ACT
 CreateNPC 云隐宗师 D2083 81 45 78 云隐宗师-D2083
 DELAYCALL 300000 @云隐宗师消失
+
+[@云隐宗师消失]
+#IF
+#ACT
+DelNpc 云隐宗师
 [@GM]
 #IF
 #ACT

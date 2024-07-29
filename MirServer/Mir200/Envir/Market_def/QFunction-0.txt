@@ -23,7 +23,7 @@ SENDMSG 6 测试成功
 #IF
 CheckKillMonName 火龙教主
 #ACT
-CreateNPC 云隐宗师 D2083 81 45 78 云隐宗师-D2083
+CreateNPC 云隐宗师 D2083 78 48 78 云隐宗师-D2083
 DELAYCALL 300000 @云隐宗师消失
 #SAY
 云隐宗师出现了.
