@@ -42,6 +42,13 @@ checkrenewlevel = 10
 #ACT
 SENDMSG 2 你的转生次数已经够多的了.
 BREAK
+
+#IF
+CHECKLEVELEX < 65
+#ACT
+SENDMSG 2 你的等级不足65级,承受不了重塑!
+BREAK
+
 #IF
 checkitem 焰魂龙纹 1
 #ACT
