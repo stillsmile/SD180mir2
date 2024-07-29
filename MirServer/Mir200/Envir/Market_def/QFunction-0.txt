@@ -19,34 +19,18 @@ OpenShopDlg 0
 #ACT
 SENDMSG 6 测试成功
 
-;[@组员经验倍率]
-;#IF
-;#ACT
-;mov M21 <$GROUPMEMBERCOUNT>
-;Mul M22 100 <$STR(M21)>
-;#IF
-;large M21 1
-;#ACT
-;Gmexecute showeffect 76
-;KILLMONEXPRATE <$STR(M22)> 600
-
-;[@组员攻击倍率]
-;#IF
-;#ACT
-;mov M19 <$GROUPMEMBERCOUNT>
-;Mul M20 100 <$STR(M19)>
-;#IF
-;large M19 1
-;#ACT
-;POWERRATE <$STR(M20)> 60 
-;没啥用
-;==========================================
 [@OnKillMob]
 #IF
 CheckKillMonName 火龙教主
 CreateNPC 云隐宗师 D2083 81 45 78 云隐宗师-D2083
+DELAYCALL 300000 @云隐宗师消失
 #SAY
-通过脚本建立了一个NPC.
+云隐宗师出现了.
+
+[@云隐宗师消失]
+#IF
+#ACT
+DelNpc 云隐宗师
 [@ButtonClick4]
 
 #IF
@@ -81,7 +65,6 @@ GOTO @背包回收垃圾
 ;buff图标
 [@避寒神丹BUFF]
 #ACT
-;AddBUttON 20 13 450 451 452 <$STR(N$我的屏幕宽度)> 300 0 103#巅峰后台 255#强大的管理面板　\254#只有后台管理才能看到此按钮　
 ADDBUTTON 9 10 342 342 342 400 10 1  护体 神丹护体中，你不会被冰冻
 DELAYCALL 300000 @避寒神丹BUFF结束
 [@避寒神丹BUFF结束]
@@ -103,10 +86,7 @@ SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 
-[@火龙教主]
-#if
-#act
-SENDMSG 0 【终极火龙现世】:『<$RegMonName>』已出现，位于<$RegMonMapDesc>(<$RegMonX>:<$RegMonY>)，勇士们，结伴终结它吧！
+
 
 [@经验密境]
 #IF
@@ -200,15 +180,6 @@ Gmexecute showeffect 76
 POWERRATE 150 1800
 SENDMSG 7 你获得了半小时1.5倍攻击力,期间死亡或下线效果即刻消失,重复使用无效!
 
-;[@StdModeFunc19]
-;#ACT
-;HighLevelKillMonFixExp 3600 1
-;sendmsg 5 开启真视卷轴，获取经验已无视等级。
-
-;[@StdModeFunc20]
-;#ACT
-;HighLevelKillMonFixExp 10800 1
-;sendmsg 5 开启真视卷轴，获取经验已无视等级。
 
 [@UserCmd1]
 #ACT

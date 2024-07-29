@@ -3,11 +3,174 @@
 更要有为苍生牺牲自己的觉悟，这就是道士的宿命\
 记住，有付出才有回报，为一己私利而活的人\
 是无法成为真正的道士，来吧接受自身的挑战！\\
+<释放元素/@释放元素>
 <好!我愿意挑战！/@join>\
 <算了,我还是离开吧/@exit>\
+<修正对话框BUG/@修正对话框BUG>\
 
 [@join]
 既然你已经有所觉悟，很好！\
 在沃玛森林里住着一位刘老人，在他居住着的房子旁边\
 有一间屋子，战胜里面的魔物，完成对自己的挑战吧！\\
 <离开/@exit>\
+[@释放元素]
+#IF
+EQUAL U19 0
+#SAY
+我并没有在你身上看到元素波动\
+<返回/@main>\
+#ELSESAY
+是宗师让你来的吗?\
+看来你身上有不少秘密.哈哈哈\
+请把需要添加元素的道具交给我.\\
+#ELSEACT
+OPENUPGRADEDLG 释放元素
+
+[@UpgradeDlgItem]
+你要释放在:<$DLGITEM.NAME>吗？\
+你身上有<$STR(U19)>颗元素,你需要释放什么属性?\\
+<暴击几率增加/@暴击几率增加>\
+<增加攻击伤害/@增加攻击伤害>\
+<物理伤害减少/@物理伤害减少>\
+<魔法伤害减少/@魔法伤害减少>\
+<忽视目标防御/@忽视目标防御>\
+<所有伤害反弹/@所有伤害反弹>\
+<增加目标暴率/@增加目标暴率>\
+<人物体力增加/@人物体力增加>\
+<人物魔力增加/@人物魔力增加>\
+<不释放了，还给我/@修正对话框BUG>\
+
+[@暴击几率增加]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 0 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+暴击几率增加+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@增加攻击伤害]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 1 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+增加攻击伤害+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@物理伤害减少]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 2 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+物理伤害减少+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@魔法伤害减少]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 3 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+魔法伤害减少+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@忽视目标防御]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 4 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+忽视目标防御+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@所有伤害反弹]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 5 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+所有伤害反弹+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@增加目标暴率]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 6 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+增加目标暴率+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@人物体力增加]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 7 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+人物体力增加+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+[@人物魔力增加]
+#IF
+LARGE U19 0
+#ACT
+DEC U19 1
+MOVR P5 1 5
+SetNewItemValue -1 8 + <$STR(P5)>
+RECLAIMITEM
+#SAY
+恭喜啊!
+人物魔力增加+<$STR(P5)>.
+#ELSESAY
+元素已经消耗殆尽了\
+
+
+[@修正对话框BUG]
+#IF
+#SAY
+请拿好你的东西\
+<返回/@main>\
+#ACT
+RECLAIMITEM

@@ -26,11 +26,10 @@ checkitem 先驱者遗骸 1
 RANDOM 2
 #ACT
 take 先驱者遗骸 1
-MOVR P15 5 30
-BONUSPOINT + <$STR(P15)>
+gamegird + 5000
 #SAY
 你真是个好人，为感谢你，\
-我为你的属性进行了优化。你可以随机获得<$STR(P15)>属性点。\
+我这里有5000灵符送给你了\
 <返回/@main>\\  
 #ELSEACT
 take 先驱者遗骸 1
