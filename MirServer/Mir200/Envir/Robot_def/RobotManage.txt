@@ -13,6 +13,11 @@ CheckMapSameMonCount hero1 经验白野猪 < 400
 #ACT
 MonGenEx hero1 127 122 经验白野猪 200 400 0 156
 
+#IF
+CheckMapSameMonCount hero2 经验白野猪 < 400
+#ACT
+MonGenEx hero2 127 122 经验白野猪 200 400 0 156
+
 
 [@虎卫检测]
 #IF
