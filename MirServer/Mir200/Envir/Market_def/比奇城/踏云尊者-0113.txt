@@ -15,6 +15,14 @@
 <离开/@exit>\
 [@释放元素]
 #IF
+  checkrenewlevel = 0
+#act
+  break
+#say
+请重塑肉身后再来释放元素.\ \
+<离开/@exit>\
+
+#IF
 EQUAL U19 0
 #SAY
 我并没有在你身上看到元素波动\
