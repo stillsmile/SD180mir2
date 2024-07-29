@@ -5,7 +5,6 @@
 另外我也可以把顶级的装备相互熔炼，\
 元素精灵赋予你的道具上。\\
 <熔炼元素属性/@元素属性> \ 
-
 作为对你们英勇行为的奖赏，我愿意为你们重塑体魄，\
 使你们得到前所未有的提升。\\
 <请为我重塑体魄/@重塑体魄> \ 
@@ -13,7 +12,7 @@
 [@重塑体魄]
 我需要一个[焰魂龙纹]，使用内力将它融入你的身体，\
 过程非常痛苦，你的等级会被清空。请慎重选择。\
-<重塑后将会送出本地图!失去熔炼元素的机会/AutoColor=245>\\\.
+<重塑后将会送出本地图!失去熔炼元素的机会/AutoColor=245>\\\
 <帮我重生为战士/@帮我重生战士> \ 
 <帮我重生为法师/@帮我重生法师> \ 
 <帮我重生为道士/@帮我重生道士> \ 
@@ -68,6 +67,10 @@ TakeOffItem 9
 TakeOffItem 10
 TakeOffItem 11
 TakeOffItem 12
+TakeOffItem 13
+TakeOffItem 14
+TakeOffItem 15
+TakeOffItem 16
 map 0
 #SAY
 你已经重塑体魄了。
@@ -100,7 +103,7 @@ CHANGEJOB Taoist
 
 [@熔炼传奇装备]
 #IF
-checkitem 传奇神甲(男)) 1
+checkitem 传奇神甲(男) 1
 #ACT
 take 传奇神甲(男) 1
 inc U19 2
@@ -166,7 +169,9 @@ checkitem 传奇面巾 1
 take 传奇面巾 1
 inc U19 2
 
-MESSAGEBOX 你的熔炼值是<$STR(U19)>
+#IF
+#SAY
+你的熔炼值是<$STR(U19)>
 
 
 [@熔炼主宰装备]
@@ -236,5 +241,6 @@ checkitem 主宰勋章 1
 #ACT
 take 主宰勋章 1
 inc U19 1
-
-MESSAGEBOX 你的熔炼值是<$STR(U19)>
+#IF
+#SAY
+你的熔炼值是<$STR(U19)>

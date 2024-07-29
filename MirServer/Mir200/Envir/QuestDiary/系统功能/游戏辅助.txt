@@ -19,11 +19,9 @@
 <☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
 [@GM功能]
 #IF
-CHECKRANGEMONCOUNTEX hl002 火蟒 36 183 400 > 0 
-#SAY
-威胁还存在，清除掉所有的火蟒。
-#ELSESAY
-这片区域安全了，感谢你
+#ACT
+CreateNPC 云隐宗师 D2083 81 45 78 云隐宗师-D2083
+DELAYCALL 300000 @云隐宗师消失
 [@GM]
 #IF
 #ACT
