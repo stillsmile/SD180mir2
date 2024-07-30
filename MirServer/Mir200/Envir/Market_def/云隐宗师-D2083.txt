@@ -8,7 +8,18 @@
 作为对你们英勇行为的奖赏，我愿意为你们重塑体魄，\
 使你们得到前所未有的提升。\\
 <请为我重塑体魄/@重塑体魄> \ 
+<重置属性点/@重置属性点>需要一个[焰魂龙纹] \ 
 <退出/@exit>\
+
+[@重置属性点]
+#IF
+checkitem 焰魂龙纹 1
+#ACT
+take 焰魂龙纹 1
+RESTBONUSPOINT
+SENDMSG 2 我已经把你的属性都重置了
+#ELSESAY
+你没有焰魂龙纹，我无法为你重塑！
 [@重塑体魄]
 我需要一个[焰魂龙纹]，使用内力将它融入你的身体，\
 过程非常痛苦，你的等级会被清空。请慎重选择。\
@@ -46,13 +57,18 @@ CHECKLEVELEX < 65
 #ACT
 SENDMSG 2 你的等级不足65级,承受不了重塑!
 BREAK
-
+#IF
+#ACT
+MOV P14 <$LEVEL>
+DEC P14 65
 #IF
 checkitem 焰魂龙纹 1
 #ACT
 take 焰魂龙纹 1
 GOTO @转职
-RENEWLEVEL 1 1 500
+MUL P14 <$STR(P14)> 10
+INC P14 500
+RENEWLEVEL 1 1 <$STR(P14)>
 CLEARSKILL
 TakeOffItem 0
 TakeOffItem 1
