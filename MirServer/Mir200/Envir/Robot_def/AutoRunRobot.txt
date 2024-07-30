@@ -14,6 +14,7 @@
 #AutoRun NPC RUNONDAY 23:59 @隅奀楷第蹋
 
 #AutoRun NPC MIN 1 @躇噫芃陔
-#AutoRun NPC RUNONDAY 10:00 @鳶韓蔥還
-
-#AutoRun NPC RUNONDAY 20:00 @鳶韓蔥還
+#AutoRun NPC RUNONDAY 7:00 @鳶韓蔥還
+#AutoRun NPC RUNONDAY 12:00 @鳶韓蔥還
+#AutoRun NPC RUNONDAY 16:00 @鳶韓蔥還
+#AutoRun NPC RUNONDAY 22:00 @鳶韓蔥還
