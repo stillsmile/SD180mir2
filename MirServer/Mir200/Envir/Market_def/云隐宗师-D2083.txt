@@ -68,6 +68,7 @@ take 焰魂龙纹 1
 GOTO @转职
 MUL P14 <$STR(P14)> 10
 INC P14 500
+map 0
 RENEWLEVEL 1 1 <$STR(P14)>
 CLEARSKILL
 TakeOffItem 0
@@ -87,7 +88,6 @@ TakeOffItem 13
 TakeOffItem 14
 TakeOffItem 15
 TakeOffItem 16
-map 0
 #SAY
 你已经重塑体魄了。
 #ELSESAY
