@@ -73,22 +73,22 @@ RECLAIMITEM
 BREAK
 
 #IF
-large N10 0
+EQUAL N10 1
 #ACT
 MOV S1 气血石
 
 #IF
-large N10 1
+EQUAL N10 0
 #ACT
 MOV S1 幻魔石
 
 #IF
-large N10 2
+EQUAL N10 2
 #ACT
 MOV S1 魔血石
 
 #IF
-large N10 3
+EQUAL N10 3
 #ACT
 MOV S1 魔血石
 
