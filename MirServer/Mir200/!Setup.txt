@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=12017118
+ItemNumber=12207468
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -2724,7 +2724,7 @@ HelMetMACAddRate=30
 MerchantNameColor=250
 SlavePowerRate=100
 ViewFog=0
-MasterRoyaltyTime=600
+MasterRoyaltyTime=9999
 ViewRangeCanMagicAttack=0
 AmyOunsulTimeRate=100
 AmyOunsulMaxTime=300
