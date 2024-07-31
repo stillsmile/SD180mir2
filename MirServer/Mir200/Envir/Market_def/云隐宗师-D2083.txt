@@ -5,7 +5,7 @@
 另外我也可以把顶级的装备相互熔炼，\
 元素精灵赋予你的道具上。\\
 <熔炼元素属性/@元素属性> \ 
-作为对你们英勇行为的奖赏，我愿意为你们重塑体魄，\
+作为对你们英勇行为的奖赏，老夫愿意为你们重塑体魄，\
 使你们得到前所未有的提升。\\
 <请为我重塑体魄/@重塑体魄> \ 
 <重置属性点/@重置属性点>需要一个[焰魂龙纹] \ 
@@ -17,11 +17,11 @@ checkitem 焰魂龙纹 1
 #ACT
 take 焰魂龙纹 1
 RESTBONUSPOINT
-SENDMSG 2 我已经把你的属性都重置了
+SENDMSG 2 老夫已经把你的属性都重置了
 #ELSESAY
-你没有焰魂龙纹，我无法为你重塑！
+你没有焰魂龙纹，老夫无法为你重塑！
 [@重塑体魄]
-我需要一个[焰魂龙纹]，使用内力将它融入你的身体，\
+老夫需要一个[焰魂龙纹]，使用内力将它融入你的身体，\
 过程非常痛苦，你的等级会被清空。请慎重选择。\
 <重塑后将会送出本地图!失去熔炼元素的机会/AutoColor=245>\\\
 <帮我重生为战士/@帮我重生战士> \ 
@@ -65,6 +65,7 @@ DEC P14 65
 checkitem 焰魂龙纹 1
 #ACT
 take 焰魂龙纹 1
+GOTO @处理经验酒
 GOTO @转职
 MUL P14 <$STR(P14)> 10
 INC P14 500
@@ -91,7 +92,65 @@ TakeOffItem 16
 #SAY
 你已经重塑体魄了。
 #ELSESAY
-你没有焰魂龙纹，我无法为你重塑！
+你没有焰魂龙纹，老夫无法为你重塑！
+
+[@处理经验酒]
+#IF
+SMALL P33 40
+#ACT
+GOTO @计次处理经验酒
+#ELSEACT
+SENDMSG 6 你身上的酒都被老夫回收了偿还给你一些声望值。
+
+[@计次处理经验酒]
+#IF
+checkitem 五万经验白酒 1
+#ACT
+take 五万经验白酒 1
+CREDITPOINT + 10
+INC P33 1
+GOTO @处理经验酒
+
+#IF
+checkitem 十万经验白酒 1
+#ACT
+take 十万经验白酒 1
+CREDITPOINT + 20
+INC P33 1
+GOTO @处理经验酒
+
+#IF
+checkitem 二十万经验白酒 1
+#ACT
+take 二十万经验白酒 1
+CREDITPOINT + 40
+INC P33 1
+GOTO @处理经验酒
+
+#IF
+checkitem 一百万经验酱香 1
+#ACT
+take 一百万经验酱香 1
+CREDITPOINT + 200
+INC P33 1
+GOTO @处理经验酒
+
+#IF
+checkitem 五百万经验精酿 1
+#ACT
+take 五百万经验精酿 1
+CREDITPOINT + 1000
+INC P33 1
+GOTO @处理经验酒
+
+#IF
+checkitem 一千万经验杜康 1
+#ACT
+take 一千万经验杜康 1
+CREDITPOINT + 1000
+INC P33 1
+GOTO @处理经验酒
+
 [@转职]
 #IF
 EQUAL P8 0
