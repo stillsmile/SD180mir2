@@ -9,6 +9,7 @@
 \ \
 <☆/AUTOCOLOR=154><飞GM等待房/@GM><☆/AUTOCOLOR=154>      <☆/AUTOCOLOR=154><GM功能/@GM功能><☆/AUTOCOLOR=154> <☆/AUTOCOLOR=154><云隐宗师消失/@云隐宗师消失><☆/AUTOCOLOR=154>  \ 
 \ \
+<☆/AUTOCOLOR=154><加熔炼值/@加熔炼值><☆/AUTOCOLOR=154>  \
 <☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
 ;<☆/AUTOCOLOR=154><二分之一测试/@二分之一测试>
 #ELSESAY
@@ -17,6 +18,10 @@
 \ \
 \ \
 <☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>                     <☆/AUTOCOLOR=154><修复技能BUG/@修复技能BUG><☆/AUTOCOLOR=154>\ \
+[@加熔炼值]
+#IF
+#ACT
+inc U19 100
 [@GM功能]
 #IF
 #ACT

@@ -3,6 +3,7 @@
 向你们表示最崇高的敬意。你们不仅击败了火龙教主，\
 更打破了恐惧与绝望的枷锁，为这片土地带来了希望。\
 另外我也可以把顶级的装备相互熔炼，\
+主宰系列每件熔炼1点，传奇每件熔炼5点\
 元素精灵赋予你的道具上。\\
 <熔炼元素属性/@元素属性> \ 
 作为对你们英勇行为的奖赏，老夫愿意为你们重塑体魄，\
@@ -181,68 +182,68 @@ CHANGEJOB Taoist
 checkitem 传奇神甲(男) 1
 #ACT
 take 传奇神甲(男) 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇神甲(女) 1
 #ACT
 take 传奇神甲(女) 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇神剑 1
 #ACT
 take 传奇神剑 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇之戒 1
 #ACT
 take 传奇之戒 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇护腕 1
 #ACT
 take 传奇护腕 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇之冠 1
 #ACT
 take 传奇之冠 1
-inc U19 2
+inc U19 5
 
 
 #IF
 checkitem 传奇项链 1
 #ACT
 take 传奇项链 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇腰带 1
 #ACT
 take 传奇腰带 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇之靴 1
 #ACT
 take 传奇之靴 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇勋章 1
 #ACT
 take 传奇勋章 1
-inc U19 2
+inc U19 5
 
 #IF
 checkitem 传奇面巾 1
 #ACT
 take 传奇面巾 1
-inc U19 2
+inc U19 5
 
 #IF
 #SAY

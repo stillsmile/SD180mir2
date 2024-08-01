@@ -241,6 +241,7 @@ RECLAIMITEM
 break
 #SAY
 该属性已经超过5%了，不能再加了。\
+
 #IF
 LARGE U19 0
 #ACT
