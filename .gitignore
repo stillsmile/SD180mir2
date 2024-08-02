@@ -427,3 +427,6 @@ MirServer/Mir200/Envir/UserData/
 MirServer/Mir200/Envir/Market_Upg/
 MirServer/Mir200/Castle/
 MirServer/Mir200/Envir/Market_def/每日领取材料/
+MirServer/.vscode/
+MirServer/mireditConfig.json
+MirServer/varDesc.json
