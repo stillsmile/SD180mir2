@@ -54,14 +54,14 @@ SENDMSG 2 你的转生次数已经够多的了.
 BREAK
 
 #IF
-CHECKLEVELEX < 65
+CHECKLEVELEX < 90
 #ACT
-SENDMSG 2 你的等级不足65级,承受不了重塑!
+SENDMSG 2 你的等级不足90级,承受不了重塑!
 BREAK
 #IF
 #ACT
 MOV P14 <$LEVEL>
-DEC P14 65
+DEC P14 90
 #IF
 checkitem 焰魂龙纹 1
 #ACT

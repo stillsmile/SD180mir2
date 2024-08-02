@@ -23,7 +23,7 @@ checkitem 先驱者遗骸 1
 
 [@不需要回报] 
 #IF
-RANDOM 2
+RANDOM 5
 #ACT
 take 先驱者遗骸 1
 gamegird + 5000
