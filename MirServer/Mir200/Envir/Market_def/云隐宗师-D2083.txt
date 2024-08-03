@@ -62,6 +62,8 @@ BREAK
 #ACT
 MOV P14 <$LEVEL>
 DEC P14 90
+MUL P20 <$RELEVEL> 100
+SENDMSG 2 转生次数补偿属性点<$STR(P20)>
 #IF
 checkitem 焰魂龙纹 1
 #ACT
@@ -69,8 +71,13 @@ take 焰魂龙纹 1
 GOTO @处理经验酒
 GOTO @转职
 MUL P14 <$STR(P14)> 10
+SENDMSG 2 等级补偿属性点<$STR(P14)>
 INC P14 500
-map 0
+INC P14 <$STR(P20)>
+SENDMSG 2 所有的属性点<$STR(P14)>
+map yssd
+DELBUTTON 6
+mov U17 1
 RENEWLEVEL 1 1 <$STR(P14)>
 CLEARSKILL
 TakeOffItem 0
