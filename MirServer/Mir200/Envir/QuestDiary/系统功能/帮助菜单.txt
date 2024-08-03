@@ -1,7 +1,8 @@
 [@帮菜]
+{
 #SAY
 <$USERNAME>你好，有什么需要领取的礼品？
-<领取礼品/@发送装备>\\
+<领取礼品/@发送装备1>\\
 <退出/@exit>
 
 [@发送装备]
@@ -18,6 +19,17 @@ GIVE 主宰腰带 1
 GIVE 主宰之靴 1
 GIVE 主宰面巾 1
 GIVE 主宰勋章 1
+  DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
+#elsesay
+没有东西获取！！！\
+<退出/@exit>\
+
+
+[@发送装备1]
+#IF
+  checknamelist 帮助菜单自己领取物品\发送人.txt
+#ACT
+inc U19 10
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
 #elsesay
 没有东西获取！！！\
