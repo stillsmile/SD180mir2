@@ -1,0 +1,2 @@
+NPC如果放在NPC文件夹中，用NPCs.txt生成，会导致OK框无法触发
+merChant的NPC可以动态重载

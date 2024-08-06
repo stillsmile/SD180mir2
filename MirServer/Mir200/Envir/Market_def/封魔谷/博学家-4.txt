@@ -1,0 +1,39 @@
+()
+%100
+[@main]
+\\
+你好啊，怎么忧心忡忡的？\
+装备镶嵌的痕迹太多了？我可以帮助你修复宝石镶嵌的痕迹。\
+让它焕然一新！\
+去准备3个品质为25的黑铁矿石，8000点声望值。\
+<我准备好了/@我准备好了>\
+<修正对话框BUG/@修正对话框BUG>返回OK框道具\
+<返回/@main>\
+[@我准备好了]
+#ACT
+OPENUPGRADEDLG 释放元素
+
+[@UpgradeDlgItem]
+#IF
+checkitem 黑铁矿石 3
+checkdura 黑铁矿石 25
+CHECKCREDITPOINT > 7999
+#ACT
+take 黑铁矿石 3
+CREDITPOINT - 8000
+ChangeItemUpgradeCount -1 = 0
+SendMsg 5 我已经成功修复了。拿好
+RECLAIMITEM
+#ELSEACT
+RECLAIMITEM
+#ELSESAY
+请准备好我说的这些东西。
+<返回/@main>\
+
+[@修正对话框BUG]
+#IF
+#SAY
+请拿好你的东西\
+<返回/@main>\
+#ACT
+RECLAIMITEM

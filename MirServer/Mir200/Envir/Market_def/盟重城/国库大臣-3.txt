@@ -5,7 +5,8 @@ equal G4 0
 #say
 发放？算了吧，货物紧缺呢。...\
 你有材料吗？可以上交国库吗？我会支付报酬的。\\
-<开服三周福利/@增加称号2>\\
+<开服一个月福利/@增加称号3>\\
+;<开服三周福利/@增加称号2>\\
 ;<开服一周福利/@增加称号>\\
 ;<40级补偿破馆珍剑/@领取破馆珍剑>\\
 <包裹里的你都拿走吧/@回收材料>上交沃玛号角，祖玛头像，火龙凭证\
@@ -58,6 +59,20 @@ BREAK
 NOT CHECKTITLE 小黄毛
 #ACT
 CONFERTITLE 小黄毛
+#ELSEACT
+SENDMSG 6 已经有了该称号
+
+[@增加称号3]
+#IF
+CHECKFENGHAOCOUNT > 29 
+#ACT
+SENDMSG 6 已经有了所有称号
+BREAK
+
+#IF
+NOT CHECKTITLE 老头乐
+#ACT
+CONFERTITLE 老头乐
 #ELSEACT
 SENDMSG 6 已经有了该称号
 

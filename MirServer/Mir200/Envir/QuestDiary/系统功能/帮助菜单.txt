@@ -29,7 +29,9 @@ GIVE 主宰勋章 1
 #IF
   checknamelist 帮助菜单自己领取物品\发送人.txt
 #ACT
-inc U19 10
+map yssd
+DELBUTTON 6
+mov U17 1
   DelTextList 帮助菜单自己领取物品\发送人.txt <$USERNAME>
 #elsesay
 没有东西获取！！！\

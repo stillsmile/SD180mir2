@@ -4,7 +4,7 @@
 记住，有付出才有回报，为一己私利而活的人\
 是无法成为真正的道士，来吧接受自身的挑战！\\
 <释放元素/@释放元素>\
-<修正对话框BUG/@修正对话框BUG>\
+<修正对话框BUG/@修正对话框BUG>返回OK框道具\
 <带我离开这里/@带我离开这里>\
 
 [@释放元素]
@@ -18,6 +18,12 @@
 
 #IF
 equal U17 1
+#act
+#ELSEACT
+MESSAGEBOX 你不属于这里
+BREAK
+
+#IF
 EQUAL U19 0
 #SAY
 我并没有在你身上看到元素波动\
@@ -33,15 +39,12 @@ OPENUPGRADEDLG 释放元素
 [@UpgradeDlgItem]
 你要释放在:<$DLGITEM.NAME>吗？\
 你身上有<$STR(U19)>颗元素,你需要释放什么属性?\\
-<暴击几率增加/@暴击几率增加>\
-<增加攻击伤害/@增加攻击伤害>\
-<物理伤害减少/@物理伤害减少>\
-<魔法伤害减少/@魔法伤害减少>\
-<忽视目标防御/@忽视目标防御>\
-<所有伤害反弹/@所有伤害反弹>\
+<暴击几率增加/@暴击几率增加>   <增加攻击伤害/@增加攻击伤害>\
+<物理伤害减少/@物理伤害减少>   <魔法伤害减少/@魔法伤害减少>\
+<忽视目标防御/@忽视目标防御>   <所有伤害反弹/@所有伤害反弹>\
+<人物体力增加/@人物体力增加>   <人物魔力增加/@人物魔力增加>\
 <增加目标暴率/@增加目标暴率>\
-<人物体力增加/@人物体力增加>\
-<人物魔力增加/@人物魔力增加>\
+
 <不释放了，还给我/@修正对话框BUG>\
 
 [@暴击几率增加]
@@ -64,8 +67,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-暴击几率增加+<$STR(P5)>.
+暴击几率增加+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -89,8 +93,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-增加攻击伤害+<$STR(P5)>.
+增加攻击伤害+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -114,8 +119,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-物理伤害减少+<$STR(P5)>.
+物理伤害减少+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -139,8 +145,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-魔法伤害减少+<$STR(P5)>.
+魔法伤害减少+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -164,8 +171,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-忽视目标防御+<$STR(P5)>.
+忽视目标防御+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -189,8 +197,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-所有伤害反弹+<$STR(P5)>.
+所有伤害反弹+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -214,8 +223,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-增加目标暴率+<$STR(P5)>.
+增加目标暴率+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -239,8 +249,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-人物体力增加+<$STR(P5)>.
+人物体力增加+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
@@ -265,8 +276,9 @@ SETITEMSTATE -1 4 1
 SETITEMSTATE -1 5 1
 RECLAIMITEM
 #SAY
+\\
 恭喜啊!
-人物魔力增加+<$STR(P5)>.
+人物魔力增加+<$STR(P5)>.<装备已经绑定/AutoColor=254>\
 #ELSESAY
 元素已经消耗殆尽了\
 
