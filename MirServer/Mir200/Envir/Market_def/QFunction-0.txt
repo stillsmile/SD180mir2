@@ -177,11 +177,18 @@ Gmexecute showeffect 76
 KILLMONEXPRATE 200 3600
 SENDMSG 7 你获得了1个小时双倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
 
-;[@StdModeFunc29]
-;#IF
-;#ACT
-;POWERRATE 150 1800
-;SENDMSG 7 你获得了半小时1.5倍攻击力,期间死亡或下线效果即刻消失,重复使用无效!
+[@StdModeFunc29]
+#IF
+#ACT
+POWERRATE 150 1800
+SENDMSG 7 你获得了半小时1.5倍攻击力,期间死亡或下线效果即刻消失,重复使用无效!
+
+[@StdModeFunc42]
+#IF
+#ACT
+POWERRATE 150 1800
+SENDMSG 7 你获得了半小时1.5倍攻击力,期间死亡或下线效果即刻消失,重复使用无效!
+
 
 
 [@UserCmd1]
