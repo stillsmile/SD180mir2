@@ -18,11 +18,7 @@ SENDMSG 6 仆从正在护卫
 KILLCALLMOB 地狱犬 1
 SENDMSG 6 你脱离了矿区，仆从将死亡。
 SetOffTimer 1
-[@OnTimer9]
-#IF
-#ACT
-SendCenterMsg 180 251 穿戴护身符可获得传送能力 0 5 0
-;刷新声望杀怪经验倍率值
+
 [@OnTimer2]
 #IF
 #ACT
@@ -95,9 +91,9 @@ ADDBUTTON 8 6 00007 00008 00007 445 10 0  -1 查看玩家们上架出售的货物
 ;判断是否等待期开服0为正常，1为等待开服
 
 ;定时公告
-#IF
-#ACT
-SetOnTimer 9 60
+;#IF
+;#ACT
+;SetOnTimer 9 60
 
 ;刷新界面和倍率声望
 #IF
