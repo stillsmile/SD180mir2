@@ -12,7 +12,11 @@
 #ACT
 OPENUPGRADEDLG 回收物品
 [@UpgradeDlgItem]
+#IF
+  CHECKLEVELEX < 45
 #ACT
+MESSAGEBOX 您的等级太低了，我无法相信你，请到45级后再来吧
+BREAK
 #IF
 CHECKTEXTLIST 大富豪回收\中级书.txt <$DLGITEM.NAME>
 #ACT
