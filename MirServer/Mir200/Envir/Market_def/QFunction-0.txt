@@ -147,6 +147,13 @@ ChangeModeEx 16 300
 GOTO @避寒神丹BUFF
 SENDMSG 7 你获得了5分钟防冰冻属性！
 
+[@避寒神丹BUFF]
+#ACT
+ADDBUTTON 9 10 342 342 342 10 100 1  护体 神丹护体中，你不会被冰冻
+DELAYCALL 300000 @避寒神丹BUFF结束
+[@避寒神丹BUFF结束]
+#ACT
+DELBUTTON 10
 
 [@StdModeFunc33]
 #IF
