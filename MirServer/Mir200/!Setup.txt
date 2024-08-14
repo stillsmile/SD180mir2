@@ -158,7 +158,7 @@ MonthSpirit7=
 MonthSpirit8=
 MonthSpirit9=
 [Setup]
-ItemNumber=17583062
+ItemNumber=17683983
 ClientFile1 =mir.dat
 ClientFile2 =mir.2
 ClientFile3 =mir.3
@@ -2741,7 +2741,7 @@ HeroLevelValueOfWarrHP=2
 HeroLevelValueOfWarrHPRate=4.5
 DedingMagicWaitTime=10
 Skill41WaitTime=0
-Skill58WaitTime=5
+Skill58WaitTime=0
 MonsterWarrorAttackTime=1200
 MonsterWizardAttackTime=1200
 MonsterTaoistAttackTime=1200
