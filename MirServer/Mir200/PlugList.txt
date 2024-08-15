@@ -1,2 +1,2 @@
-mPlugOfEngine.dll
-IPLocal.dll
+QYD.dll
+QYM2Plugin.dll

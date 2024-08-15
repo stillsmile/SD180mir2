@@ -1,0 +1,2 @@
+打开插件的更新选项 选中【启用自定义更新】
+填写更新地址：https://www.3122.cn/tools/ql/GNlist.txt

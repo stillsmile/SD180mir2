@@ -14,6 +14,17 @@
 [@ButtonClick6]
 #ACT
 OpenShopDlg 0 
+
+[@QYDStartAutoPlayGame]
+#act
+QYDStartAutoPlayGame
+sendmsg 6 开启成功！
+
+[@QYDStopAutoPlayGame]
+#act
+QYDStopAutoPlayGame
+sendmsg 6 停止成功！
+
 [@OpenSndaItemBox]
 
 #IF

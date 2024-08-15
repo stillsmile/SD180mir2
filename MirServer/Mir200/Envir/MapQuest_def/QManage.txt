@@ -64,36 +64,26 @@ MOV U14 1
 SENDMSG 7 准确增加20点.
 ;界面3个按钮
 
-#IF
-#ACT
-ADDBUTTON 8 1 00000 00001 00000 10 10 0  -1 一键回收包裹里的装备兑换灵符
-
-#IF
-#ACT
-ADDBUTTON 8 2 00004 00005 00004 155 10 0  -1 金币，灵符，元宝，声望值相互兑换
-
-#ACT
-ADDBUTTON 8 4 00002 00003 00002 300 10 0  -1 游戏辅助和远程仓库
-
-#IF
-#ACT
-ADDBUTTON 8 6 00007 00008 00007 445 10 0  -1 查看玩家们上架出售的货物
-
-;;判断是否等待期开服0为正常，1为等待开服
-;#IF
-;equal G0 0
-;#ACT
-;ADDBUTTON 8 4 00002 00003 00002 300 10 0  -1 游戏辅助和远程仓库
-;#ELSEACT
-;DELBUTTON 4
-
-
-;判断是否等待期开服0为正常，1为等待开服
-
-;定时公告
 ;#IF
 ;#ACT
-;SetOnTimer 9 60
+;ADDBUTTON 8 1 00000 00001 00000 300 10 0  -1 一键回收包裹里的装备兑换灵符
+
+#IF
+#ACT
+ADDBUTTON 8 2 00004 00005 00004 10 10 0  -1 金币，灵符，元宝，声望值相互兑换
+
+;#ACT
+;ADDBUTTON 8 4 00002 00003 00002 445 10 0  -1 游戏辅助和远程仓库
+
+#IF
+#ACT
+ADDBUTTON 8 6 00007 00008 00007 155 10 0  -1 查看玩家们上架出售的货物
+#if
+#act
+QYDSetAutoPickItemRange 5
+QYDStartAutoPickItem 1
+QYDSetAutoPickItemInterval 500
+SendMsg 6 你已经打开自动捡物功能
 
 ;刷新界面和倍率声望
 #IF
@@ -105,26 +95,49 @@ DELAYGOTO 1 @MAIN
 SetOnTimer 2 1
 DELAYGOTO 1 @MAIN
 
-[@MAIN]
-;判断是否等待期开服0为正常，1为等待开服
-#IF
-equal G0 1
+
+#if
+#act
+QYDSTARTAUTORECOVER 1
+QYDStartAutoRecoverSeries 特殊戒指 1
+QYDStartAutoRecoverSeries 高级材料 1
+QYDStartAutoRecoverSeries 垃圾材料 1
+
+QYDStartAutoRecoverSeries 火龙装备 1
+QYDStartAutoRecoverSeries 雪域装备 1
+QYDStartAutoRecoverSeries 魔龙装备 1
+
+QYDStartAutoRecoverSeries 赤月装备 1
+QYDStartAutoRecoverSeries 祖玛装备 1
+QYDStartAutoRecoverSeries 沃玛装备 1
+
+QYDStartAutoRecoverSeries 前期装备 1
+QYDStartAutoRecoverSeries 垃圾装备 1
+
+QYDStartAutoRecoverSeries 雪域技能书 1
+QYDStartAutoRecoverSeries 魔龙技能书 1
+QYDStartAutoRecoverSeries 赤月技能书 1
+QYDStartAutoRecoverSeries 高级技能书 1
+QYDStartAutoRecoverSeries 垃圾技能书 1
+QYDStartAutoRecoverSeries 一般技能书 1
+
+SendMsg 6 已经开启了自动回收
+
+#if
 #ACT
-map dengdai
-DELBUTTON 4
-#ELSEACT
-SENDMSG 5 服务器已开启，祝你游戏愉快
+DELAYGOTO 10000 @自动挂机
+
+[@自动挂机]
+#act
+QYDOpenAutoPlayGame
+
+
+[@MAIN]
 
 #IF
 ISNEWHUMAN
 #ACT
-give 蜡烛 1
 SENDMSG 5 新手提示：请按F12呼出游戏内挂，请于4级前到助手小姐处接任务！
-
-
-#IF
-#ACT
-SENDMSG 6 提示：当前的声望值为:<$CREDITPOINT>点...
 
 #IF
 ISCASTLEMASTER
@@ -132,7 +145,3 @@ ISCASTLEMASTER
 SENDMSG 0 万众欢呼，号令天下的沙城主『<$USERNAME>』进入游戏!
 ;城主
 SetIcon 0 65535
-
-[@Member]
-#CALL [系统功能\后台管理.txt] @管理
-
