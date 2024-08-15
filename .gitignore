@@ -10,7 +10,6 @@ MirServer/DBServer/FDB/Mir.DB
 MirServer/LoginSrv/IDDB/Id.DB
 MirServer/三优脚本编辑器/
 MirServer/LogServer/
-MirServer/登录器/
 MirServer/RunGate/Log*/*
 MirServer/Mud2/DB/Back/导入_2023年07月31日00时04分28秒/Magic.DB
 MirServer/Mud2/DB/Back/导入_2023年07月31日00时04分28秒/Monster.DB
@@ -431,4 +430,5 @@ MirServer/.vscode/
 MirServer/mireditConfig.json
 MirServer/varDesc.json
 MirServer/Mud2/DB/Back/
-MirServer/绿盟GOM登陆器配置器V3.4/
+
+MirServer/登录器/*.exe

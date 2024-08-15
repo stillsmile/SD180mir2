@@ -1,0 +1,54 @@
+;跨服喊话脚本例子
+
+;功能: 检测喊话内容有没有非法字符,过滤
+;      的非法字符为神佑插件中的过滤列表
+;      使用脚本检测时不会执行插件中的处理方式
+;格式: FilterCharacter <$str(S22)>
+
+
+;功能: 检测跨服喊话服务器连接是否成功
+;格式: CrossServeronline
+
+;功能: 发送跨服喊话
+;格式: SendCrossMsg 消息文字
+
+
+[@main]
+
+跨服喊话，每条信息收取2000元宝费用，显示20秒。\ \
+
+<我要跨服喊话/@@InPutString22> 
+
+
+
+
+
+[@InPutString22]
+#if
+CheckStringlength <$str(S22)> > 50
+#act
+messagebox 字符内容输入过长，必须在25(汉字)个字以内。
+break
+;-------------------------------------
+#if
+FilterCharacter <$str(S22)>
+#act
+messagebox 您发送的内容包含非法字符！！
+break
+;-------------------------------------
+#if
+checkgamegold < 1999
+#act
+messagebox 穷鬼没钱还来发跨服喊话，死边边去。
+break
+;-------------------------------------
+#IF
+CrossServeronline
+#ACT
+gamegold - 2000
+SendCrossMsg <$str(S22)>
+sendmsg 6 [提示]:跨服喊话内容发送成功...
+break
+#elseact
+messagebox 跨服喊话功能暂不可用，请稍后再试。
+

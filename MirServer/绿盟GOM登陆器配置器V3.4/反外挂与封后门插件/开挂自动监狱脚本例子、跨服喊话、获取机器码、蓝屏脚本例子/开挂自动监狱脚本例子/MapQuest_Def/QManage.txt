@@ -1,0 +1,47 @@
+
+
+[@Login]
+#IF
+CHECKLEVELEX > 0
+#ACT
+goto @检查开外挂次数
+
+
+
+
+[@检查开外挂次数]
+;---------------------------------------
+;这段主要是将人物开挂次数同步到插件中去
+;插件重启后是不保存的,开挂次数超过临界
+#if
+CheckAuxiliaryCount = 0
+LARGE U44 0
+#act
+SetAuxiliaryCount = <$str(U44)>
+
+;---------------------------------------
+#if
+;检查系统记录的开挂次数  大于等于3次
+CheckAuxiliaryCount > 2
+#act
+;获取当前开挂次数
+GetAuxiliaryCount <$str(S55)>
+;将当前开挂次数记录到私人可保存变量
+mov U44 <$str(S55)>
+;开启定时监控
+SetOnTimer 244 3
+;传送到监狱
+mapmove 0162
+sendmsg 6 [警告]：多次不良开挂记录，你已被关进小黑屋！！
+sendmsg 6 [警告]：多次不良开挂记录，你已被关进小黑屋！！
+
+
+
+
+[@OnTimer244]
+#if
+ISONMAP 0162
+#elseact
+mapmove 0162
+sendmsg 6 你给我老老实实得呆着！！不要企图逃跑！！！
+sendmsg 6 你给我老老实实得呆着！！不要企图逃跑！！！

@@ -1,0 +1,51 @@
+[@main]
+#act
+GetAuxiliaryCount <$str(S55)>
+#say
+忏悔吧，骚年...........\ \
+
+你当前被检测开挂次数:<$str(S55)>\ \
+
+洗清罪恶，每次需交纳1000元宝保证金\ \
+
+洗到3点以下才能放你出去！！\
+
+<交纳保证金洗清罪名/@交元宝>       <回土城/@回家>
+
+
+[@回家]
+#if
+;检测开挂次数是否小于3次，小于3次才让回家
+CheckAuxiliaryCount < 3
+#act
+;停止监控定时器
+SetOffTimer 244
+mapmove 3 333 333
+sendmsg 6 [罪恶师]:拜拜了您勒,记得做个好人。
+break
+#elseact
+sendmsg 6 [罪恶师]:没洗脱罪名前，你给我老老实实呆着！开挂的败类！
+
+[@交元宝]
+#if
+;检测开挂次数是否大于0
+CheckAuxiliaryCount > 0
+#act
+goto @检测元宝
+break
+#elseact
+sendmsg 6 [罪恶师]:你的罪名已经洗清，以后要做个好人。
+
+[@检测元宝]
+#if
+checkgamegold > 999
+#act
+gamegold - 1000
+SetAuxiliaryCount - 1
+GetAuxiliaryCount <$str(S55)>
+mov U44 <$str(S55)>
+sendmsg 6 [罪恶师]:洗清开挂次数1次，还剩<$str(S55)>条不良记录。
+goto @main
+break
+#elseact
+messagebox 没钱就老老实实呆着玩泥巴！！

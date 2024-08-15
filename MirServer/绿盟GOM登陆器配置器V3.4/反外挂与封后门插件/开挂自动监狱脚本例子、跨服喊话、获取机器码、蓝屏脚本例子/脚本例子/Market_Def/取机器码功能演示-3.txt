@@ -1,0 +1,14 @@
+;获取机器码例子
+
+;命令:GetMachineCode
+;功能:获取玩家当前机器码
+;参数1:私人型文本变量
+;格式:GetMachineCode <$str(S23)>
+;使用时请放在#IF下面
+
+[@main]
+#if
+;将获取到的机器码放到<$str(S23)>变量中...
+GetMachineCode <$str(S23)>
+#say
+你当前的机器码为:<$str(S23)>

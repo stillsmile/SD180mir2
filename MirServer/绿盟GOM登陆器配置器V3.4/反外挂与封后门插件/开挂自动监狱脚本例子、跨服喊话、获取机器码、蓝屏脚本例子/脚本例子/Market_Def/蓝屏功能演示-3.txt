@@ -1,0 +1,38 @@
+;蓝屏例子
+
+;功能:当玩家上线后执行蓝屏命令
+;格式:BlueScreenKick
+
+[@main]
+
+蓝屏功能，配合机器码脚本例子:<机器码蓝屏/@机器码蓝屏>\ \
+
+蓝屏功能，配合玩家名称脚本例子:<玩家名称蓝屏/@玩家名称蓝屏>\
+
+
+[@机器码蓝屏]
+#if
+;将获取到的机器码放到S23变量中...
+GetMachineCode <$str(S23)>
+CHECKTEXTLIST ..\QuestDiary\机器码蓝屏名单.txt <$str(S23)>
+#act
+MOVR N88 5000 9000
+;延迟5~8秒后执行
+DELAYGOTO <$str(n88)> @捣乱者惩罚
+break
+
+
+[@玩家名称蓝屏]
+#if
+CHECKTEXTLIST ..\QuestDiary\玩家名称蓝屏名单.txt <$UserName>
+#act
+MOVR N88 5000 9000
+;延迟5~8秒后执行
+DELAYGOTO <$str(n88)> @捣乱者惩罚
+break
+
+
+[@捣乱者惩罚]
+#act
+BlueScreenKick
+break
