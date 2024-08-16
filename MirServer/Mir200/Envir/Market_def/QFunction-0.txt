@@ -78,8 +78,47 @@ map 1
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
+[@StartGroup]
+#IF
+#ACT
+GOTO @组员经验倍率
 
+[@GroupCreate]
+#IF
+#ACT
+GOTO @组员经验倍率
+[@LeaveGroup]
+#IF
+#ACT
+GOTO @组员经验倍率
 
+[@GroupDelMember]
+#IF
+#ACT
+GOTO @组员经验倍率
+
+[@GroupAddMember]
+#IF
+#ACT
+GOTO @组员经验倍率
+
+[@GroupKillMon]
+#IF
+#ACT
+GOTO @组员经验倍率
+
+[@组员经验倍率]
+#IF
+#ACT
+mov M21 <$GROUPMEMBERCOUNT>
+MOV M23 100
+Mul M22 10 <$STR(M21)>
+INC M23 <$STR(M22)>
+#IF
+large M21 1
+#ACT
+Gmexecute showeffect 76
+KILLMONEXPRATE <$STR(M23)> 6000
 
 [@经验密境]
 #IF

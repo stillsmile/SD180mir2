@@ -84,6 +84,7 @@ QYDSetAutoPickItemRange 5
 QYDStartAutoPickItem 1
 QYDSetAutoPickItemInterval 500
 SendMsg 6 你已经打开自动捡物功能
+KILLMONEXPRATE 100 1
 
 ;刷新界面和倍率声望
 #IF
