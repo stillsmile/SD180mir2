@@ -12,8 +12,9 @@
 
 #ELSESAY
 \ \
-\ \
-<☆/AUTOCOLOR=154><远程仓库/@storage><☆/AUTOCOLOR=154>     \
+<☆/AUTOCOLOR=154><确认打开远程仓库/@storage><☆/AUTOCOLOR=154>     \
+#ELSEACT
+GOTO @storage
 [@自动回收]
 #if
 #act

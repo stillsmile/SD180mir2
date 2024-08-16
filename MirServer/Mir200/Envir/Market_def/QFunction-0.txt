@@ -1,4 +1,4 @@
-(@@sendmsg @storage @PlayOffline @getback @buy @sell @repair @s_repair @@offlinemsg @storage @getback @getnextpage @getPreviouspage @@INPUTINTEGER @@InPutString )
+(@storage @getback)
 ;界面UI第一个按钮
 [@ButtonClick1]
 #IF
@@ -28,10 +28,8 @@ sendmsg 6 停止成功！
 [@OpenSndaItemBox]
 
 #IF
-;CHECKLEVELEX < 50
 #ACT
-;SENDMSG 2 你的等级不足50级,无法开启奇门阵！
-;#ELSEACT
+
 SETSNDAITEMBOX 1 2 8888 4 5 6 7 8 6666 9 10
 SENDMSG 6 恭喜激活奇门阵！
 [@OnKillMob]
@@ -47,33 +45,12 @@ DELAYCALL 300000 @云隐宗师消失
 #IF
 #ACT
 DelNpc 云隐宗师
-[@ButtonClick4]
-
-#IF
-#ACT
-#CALL [系统功能\游戏辅助.txt] @辅助
 
 ;背包按钮
 [@ItemBagButtonClick1]
 #IF
 #ACT
-MOV M0 0
-MOV N12 0
-GOTO @背包回收垃圾
-[@背包回收垃圾]
-#IF
-SMALL M0 40
-#ACT
-GOTO @计次回收
-#ELSEACT
-SENDMSG 6 〖提示〗一键回收成功<$STR(N12)>金币
-
-[@计次回收]
-#IF
-#ACT
-#CALL [系统功能\垃圾回收.txt] @回收垃圾
-INC M0 1
-GOTO @背包回收垃圾
+#CALL [系统功能\游戏辅助.txt] @辅助
 
 [@ItemBagButtonClick2]
 #ACT
@@ -157,14 +134,6 @@ Mov D36 50000
 ChangeModeEx 16 300
 GOTO @避寒神丹BUFF
 SENDMSG 7 你获得了5分钟防冰冻属性！
-
-[@避寒神丹BUFF]
-#ACT
-ADDBUTTON 9 10 342 342 342 10 100 1  护体 神丹护体中，你不会被冰冻
-DELAYCALL 300000 @避寒神丹BUFF结束
-[@避寒神丹BUFF结束]
-#ACT
-DELBUTTON 10
 
 [@StdModeFunc33]
 #IF

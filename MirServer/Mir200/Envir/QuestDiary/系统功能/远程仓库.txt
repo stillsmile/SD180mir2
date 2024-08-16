@@ -1,0 +1,83 @@
+(@storage @getback)
+{
+(@storage @getback)
+[@storage]
+\ \
+
+
+需要保管什么东西?\ 
+测试1111\\
+<返回/@远程仓库>
+
+
+[@StorageOpenFail2]
+
+#IF
+
+#ACT
+
+MESSAGEBOX 仓库二无法打开,单击确认后开启! @开启仓库二 @取消
+
+break
+
+[@开启仓库二]
+
+#IF
+
+#ACT
+
+SETSTORAGEOPEN 20130801 20130802 20130803 20130804 2 20130806 20130807 20130808 1 20130810
+
+messagebox 扩展仓库二号成功!!
+
+break
+
+[@StorageOpenFail3]
+
+#IF
+
+#ACT
+
+MESSAGEBOX 仓库三无法打开,单击确认后开启! @开启仓库三 @取消
+
+break
+
+[@开启仓库三]
+
+#IF
+
+#ACT
+
+SETSTORAGEOPEN 20130801 20130802 20130803 20130804 3 20130806 20130807 20130808 1 20130810
+
+messagebox 扩展仓库三号成功!!
+
+break
+
+
+
+[@StorageOpenFail4]
+
+#IF
+
+#ACT
+
+MESSAGEBOX 仓库四无法打开,单击确认后开启! @开启仓库四 @取消
+
+break
+
+[@开启仓库四]
+
+#IF
+
+#ACT
+
+SETSTORAGEOPEN 20130801 20130802 20130803 20130804 4 20130806 20130807 20130808 1 20130810
+
+messagebox 扩展仓库三号成功!!
+
+break
+
+
+
+}
