@@ -129,15 +129,15 @@ SENDMSG 7 经验密境探险结束了！
 #IF
 #SAY
 你打算跟换是什么经验丹呢？\\
-<1个冰核换五倍经验神丹/@五倍>\\
-<4个冰核换十倍经验神丹/@十倍>\\
+<1个冰核换双倍经验神丹/@五倍>\\
+<4个冰核换五倍经验神丹/@十倍>\\
 
 [@五倍]
 #IF
 checkitem 冰核 1
 #ACT
 take 冰核 1
-give 五倍经验神丹 1
+give 双倍经验神丹 1
 SENDMSG 5 兑换成功！
 #ELSEACT
 SENDMSG 2 你没有那么多的冰核啊！
@@ -147,8 +147,8 @@ SENDMSG 2 你没有那么多的冰核啊！
 checkitem 冰核 4
 #ACT
 take 冰核 4
-give 十倍经验神丹 1
+give 五倍经验神丹 1
 SENDMSG 5 兑换成功！
-SENDMSG 0 『<$USERNAME>』在迷失旅人NPC处用4个冰核兑换了十倍经验神丹！！
+SENDMSG 0 『<$USERNAME>』在迷失旅人NPC处用4个冰核兑换了五倍经验神丹！！
 #ELSEACT
 SENDMSG 2 你没有那么多的冰核啊！

@@ -132,7 +132,20 @@ DELAYGOTO 10000 @×Ô¶¯¹Ò»ú
 #act
 QYDOpenAutoPlayGame
 
+[@OnTimer7]
+#IF
+#ACT
+mov M21 <$GROUPMEMBERCOUNT>
+MOV M23 100
+Mul M22 10 <$STR(M21)>
+INC M23 <$STR(M22)>
+#IF
+large M21 1
+#ACT
+Gmexecute showeffect 76
+KILLMONEXPRATE <$STR(M23)> 6000
 
+;==========================================
 [@MAIN]
 
 #IF

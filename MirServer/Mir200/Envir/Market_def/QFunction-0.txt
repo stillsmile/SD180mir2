@@ -78,31 +78,23 @@ map 1
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
 SENDMSG 7 你还不是火龙勇士！不能踏入此地图！！
-[@StartGroup]
-#IF
-#ACT
-GOTO @组员经验倍率
-
+;创建小组时触发.
 [@GroupCreate]
 #IF
 #ACT
 GOTO @组员经验倍率
+;离开队伍时触发.
 [@LeaveGroup]
 #IF
 #ACT
 GOTO @组员经验倍率
-
+;删除小组成员时触发.
 [@GroupDelMember]
 #IF
 #ACT
 GOTO @组员经验倍率
-
+;添加小组成员时触发.
 [@GroupAddMember]
-#IF
-#ACT
-GOTO @组员经验倍率
-
-[@GroupKillMon]
 #IF
 #ACT
 GOTO @组员经验倍率
@@ -119,6 +111,11 @@ large M21 1
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE <$STR(M23)> 6000
+SetOnTimer 7 5
+#ELSEACT
+SetOffTimer 7
+
+
 
 [@经验密境]
 #IF
@@ -179,7 +176,7 @@ SENDMSG 7 你获得了5分钟防冰冻属性！
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE 1000 3600
-SENDMSG 7 你获得了1个小时十倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+SENDMSG 7 你获得了1个小时十倍经验,期间死亡或下线将失效,重复使用无效!
 
 
 [@StdModeFunc32]
@@ -187,21 +184,21 @@ SENDMSG 7 你获得了1个小时十倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE 500 3600
-SENDMSG 7 你获得了1个小时五倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+SENDMSG 7 你获得了1个小时五倍经验,期间死亡或下线将失效,重复使用无效!
 
 [@StdModeFunc31]
 #IF
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE 300 3600
-SENDMSG 7 你获得了1个小时三倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+SENDMSG 7 你获得了1个小时三倍经验,期间死亡或下线将失效,重复使用无效!
 
 [@StdModeFunc30]
 #IF
 #ACT
 Gmexecute showeffect 76
 KILLMONEXPRATE 200 3600
-SENDMSG 7 你获得了1个小时双倍经验,期间死亡或下线不减少双倍时间,重复使用无效!
+SENDMSG 7 你获得了1个小时双倍经验,期间死亡或下线将失效,重复使用无效!
 
 [@StdModeFunc29]
 #IF
